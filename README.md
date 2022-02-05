@@ -49,6 +49,8 @@ Este projeto é um boilerplate.
   
 - [x] PWA instalável;
 
+<br />
+
 ---
 
 # :triangular_flag_on_post: Pré-Requisitos
