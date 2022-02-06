@@ -5,13 +5,13 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_pwa_boilerplate?color=yellow&style=plastic)
 </div>
 
-<h1 align="center">Boilerplate next, styled-components e pwa</h1>
+<h1 align="center">Boilerplate next, styled-components, redux toolkit e pwa</h1>
 
 <br />
 
 # :memo: Sobre o Projeto
 
-Este projeto é um boilerplate.
+Este projeto é um boilerplate com gerenciamento de estado global configurado e cobertura de 100% dos testes.
 
 <br />
 
@@ -25,9 +25,13 @@ Este projeto é um boilerplate.
 
 💅 Styled-Components
 
+🗂 Redux Toolkit
+
 🚩 Lints — ESlint/Prettier/EditorConfig/Commitlint
 
-✅ Jest e React Testing Library
+✅ Jest 
+
+🐙 React Testing Library
 
 📝 Storybook
 
