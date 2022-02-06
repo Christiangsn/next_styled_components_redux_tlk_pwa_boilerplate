@@ -2,15 +2,19 @@ module.exports = {
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules', '/.next/'],
   collectCoverage: true,
-  collectCoverageFrom: [
-    'src/components/**/*.tsx',
-    'src/hooks/**/*.ts(x)?',
-    '!src/layouts/index.ts(x)?',
-    '!src/components/index.tsx',
-    '!src/**/stories.(ts|md)x',
-    '!src/pages/**/*.ts(x)?',
-    '!src/styles/**/*',
-    '!src/types/**/*.d.ts'
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  coveragePathIgnorePatterns: [
+    'src/pages/',
+    'src/components/index.ts',
+    'src/components/Svg',
+    'src/hooks/index.ts',
+    'src/layouts/index.ts',
+    'src/utils/index.ts',
+    'src/types/',
+    'src/store/',
+    'src/theme',
+    'src/styles/',
+    'stories.tsx'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
