@@ -1,4 +1,5 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
+import T from 'theme'
 
 export default createGlobalStyle`
   * {
@@ -10,7 +11,7 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale !important;
     list-style: none !important;
     outline: none;
-    font-family: ${({ theme }) => theme.font.family};
+    font-family: ${T.font.family};
   }
 
   html {
@@ -20,21 +21,17 @@ export default createGlobalStyle`
   body,
   html,
   #__next {
-    ${({ theme }) => css`
-      background-color: ${theme.colors.secondary};
-      color: ${theme.colors.black};
-    `}
+      background-color: ${T.colors.secondary};
+      color: ${T.colors.black};
   }
 
   body, #root, input, select, textarea, button {
-    ${({ theme }) => css`
-      font: ${theme.font.normal} ${theme.font.sizes.medium} 'Inter', sans-serif;
-    `}
+      font: ${T.font.normal} ${T.font.sizes.medium} 'Inter', sans-serif;
   }
 
   button {
     border: none;
-    border-radius: ${({ theme }) => theme.border.radius};
+    border-radius: ${T.border.radius};
   }
 
   #__next {
@@ -57,21 +54,17 @@ export default createGlobalStyle`
   ::-webkit-scrollbar,
   scrollbar-width {
     width: 1.6rem !important;
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: ${T.colors.white};
   }
 
   ::-webkit-scrollbar-thumb {
-    ${({ theme }) => css`
-      background-color: ${theme.colors.primary};
-      border-radius: 2rem;
-      border: 0.3rem solid ${theme.colors.white};
-    `}
+    background-color: ${T.colors.primary};
+    border-radius: 2rem;
+    border: 0.3rem solid ${T.colors.white};
   }
 
   :root {
-    ${({ theme }) => css`
-      scrollbar-color: ${theme.colors.primary} ${theme.colors.white} !important;
-      scrollbar-width: 1.6rem !important;
-    `}
+    scrollbar-color: ${T.colors.primary} ${T.colors.white} !important;
+    scrollbar-width: 1.6rem !important;
   }
 `
