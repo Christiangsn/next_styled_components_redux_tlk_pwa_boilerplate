@@ -1,1 +1,2 @@
-export { useAnimationRender } from 'hooks/useAnimationRender'
+export { useAnimationRender } from './useAnimationRender'
+export { useWindowSize } from './useWindowSize'
