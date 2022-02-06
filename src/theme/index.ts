@@ -3,6 +3,7 @@ import { breakpoints } from './breakpoints'
 import { colors } from './colors'
 import { font } from './font'
 import { spacings } from './spacings'
+import { windowSizes } from './windowSizes'
 
 const grid = {
   container: '130rem',
@@ -24,6 +25,7 @@ const T = {
   spacings,
   animations,
   breakpoints,
+  windowSizes,
   grid,
   border,
   layers
