@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import T from 'theme'
 
 export const Container = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ export const Container = styled.div`
   padding: 0;
   align-items: center;
 
-  ${({ theme }) => theme.breakPoint(800)} {
+  ${T.breakpoints.custom(800)} {
     margin: 12rem auto;
     padding: 0 2rem;
   }
@@ -18,16 +19,15 @@ export const BtnGroup = styled.div`
   flex-direction: column;
   max-width: 35rem;
 
-  ${({ theme }) => css`
-    gap: ${theme.grid.gutter};
-    margin-top: ${theme.spacings.xtreme};
-    padding: 0 ${theme.spacings.large};
+  gap: ${T.grid.gutter};
+  margin-top: ${T.spacings.xtreme};
+  padding: 0 ${T.spacings.large};
 
-    .btn {
-      opacity: 0;
-      animation: ${theme.animations.fadeInMove('0', '30px', '0')} 0.3s linear
-        forwards 0.2s;
-    }
-  `}
+  .btn {
+    opacity: 0;
+    animation: ${T.animations.fadeInMove('0', '30px', '0')} 0.3s linear forwards
+      0.2s;
+  }
+
   align-items: center;
 `

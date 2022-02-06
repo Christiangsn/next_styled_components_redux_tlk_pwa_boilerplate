@@ -1,10 +1,10 @@
 import styled from 'styled-components'
+import T from 'theme'
 
 export const Container = styled.div`
   margin: 2rem auto;
-  height: 4000px;
 
-  ${({ theme }) => theme.breakPoint(800)} {
+  ${T.breakpoints.custom(800)} {
     margin: 12rem auto;
   }
 `
@@ -15,7 +15,7 @@ export const Column = styled.div`
 
   .btn {
     opacity: 0;
-    animation: ${({ theme }) => theme.animations.fadeInMove('0', '30px', '0')}
-      0.3s linear forwards 0.2s;
+    animation: ${T.animations.fadeInMove('0', '30px', '0')} 0.3s linear forwards
+      0.2s;
   }
 `

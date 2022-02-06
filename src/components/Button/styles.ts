@@ -1,72 +1,58 @@
 import styled, { css } from 'styled-components'
-import { T } from 'theme'
+import T from 'theme'
 import { BtnProps } from '.'
 
 const SizesBtn = {
   small: css`
-    ${({ theme }) => css`
-      height: min-content;
-      font-size: ${theme.font.sizes.xSmall};
-      padding: ${theme.spacings.xSmall} ${theme.spacings.small};
-    `}
+    height: min-content;
+    font-size: ${T.font.sizes.xSmall};
+    padding: ${T.spacings.xSmall} ${T.spacings.small};
   `,
   medium: css`
-    ${({ theme }) => css`
-      height: min-content;
-      font-size: ${theme.font.sizes.small};
-      padding: ${theme.spacings.small} ${theme.spacings.xLarge};
-    `}
+    height: min-content;
+    font-size: ${T.font.sizes.small};
+    padding: ${T.spacings.small} ${T.spacings.xLarge};
   `,
   large: css`
-    ${({ theme }) => css`
-      height: min-content;
-      font-size: ${theme.font.sizes.small};
-      padding: ${theme.spacings.medium} ${theme.spacings.xxxLarge};
-    `}
+    height: min-content;
+    font-size: ${T.font.sizes.small};
+    padding: ${T.spacings.medium} ${T.spacings.xxxLarge};
   `,
   xLarge: css`
-    ${({ theme }) => css`
-      height: min-content;
-      font-size: ${theme.font.sizes.small};
-      padding: ${theme.spacings.medium} ${theme.spacings.xtreme};
-    `}
+    height: min-content;
+    font-size: ${T.font.sizes.small};
+    padding: ${T.spacings.medium} ${T.spacings.xtreme};
   `
 }
 
 const ColorsBtn = {
   gray: css`
-    ${({ theme }) => css`
-      background-color: ${theme.colors.gray};
+    background-color: ${T.colors.gray};
 
-      &:hover {
-        background-color: ${theme.colors.grayHover};
-      }
-    `}
+    &:hover {
+      background-color: ${T.colors.grayHover};
+    }
   `,
   blue: css`
-    ${({ theme }) => css`
-      background-color: ${theme.colors.primary};
+    background-color: ${T.colors.primary};
 
-      &:hover {
-        background-color: ${theme.colors.primaryHover};
-      }
-    `}
+    &:hover {
+      background-color: ${T.colors.primaryHover};
+    }
   `,
   red: css`
-    ${({ theme }) => css`
-      background-color: ${theme.colors.red};
+    background-color: ${T.colors.red};
 
-      &:hover {
-        background-color: ${theme.colors.redHover};
-      }
-    `}
+    &:hover {
+      background-color: ${T.colors.redHover};
+    }
   `
 }
 
 export const Container = styled.button<BtnProps>`
-  ${({ theme, fullWidth, color, size }) => css`
+  ${({ fullWidth, color, size }) => css`
     cursor: pointer;
-    border-radius: ${theme.border.radius};
+    border-radius: ${T.border.radius};
     font-weight: 400;
     display: inline-flex;
     align-items: center;
@@ -79,7 +65,7 @@ export const Container = styled.button<BtnProps>`
     ${!!color && ColorsBtn[color]};
     ${!!size && SizesBtn[size]}
 
-    ${T.breakPoint(480)} {
+    ${T.breakpoints.custom(480)} {
       width: ${fullWidth ? '100%' : 'fit-content'};
     }
 
@@ -87,7 +73,7 @@ export const Container = styled.button<BtnProps>`
     &:disabled:hover {
       opacity: 0.5;
       cursor: not-allowed;
-      background-color: ${theme.colors.disabled};
+      background-color: ${T.colors.disabled};
     }
 
     &:focus {
@@ -96,7 +82,7 @@ export const Container = styled.button<BtnProps>`
     }
 
     span {
-      color: ${theme.colors.white};
+      color: ${T.colors.white};
     }
 
     svg + span {
@@ -108,7 +94,7 @@ export const Container = styled.button<BtnProps>`
       min-width: 2rem;
       height: 2rem;
       min-height: 2rem;
-      color: ${theme.colors.white};
+      color: ${T.colors.white};
     }
   `}
 `

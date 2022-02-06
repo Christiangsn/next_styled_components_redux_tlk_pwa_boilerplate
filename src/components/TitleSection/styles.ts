@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import T from 'theme'
 
 export const TitleSection = styled.h1`
   display: flex;
@@ -7,15 +8,12 @@ export const TitleSection = styled.h1`
   justify-content: center;
   padding: 0 2rem;
 
-  ${({ theme }) => css`
-    opacity: 0;
-    animation: ${theme.animations.fadeInMove('0', '-40px', '0')} 0.6s ease
-      forwards;
-    font-size: ${theme.font.sizes.xLarge};
-    font-weight: ${theme.font.normal};
+  opacity: 0;
+  animation: ${T.animations.fadeInMove('0', '-40px', '0')} 0.6s ease forwards;
+  font-size: ${T.font.sizes.xLarge};
+  font-weight: ${T.font.normal};
 
-    ${theme.breakPoint(800)} {
-      font-size: ${theme.font.sizes.xxLarge};
-    }
-  `}
+  ${T.breakpoints.custom(800)} {
+    font-size: ${T.font.sizes.xxLarge};
+  }
 `
