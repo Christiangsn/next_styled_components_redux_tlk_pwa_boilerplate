@@ -1,7 +1,14 @@
 import { ReactNode } from 'react'
+import { Provider } from 'react-redux'
 import { render, RenderResult } from '@testing-library/react'
-import { ThemeProvider } from 'styled-components'
-import { T } from 'theme'
+import { PersistGate } from 'redux-persist/integration/react'
+import { persistor, store } from 'store/configStore'
 
 export const renderWithTheme = (children: ReactNode): RenderResult =>
-  render(<ThemeProvider theme={T}>{children}</ThemeProvider>)
+  render(
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        {children}
+      </PersistGate>
+    </Provider>
+  )
