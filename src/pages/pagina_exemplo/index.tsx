@@ -8,9 +8,9 @@ export default function PageExample() {
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Página Exemplo 4" />
+      <C.HeadPage title="Página Exemplo" />
 
-      <C.TitleSection title="Página Exemplo 4" />
+      <C.TitleSection title="Página Exemplo" />
 
       <br />
 
