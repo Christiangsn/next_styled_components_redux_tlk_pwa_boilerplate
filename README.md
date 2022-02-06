@@ -1,17 +1,17 @@
 <div align="center">
 
-<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/next_styled_components_pwa_boilerplate?style=plastic)</a>
-![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_pwa_boilerplate?style=plastic)
-![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_pwa_boilerplate?color=yellow&style=plastic)
+<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)</a>
+![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=yellow&style=plastic)
 </div>
 
-<h1 align="center">Boilerplate next, styled-components, redux toolkit e pwa</h1>
+<h1 align="center">Boilerplate Completo e atualizado com Next.js, Typescript Styled-Components, Testes, Redux Toolkit e PWA</h1>
 
 <br />
 
 # :memo: Sobre o Projeto
 
-Este projeto é um boilerplate com gerenciamento de estado global configurado e cobertura de 100% dos testes.
+Este projeto é um boilerplate completo, constantemente atualizado, configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível.
 
 <br />
 
@@ -47,9 +47,15 @@ Este projeto é um boilerplate com gerenciamento de estado global configurado e 
 
 - [x] Acessível para navegação sem mouse e para leitores de tela;
 
-- [x] Component de modal acessível;
+- [x] Hooks personalizados para:
+  - [x] animação na montagem e desmontagem de componentes;
+  - [x] renderização condicional de componentes por breakpoints;
 
-- [x] Component de botão;
+- [x] Tema criado com styled-componentes sem uso de provider;
+
+- [x] Gerenciamento de estado global configurado e abstraído para total desacoplamento do Redux com o projeto;
+
+- [x] 100% de cobertura nos testes;
   
 - [x] PWA instalável;
 
@@ -72,7 +78,7 @@ Este projeto é um boilerplate com gerenciamento de estado global configurado e 
 ## Clonar Repositório:
 
 ```bash
-git clone https://github.com/everton-dgn/next_styled_components_pwa_boilerplate.git
+git clone https://github.com/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate.git
 ```
 
 ## Instalar Dependências:
