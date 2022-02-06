@@ -1,7 +1,7 @@
-import { renderWithTheme } from 'utils/tests/helpers'
+import { renderWithTheme } from 'utils'
 import HeadPage from '.'
 
-describe('<HeadPage />', () => {
+describe('[Components] HeadPage', () => {
   it('should render a snapshot', () => {
     const { container } = renderWithTheme(<HeadPage title="Acessibilidade" />)
 

@@ -1,9 +1,9 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { renderWithTheme } from 'utils/tests/helpers'
+import { renderWithTheme } from 'utils'
 import Button from '.'
 
-describe('<Button />', () => {
+describe('[Components] Button', () => {
   it('should render a small blue button with text', () => {
     const { container } = renderWithTheme(
       <Button text="Mais Informações" color="blue" size="small" />
@@ -69,5 +69,23 @@ describe('<Button />', () => {
 
     expect(onClick).toHaveBeenCalled()
     expect(onClick).toHaveBeenCalledTimes(1)
+  })
+
+  it('should render a Button with full width', () => {
+    renderWithTheme(
+      <Button
+        disabled
+        text="Mais Informações"
+        color="blue"
+        size="large"
+        fullWidth={true}
+      />
+    )
+
+    const btn = screen.getByRole('button', { name: /Mais Informações/i })
+
+    expect(btn).toHaveStyle({
+      width: '100%'
+    })
   })
 })
