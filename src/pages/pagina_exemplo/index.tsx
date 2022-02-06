@@ -1,29 +1,10 @@
-import { useMemo } from 'react'
-import { useAnimationRender } from 'hooks'
-import * as S from 'pages/pagina_exemplo/styles'
+import { useRouter } from 'next/router'
+import { LayoutExample } from 'layouts'
+import * as S from './styles'
 import * as C from 'components'
 
-export default function Notifications() {
-  const { renderComponent, setRenderComponent, isVisible, changeVisibility } =
-    useAnimationRender({ timeMilSecToRemoveComponent: 200 })
-
-  const btnInfo = useMemo(
-    () => [
-      {
-        text: 'Confirmar',
-        size: 'xLarge',
-        color: 'blue',
-        ariaLabel: 'Confirmar'
-      },
-      {
-        text: 'Cancelar',
-        size: 'xLarge',
-        color: 'red',
-        ariaLabel: 'Cancelar'
-      }
-    ],
-    []
-  )
+export default function PageExample() {
+  const router = useRouter()
 
   return (
     <S.Container as="section">
@@ -31,29 +12,24 @@ export default function Notifications() {
 
       <C.TitleSection title="Página Exemplo 4" />
 
+      <br />
+
+      <C.TitleAnimation />
+
       <S.Column>
         <C.Button
           fullWidth={true}
           color="blue"
           size="large"
-          text="Abrir Modal de Exemplo"
+          text="Voltar"
           className="btn"
-          onClick={() => setRenderComponent(true)}
-          aria-label="Abir o modal"
+          aria-label="Voltar"
+          onClick={() => router.push('/')}
+          onMouseEnter={() => router.prefetch('/')}
         />
       </S.Column>
-
-      {renderComponent && (
-        <C.Modal
-          type="info"
-          title="Informações"
-          isVisible={isVisible}
-          changeVisibility={changeVisibility}
-          btnInfo={btnInfo as []}
-          msg="Isto é apenas um conteúdo informativo de exemplo para visualização
-            do componente Modal!"
-        />
-      )}
     </S.Container>
   )
 }
+
+PageExample.Layout = LayoutExample
