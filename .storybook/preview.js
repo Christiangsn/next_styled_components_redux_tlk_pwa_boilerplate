@@ -1,10 +1,10 @@
 import '../.jest/next-image.mock'
+import { Provider } from 'react-redux'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { themes } from '@storybook/theming'
-import { ThemeProvider } from 'styled-components'
+import { store } from 'store/configStore'
 import GlobalStyles from 'styles/GlobalStyles'
-import { T } from 'theme'
 
 const customViewports = {
   MotoG4: {
@@ -82,9 +82,9 @@ export const parameters = {
 
 export const decorators = [
   Story => (
-    <ThemeProvider theme={T}>
+    <Provider store={store}>
       <GlobalStyles />
       <Story />
-    </ThemeProvider>
+    </Provider>
   )
 ]
