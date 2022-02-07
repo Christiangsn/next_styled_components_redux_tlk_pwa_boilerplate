@@ -5,12 +5,7 @@ import RenderTextByBreakpoint from '.'
 
 let size: number = T.windowSizes.xs
 window.matchMedia = jest.fn().mockImplementation(query => ({
-  matches: query === `(min-width: ${size}px)`,
-  media: '',
-  onchange: null,
-  addListener: jest.fn(),
-  removeListener: jest.fn(),
-  dispatchEvent: jest.fn()
+  matches: query === `(min-width: ${size}px)`
 }))
 
 describe('[Component] RenderTextByBreakpoint', () => {
@@ -30,15 +25,15 @@ describe('[Component] RenderTextByBreakpoint', () => {
     size = T.windowSizes.sm
     renderWithTheme(<RenderTextByBreakpoint />)
 
-    const mobile = screen.queryByText('Breakpoint Tablet, "sm": 600px - 1023px')
-    expect(mobile).toBeInTheDocument()
+    const tablet = screen.queryByText('Breakpoint Tablet, "sm": 600px - 1023px')
+    expect(tablet).toBeInTheDocument()
   })
 
   it('should render the text específico para o breakpoint md', () => {
     size = T.windowSizes.md
     renderWithTheme(<RenderTextByBreakpoint />)
 
-    const mobile = screen.queryByText('Breakpoint Desktop, "md": 1024px - ∞px')
-    expect(mobile).toBeInTheDocument()
+    const desktop = screen.queryByText('Breakpoint Desktop, "md": 1024px - ∞px')
+    expect(desktop).toBeInTheDocument()
   })
 })
