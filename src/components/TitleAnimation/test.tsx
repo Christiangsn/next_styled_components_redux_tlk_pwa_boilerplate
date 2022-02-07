@@ -1,6 +1,6 @@
 import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { renderWithTheme } from 'utils/tests/helpers'
+import { renderWithTheme } from 'utils'
 import TitleAnimation from '.'
 
 describe('[Components] TitleAnimation', () => {
@@ -9,7 +9,9 @@ describe('[Components] TitleAnimation', () => {
   })
 
   afterEach(() => {
-    jest.runOnlyPendingTimers()
+    act(() => {
+      jest.runOnlyPendingTimers()
+    })
     jest.useRealTimers()
   })
 
