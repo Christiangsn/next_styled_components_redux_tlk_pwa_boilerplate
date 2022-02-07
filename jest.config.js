@@ -1,4 +1,5 @@
 module.exports = {
+  coverageProvider: 'v8',
   testEnvironment: 'jsdom',
   testPathIgnorePatterns: ['/node_modules', '/.next/'],
   collectCoverage: true,
