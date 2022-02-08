@@ -6,10 +6,10 @@ const RenderTextByBreakpoint = () => {
   const { windowSize } = useWindowSize()
 
   const renderTextByBreakpoint = useCallback(() => {
-    if (windowSize.md) return 'Breakpoint Desktop, "md": 1024px - ∞px'
-    if (windowSize.sm) return 'Breakpoint Tablet, "sm": 600px - 1023px'
-    if (windowSize.xs) return 'Breakpoint Mobile, "xs": 0px - 599px'
-  }, [windowSize.md, windowSize.sm, windowSize.xs])
+    if (windowSize.lg) return 'Breakpoint Desktop, "lg": 1024px - ∞px'
+    if (windowSize.md) return 'Breakpoint Tablet, "md": 600px - 1023px'
+    if (windowSize.sm) return 'Breakpoint Mobile, "sm": 0px - 599px'
+  }, [windowSize.lg, windowSize.md, windowSize.sm])
 
   return (
     <S.Wrapper>

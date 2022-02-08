@@ -2,18 +2,18 @@ import { useEffect, useState } from 'react'
 import T from 'theme'
 
 type useWindowSizeType = {
-  xs: boolean
   sm: boolean
   md: boolean
+  lg: boolean
 }
 
 export const getWindowSize = () => {
   const minWidth = (size: number) =>
     window.matchMedia(`(min-width: ${size}px)`).matches
   return {
-    xs: minWidth(T.windowSizes.xs),
     sm: minWidth(T.windowSizes.sm),
-    md: minWidth(T.windowSizes.md)
+    md: minWidth(T.windowSizes.md),
+    lg: minWidth(T.windowSizes.lg)
   }
 }
 
