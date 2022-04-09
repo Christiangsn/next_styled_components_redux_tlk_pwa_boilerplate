@@ -1,9 +1,9 @@
 import { useCallback } from 'react'
-import { useWindowSize } from 'hooks'
+import { useRenderingByWindowSize } from 'hooks'
 import * as S from './styles'
 
 const RenderTextByBreakpoint = () => {
-  const { windowSize } = useWindowSize()
+  const { windowSize } = useRenderingByWindowSize()
 
   const renderTextByBreakpoint = useCallback(() => {
     if (windowSize.lg) return 'Breakpoint Desktop, "lg": 1024px - ∞px'

@@ -17,7 +17,7 @@ export const getWindowSize = () => {
   }
 }
 
-export const useWindowSize = () => {
+export const useRenderingByWindowSize = () => {
   const [windowSize, setWindowSize] = useState<useWindowSizeType>(
     getWindowSize()
   )

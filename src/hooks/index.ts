@@ -1,2 +1,2 @@
 export { useAnimationRender } from './useAnimationRender'
-export { useWindowSize } from './useWindowSize'
+export { useRenderingByWindowSize } from './useRenderingByWindowSize'
