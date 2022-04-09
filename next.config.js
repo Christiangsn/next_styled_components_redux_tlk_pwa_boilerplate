@@ -21,5 +21,5 @@ module.exports = withPWA({
     dirs: ['components', 'layouts', 'pages', 'styles', 'theme']
   },
   reactStrictMode: true,
-  pageExtensions: ['tsx']
+  pageExtensions: ['page.tsx']
 })
