@@ -1,5 +1,5 @@
 import { Story } from '@storybook/react'
-import TitleAnimation from '.'
+import TitleAnimation from '..'
 
 const Template: Story = args => <TitleAnimation {...args} />
 

@@ -1,5 +1,5 @@
 import { Story } from '@storybook/react'
-import RenderTextByBreakpoint from '.'
+import RenderTextByBreakpoint from '..'
 
 const Template: Story = args => <RenderTextByBreakpoint {...args} />
 

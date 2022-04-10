@@ -1,6 +1,6 @@
 module.exports = {
   staticDirs: ['../public'],
-  stories: ['../src/components/**/stories.@(js|md|ts)x'],
+  stories: ['../src/components/**/storybook/stories.@(js|md|ts)x'],
   addons: [
     '@storybook/addon-essentials',
     'storybook-dark-mode/register',

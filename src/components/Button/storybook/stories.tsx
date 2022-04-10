@@ -1,5 +1,6 @@
 import { Story } from '@storybook/react'
-import Button, { BtnProps } from '.'
+import Button from '..'
+import { BtnProps } from '../types'
 
 export const Template: Story<BtnProps> = args => <Button {...args} />
 

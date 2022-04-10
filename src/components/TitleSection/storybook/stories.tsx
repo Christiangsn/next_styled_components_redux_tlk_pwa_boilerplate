@@ -1,5 +1,6 @@
 import { Story } from '@storybook/react'
-import TitleSection, { TitleProps } from '.'
+import TitleSection from '..'
+import { TitleProps } from '../types'
 
 const Template: Story<TitleProps> = args => <TitleSection {...args} />
 
