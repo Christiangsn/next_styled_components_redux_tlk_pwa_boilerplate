@@ -1,8 +1,8 @@
 import { animations } from './animations'
 import { breakpoints } from './breakpoints'
 import { colors } from './colors'
-import { font } from './font'
 import { spacings } from './spacings'
+import { fonts } from './typographies'
 import { windowSizes } from './windowSizes'
 
 const grid = {
@@ -21,7 +21,7 @@ const layers = {
 
 const T = {
   colors,
-  font,
+  fonts,
   spacings,
   animations,
   breakpoints,
