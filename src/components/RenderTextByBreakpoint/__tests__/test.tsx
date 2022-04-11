@@ -1,7 +1,7 @@
 import { screen } from '@testing-library/react'
 import T from 'theme'
 import { renderWithTheme } from 'utils'
-import RenderTextByBreakpoint from '.'
+import RenderTextByBreakpoint from '..'
 
 let size: number = T.windowSizes.sm
 window.matchMedia = jest.fn().mockImplementation(query => ({

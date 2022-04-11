@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks'
-import { useRenderingByWindowSize } from 'hooks'
+import { useRenderingByWindowSize } from '..'
 import T from 'theme'
 
 let size: number = T.windowSizes.sm

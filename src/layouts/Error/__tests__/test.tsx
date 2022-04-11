@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
+import { Error } from 'layouts/Error'
 import { renderWithTheme } from 'utils'
-import { Error } from '.'
 
 describe('[Layouts] Error', () => {
   it('should render a children', () => {

@@ -4,7 +4,7 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = withPWA({
   swcMinify: true,
-  experimental: {
+  compiler: {
     styledComponents: true
   },
   pwa: {
@@ -15,10 +15,21 @@ module.exports = withPWA({
   images: {
     domains: ['localhost'],
     path: '/_next/image',
-    loader: 'default'
+    loader: 'default',
+    formats: ['image/avif', 'image/webp']
   },
   eslint: {
-    dirs: ['components', 'layouts', 'pages', 'styles', 'theme']
+    dirs: [
+      'components',
+      'hooks',
+      'layouts',
+      'pages',
+      'store',
+      'styles',
+      'theme',
+      'types',
+      'utils'
+    ]
   },
   reactStrictMode: true,
   pageExtensions: ['page.tsx']

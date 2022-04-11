@@ -1,7 +1,7 @@
 import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithTheme } from 'utils'
-import TitleAnimation from '.'
+import TitleAnimation from '..'
 
 describe('[Components] TitleAnimation', () => {
   beforeEach(() => {

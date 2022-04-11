@@ -11,6 +11,8 @@ export default function Home() {
   const dispatch = useDispatch()
   const { changeSideBar } = useTypedSelector(state => state)
 
+  const handleChangeSidebar = () => dispatch(setChangeSideBar())
+
   return (
     <S.Container>
       <C.HeadPage title="Página Inicial" />
@@ -36,7 +38,7 @@ export default function Home() {
           text="Altera Sidebar"
           aria-label="Altera Sidebar"
           className="btn"
-          onClick={() => dispatch(setChangeSideBar())}
+          onClick={handleChangeSidebar}
         />
       </S.BtnGroup>
 

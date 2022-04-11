@@ -1,15 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils'
 import PageExample from '../index.page'
-
-const mockedPush = jest.fn()
-const mockedPrefetch = jest.fn()
-jest.mock('next/router', () => ({
-  useRouter: () => ({
-    push: mockedPush,
-    prefetch: mockedPrefetch
-  })
-}))
+import { mockedPush, mockedPrefetch } from '__mocks__/nextRouter'
 
 describe('[Page] PageExample', () => {
   it('should an Home page', () => {

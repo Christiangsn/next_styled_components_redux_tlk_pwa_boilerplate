@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks'
-import { useAnimationRender } from '.'
+import { useAnimationRender } from '..'
 
 describe('[Hooks] useAnimationRender', () => {
   beforeEach(() => {

@@ -1,5 +1,5 @@
 import { renderWithTheme } from 'utils'
-import HeadPage from '.'
+import HeadPage from '..'
 
 describe('[Components] HeadPage', () => {
   it('should render a snapshot', () => {

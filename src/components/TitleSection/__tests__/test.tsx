@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
 import { renderWithTheme } from 'utils'
-import TitleSection from '.'
+import TitleSection from '..'
 
 describe('[Components] TitleSection', () => {
   it('should render the heading', () => {

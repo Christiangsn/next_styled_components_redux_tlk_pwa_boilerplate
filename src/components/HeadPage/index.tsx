@@ -1,8 +1,5 @@
 import Head from 'next/head'
-
-type TitleProps = {
-  title: string
-}
+import { TitleProps } from './types'
 
 const HeadPage = ({ title }: TitleProps) => (
   <Head>

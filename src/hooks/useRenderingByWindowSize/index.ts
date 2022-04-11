@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react'
 import T from 'theme'
-
-type useWindowSizeType = {
-  sm: boolean
-  md: boolean
-  lg: boolean
-}
+import { useWindowSizeType } from './types'
 
 export const getWindowSize = () => {
   const minWidth = (size: number) =>

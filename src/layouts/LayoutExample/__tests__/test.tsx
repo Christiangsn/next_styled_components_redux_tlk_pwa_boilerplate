@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
+import { LayoutExample } from 'layouts/LayoutExample'
 import { renderWithTheme } from 'utils'
-import { LayoutExample } from '.'
 
 describe('[Layouts] LayoutExample', () => {
   it('should render a children', () => {

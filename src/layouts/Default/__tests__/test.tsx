@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react'
+import { Default } from 'layouts/Default'
 import { renderWithTheme } from 'utils'
-import { Default } from '.'
 
 describe('[Layouts] Default', () => {
   it('should render a children', () => {

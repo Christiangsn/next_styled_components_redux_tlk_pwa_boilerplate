@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 import T from 'theme'
-import { BtnProps } from '.'
+import { BtnProps } from './types'
 
 const SizesBtn = {
   small: css`
