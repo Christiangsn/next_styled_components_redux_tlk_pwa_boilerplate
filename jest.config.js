@@ -13,7 +13,7 @@ const customJestConfig = {
     'src/pages/_app.page.tsx',
     'src/pages/index.page.tsx',
     'src/pages/_document.page.tsx',
-    'src/components/index.ts',
+    'src/components/index.tsx',
     'src/components/Svg',
     'src/hooks/index.ts',
     'src/layouts/index.ts',

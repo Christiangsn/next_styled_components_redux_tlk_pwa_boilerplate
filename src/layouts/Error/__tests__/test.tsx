@@ -1,10 +1,10 @@
 import { screen } from '@testing-library/react'
 import { Error } from 'layouts/Error'
-import { renderWithTheme } from 'utils'
+import { renderWithProviders } from 'utils'
 
 describe('[Layouts] Error', () => {
   it('should render a children', () => {
-    renderWithTheme(
+    renderWithProviders(
       <Error>
         <h1 data-testid="select_layout">Test Layout</h1>
       </Error>

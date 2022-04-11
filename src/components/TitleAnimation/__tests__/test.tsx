@@ -1,6 +1,6 @@
 import { act, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { renderWithTheme } from 'utils'
+import { renderWithProviders } from 'utils'
 import TitleAnimation from '..'
 
 describe('[Components] TitleAnimation', () => {
@@ -16,14 +16,14 @@ describe('[Components] TitleAnimation', () => {
   })
 
   it('should render a button', () => {
-    renderWithTheme(<TitleAnimation />)
+    renderWithProviders(<TitleAnimation />)
 
     const button = screen.getByRole('button')
     expect(button).toBeInTheDocument()
   })
 
   it('should render a heading by clicking the button', () => {
-    renderWithTheme(<TitleAnimation />)
+    renderWithProviders(<TitleAnimation />)
 
     const button = screen.getByRole('button')
 

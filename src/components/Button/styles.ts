@@ -5,22 +5,22 @@ import { BtnProps } from './types'
 const SizesBtn = {
   small: css`
     height: min-content;
-    font-size: ${T.font.sizes.xSmall};
+    font-size: ${T.fonts.sizes.xSmall};
     padding: ${T.spacings.xSmall} ${T.spacings.small};
   `,
   medium: css`
     height: min-content;
-    font-size: ${T.font.sizes.small};
+    font-size: ${T.fonts.sizes.small};
     padding: ${T.spacings.small} ${T.spacings.xLarge};
   `,
   large: css`
     height: min-content;
-    font-size: ${T.font.sizes.small};
+    font-size: ${T.fonts.sizes.small};
     padding: ${T.spacings.medium} ${T.spacings.xxxLarge};
   `,
   xLarge: css`
     height: min-content;
-    font-size: ${T.font.sizes.small};
+    font-size: ${T.fonts.sizes.small};
     padding: ${T.spacings.medium} ${T.spacings.xtreme};
   `
 }

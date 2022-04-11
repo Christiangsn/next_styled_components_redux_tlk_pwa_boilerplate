@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils'
+import { renderWithProviders } from 'utils'
 import ErrorBoundary from '..'
 
 const ChildWithError = () => {
@@ -14,7 +14,7 @@ describe('[Components] ErrorBoundary', () => {
   afterAll(() => spy.mockRestore())
 
   test('should render an error message', () => {
-    renderWithTheme(
+    renderWithProviders(
       <ErrorBoundary>
         <ChildWithError />
       </ErrorBoundary>

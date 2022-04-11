@@ -1,15 +1,15 @@
 import { screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils'
+import { renderWithProviders } from 'utils'
 import CustomError from '../index.page'
 
 describe('[Page] CustomError', () => {
   it('should an error page', () => {
-    const { container } = renderWithTheme(<CustomError />)
+    const { container } = renderWithProviders(<CustomError />)
     expect(container).toBeInTheDocument()
   })
 
   it('should the following section title: Ops, página não encontrada!', () => {
-    renderWithTheme(<CustomError />)
+    renderWithProviders(<CustomError />)
 
     const titleSection = screen.getByRole('heading', {
       name: 'Ops, página não encontrada!'

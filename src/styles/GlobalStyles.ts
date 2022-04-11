@@ -11,7 +11,7 @@ export default createGlobalStyle`
     -moz-osx-font-smoothing: grayscale !important;
     list-style: none !important;
     outline: none;
-    font-family: ${T.font.family};
+    font-family: ${T.fonts.family};
   }
 
   html {
@@ -26,7 +26,7 @@ export default createGlobalStyle`
   }
 
   body, #root, input, select, textarea, button {
-      font: ${T.font.normal} ${T.font.sizes.medium} 'Inter', sans-serif;
+      font: ${T.fonts.normal} ${T.fonts.sizes.medium} 'Inter', sans-serif;
   }
 
   button {

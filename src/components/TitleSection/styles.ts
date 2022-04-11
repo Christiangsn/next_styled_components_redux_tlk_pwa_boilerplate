@@ -10,10 +10,10 @@ export const TitleSection = styled.h1`
 
   opacity: 0;
   animation: ${T.animations.fadeInMove('0', '-40px', '0')} 0.6s ease forwards;
-  font-size: ${T.font.sizes.xLarge};
-  font-weight: ${T.font.normal};
+  font-size: ${T.fonts.sizes.xLarge};
+  font-weight: ${T.fonts.normal};
 
   ${T.breakpoints.custom(800)} {
-    font-size: ${T.font.sizes.xxLarge};
+    font-size: ${T.fonts.sizes.xxLarge};
   }
 `
