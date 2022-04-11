@@ -1,1 +1,1 @@
-export * from './tests/helpers'
+export * from './tests/provider'

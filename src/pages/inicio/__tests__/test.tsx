@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react'
-import { renderWithTheme } from 'utils'
+import { renderWithProviders } from 'utils'
 import Home from '../index.page'
-import { mockedPush, mockedPrefetch } from '__mocks__/nextRouter'
+import { mockedPush, mockedPrefetch } from '__mocks__'
 
 describe('[Page] Home', () => {
   beforeEach(() => {
@@ -11,12 +11,12 @@ describe('[Page] Home', () => {
   })
 
   it('should an Home page', () => {
-    const { container } = renderWithTheme(<Home />)
+    const { container } = renderWithProviders(<Home />)
     expect(container).toBeInTheDocument()
   })
 
   it('should go to another page by clicking the button 1 and it should preload the next page with the onMouseEnter event', () => {
-    renderWithTheme(<Home />)
+    renderWithProviders(<Home />)
 
     const btn = screen.getByRole('button', { name: 'Página Exemplo' })
 
@@ -30,7 +30,7 @@ describe('[Page] Home', () => {
   })
 
   it('should go to another page by clicking the button 2 and it should preload the next page with the onMouseEnter event', () => {
-    renderWithTheme(<Home />)
+    renderWithProviders(<Home />)
 
     const btn = screen.getByRole('button', { name: 'Página Exemplo 2' })
 
@@ -44,7 +44,7 @@ describe('[Page] Home', () => {
   })
 
   it('should change the text displayed when clicking the button', () => {
-    renderWithTheme(<Home />)
+    renderWithProviders(<Home />)
 
     const btn = screen.getByRole('button', { name: 'Altera Sidebar' })
     const titleSectionBefore = screen.getByRole('heading', {

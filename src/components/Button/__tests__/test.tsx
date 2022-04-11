@@ -1,11 +1,11 @@
 import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { renderWithTheme } from 'utils'
+import { renderWithProviders } from 'utils'
 import Button from '..'
 
 describe('[Components] Button', () => {
   it('should render a small blue button with text', () => {
-    const { container } = renderWithTheme(
+    const { container } = renderWithProviders(
       <Button text="Mais Informações" color="blue" size="small" />
     )
 
@@ -22,7 +22,7 @@ describe('[Components] Button', () => {
   })
 
   it('should render a medium blue button with text', () => {
-    renderWithTheme(
+    renderWithProviders(
       <Button size="medium" text="Mais Informações" color="blue" />
     )
 
@@ -37,7 +37,7 @@ describe('[Components] Button', () => {
   })
 
   it('should render a disabled Button', () => {
-    renderWithTheme(
+    renderWithProviders(
       <Button disabled text="Mais Informações" color="blue" size="large" />
     )
 
@@ -54,7 +54,7 @@ describe('[Components] Button', () => {
   it('should call a function once on click on the button', () => {
     const onClick = jest.fn()
 
-    renderWithTheme(
+    renderWithProviders(
       <Button
         onClick={onClick}
         text="Mais Informações"
@@ -72,7 +72,7 @@ describe('[Components] Button', () => {
   })
 
   it('should render a Button with full width', () => {
-    renderWithTheme(
+    renderWithProviders(
       <Button
         disabled
         text="Mais Informações"

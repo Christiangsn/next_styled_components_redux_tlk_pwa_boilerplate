@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { persistor, store } from 'store/configStore'
 import * as C from 'components'
 
-export const renderWithTheme = (children: ReactNode): RenderResult =>
+export const renderWithProviders = (children: ReactNode): RenderResult =>
   render(
     <C.ErrorBoundary>
       <Provider store={store}>
