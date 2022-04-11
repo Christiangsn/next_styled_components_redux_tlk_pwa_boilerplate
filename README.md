@@ -9,7 +9,7 @@
 
 <br />
 
-# :memo: Sobre o Projeto
+# Sobre o Projeto
 
 Este projeto é um boilerplate completo, constantemente atualizado, configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível.
 
@@ -17,7 +17,30 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# :globe_with_meridians: Tecnologias Usadas
+# Conteúdos
+
+* [Tecnologias](#tecnologias)
+* [Features](#features)
+* [Estrutura de Diretórios e Arquivos](#estrutura-de-diretórios-e-arquivos)
+* [Pré-Requisitos](#pré-requisitos)
+* [Como instalar e executar o projeto](#como-instalar-e-executar-o-projeto)
+  * [Clonar Repositório](#clonar-repositório)
+  * [Instalar Dependências](#instalar-dependências)
+  * [Inciar Ambiente de Desenvolvimento](#inciar-ambiente-de-desenvolvimento)
+  * [Gerar Build de Produção](#gerar-build-de-produção)
+  * [Inciar Ambiente de Produção](#inciar-ambiente-de-produção)
+  * [Executar Testes](#executar-testes)
+  * [Executar Testes em Modo Watch](#executar-testes-em-modo-watch)
+  * [Inciar Storybook em Modo de Desenvolvimento](#inciar-storybook-em-modo-de-desenvolvimento)
+  * [Gerar Build de Produção do Storybook](#gerar-build-de-produção-do-storybook)
+  * [Executar lints](#executar-lints)
+* [Autor](#autor)
+
+<br />
+
+---
+
+# Tecnologias
 
 ⚛ Next.js
 
@@ -25,9 +48,9 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 💅 Styled-Components
 
-🗂 Redux Toolkit
+🗂 Redux Toolkit e Redux-Persist
 
-🚩 Lints — ESlint/Prettier/EditorConfig/Commitlint
+🚩 Lints: ESlint, Prettier, EditorConfig, Commitlint e Typecheck
 
 ✅ Jest 
 
@@ -41,7 +64,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# :sparkles: Features
+# Features
 
 - [x] Projeto responsivo;
 
@@ -55,6 +78,8 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 - [x] Gerenciamento de estado global configurado e abstraído para total desacoplamento do Redux com o projeto;
 
+- [x] Persistência de dados;
+
 - [x] 100% de cobertura nos testes;
   
 - [x] PWA instalável;
@@ -63,9 +88,149 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# :triangular_flag_on_post: Pré-Requisitos
+# Estrutura de Diretórios e Arquivos
 
-- node
+<br>
+
+<details>
+  <summary>Clique para mostrar estrutura completa</summary>
+
+```
+  project
+  .
+  ├── .husky
+  ├── .jest
+  |   ├── matchMediaMock.ts
+  |   ├── nextDynamicMocks.ts
+  |   ├── nextImageMocks.tsx
+  |   └── setup.ts
+  ├── .storybook
+  |   ├── main.js
+  |   ├── preview.js
+  |   └── preview-head.html
+  ├── componentGenerator
+  |   ├── templates
+  |   |   ├── component.tsx.hbs
+  |   |   ├── stories.mdx.hbs
+  |   |   ├── stories.tsx.hbs
+  |   |   ├── styles.ts.hbs
+  |   |   ├── test.tsx.hbs
+  |   |   └── types.ts.hbs
+  |   └── plopfile.js
+  ├── public
+  |   ├── iconsPwa     
+  |   ├── imgs   
+  |   ├── favicon.png   
+  |   └── manifest.json
+  ├── src
+  |   ├── __mocks__
+  |   |   ├── index.tsx
+  |   |   └── nextRouter.ts
+  |   ├── components
+  |   |   ├── Button
+  |   |   |   ├── __tests__  
+  |   |   |   |   ├── __mocks__
+  |   |   |   |   |   └── exemploMock.ts
+  |   |   |   |   └── test.tsx          
+  |   |   |   ├── storybook
+  |   |   |   |   ├── stories.mdx
+  |   |   |   |   └── stories.tsx
+  |   |   |   ├── index.tsx
+  |   |   |   ├── styles.ts
+  |   |   |   └── types.ts
+  |   |   ├── ErrorBoundary
+  |   |   ├── HeadPage
+  |   |   ├── RenderTextByBreakpoint
+  |   |   ├── Svg
+  |   |   |   ├── Logo  
+  |   |   |   |   └── index.tsx
+  |   |   |   ├── index.ts   
+  |   |   |   └── types.ts   
+  |   |   ├── TitleAnimation
+  |   |   ├── TitleSection
+  |   |   └── index.tsx
+  |   ├── hooks
+  |   |   ├── useAnimationRender
+  |   |   |   ├── __tests__  
+  |   |   |   |   ├── __mocks__
+  |   |   |   |   |   └── exemploMock.ts
+  |   |   |   |   └── test.tsx          
+  |   |   |   └── index.ts
+  |   |   ├── useRenderingByWindowSize
+  |   |   └── index.ts
+  |   ├── layouts
+  |   |   ├── Default
+  |   |   |   ├── __tests__  
+  |   |   |   |   ├── __mocks__
+  |   |   |   |   |   └── exemploMock.ts
+  |   |   |   |   └── test.tsx          
+  |   |   |   ├── index.tsx
+  |   |   |   └── styles.ts
+  |   |   ├── Error
+  |   |   ├── LayoutExample
+  |   |   └── index.ts
+  |   ├── pages
+  |   |   ├── _error
+  |   |   └── inicio
+  |   |   |   └── __tests__  
+  |   |   |   |   └── __mocks__
+  |   |   |   |   |   └── exemploMock.ts
+  |   |   |   |   └── test.tsx          
+  |   |   |   ├── index.page.tsx
+  |   |   |   └── styles.ts
+  |   |   ├── pagina_exemplo
+  |   |   ├── pagina_exemplo2
+  |   |   ├── _app.page.tsx
+  |   |   ├── _document.page.tsx
+  |   |   └── index.page.tsx
+  |   ├── store
+  |   |   └── slices
+  |   |   |   └── changeSideBar.ts
+  |   |   ├── configStore.ts
+  |   |   └── StateTypes.ts
+  |   └── styles
+  |   |   └── GlobalStyles.ts
+  |   ├── theme
+  |   |   ├── animations.ts
+  |   |   ├── breakpoints.ts
+  |   |   ├── colors.ts
+  |   |   ├── index.ts
+  |   |   ├── spacings.ts
+  |   |   ├── typographies.ts
+  |   |   └── windowSizes.ts
+  |   ├── types
+  |   |   ├── page.d.ts
+  |   |   └── styled-components.d.ts
+  |   └── utils
+  |       ├── tests
+  |       |   └── provider.tsx
+  |       └── index.ts
+  ├── .commitlintrc
+  ├── .editorconfig
+  ├── .eslintignore
+  ├── .eslintrc
+  ├── .gitattributes
+  ├── .gitignore
+  ├── .prettierignore
+  ├── .pretierrc
+  ├── jest.config.js
+  ├── LICENSE
+  ├── next.config.js
+  ├── next-env.d.ts
+  ├── package.json
+  ├── README.md
+  └── tsconfig.json
+```
+
+</details>
+
+<br>
+
+---
+
+# Pré-Requisitos
+
+- node (última versão lts)
 
 - yarn
 
@@ -73,21 +238,21 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# :question: Como instalar e executar o projeto
+# Como instalar e executar o projeto
 
-## Clonar Repositório:
+## Clonar Repositório
 
 ```bash
 git clone https://github.com/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate.git
 ```
 
-## Instalar Dependências:
+## Instalar Dependências
 
 ```bash
 yarn
 ```
 
-## Inciar Ambiente de Desenvolvimento:
+## Inciar Ambiente de Desenvolvimento
 
 ```bash
 yarn dev
@@ -95,13 +260,13 @@ yarn dev
 
 Disponível em http://localhost:3000
 
-## Gerar Build de Produção:
+## Gerar Build de Produção
 
 ```bash
 yarn build
 ```
 
-## Inciar Ambiente de Produção:
+## Inciar Ambiente de Produção
 
 ```bash
 yarn start
@@ -109,19 +274,19 @@ yarn start
 
 Disponível em http://localhost:3000
 
-## Executar Testes:
+## Executar Testes
 
 ```bash
 yarn test
 ```
 
-## Executar Testes em Modo Watch:
+## Executar Testes em Modo Watch
 
 ```bash
 yarn test:w
 ```
 
-## Inciar Storybook em Modo de Desenvolvimento:
+## Inciar Storybook em Modo de Desenvolvimento
 
 ```bash
 yarn sb
@@ -129,13 +294,13 @@ yarn sb
 
 Disponível em http://localhost:6006
 
-## Gerar Build de Produção do Storybook:
+## Gerar Build de Produção do Storybook
 
 ```bash
 yarn build-sb
 ```
 
-## Executar lints:
+## Executar lints
 
 ```bash
 yarn lint
@@ -145,12 +310,16 @@ yarn lint
 yarn next:lint
 ```
 
+```bash
+yarn typecheck
+```
+
 <br />
 
 ---
 
-# :closed_book: Autor
+# Autor
 
-Feito por [Éverton Toffanetto](https://querocriarsite.com).
+Feito por [Éverton Toffanetto](https://programadordesucesso.com).
 
 ### :link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto/
