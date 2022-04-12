@@ -131,7 +131,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   |   |   |   ├── __tests__  
   |   |   |   |   ├── __mocks__
   |   |   |   |   |   └── exemploMock.ts
-  |   |   |   |   └── test.tsx          
+  |   |   |   |   └── Button.test.tsx          
   |   |   |   ├── storybook
   |   |   |   |   ├── stories.mdx
   |   |   |   |   └── stories.tsx
@@ -154,7 +154,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   |   |   |   ├── __tests__  
   |   |   |   |   ├── __mocks__
   |   |   |   |   |   └── exemploMock.ts
-  |   |   |   |   └── test.tsx          
+  |   |   |   |   └── useAnimationRender.test.tsx          
   |   |   |   └── index.ts
   |   |   ├── useRenderingByWindowSize
   |   |   └── index.ts
@@ -163,7 +163,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   |   |   |   ├── __tests__  
   |   |   |   |   ├── __mocks__
   |   |   |   |   |   └── exemploMock.ts
-  |   |   |   |   └── test.tsx          
+  |   |   |   |   └── Default.test.tsx          
   |   |   |   ├── index.tsx
   |   |   |   └── styles.ts
   |   |   ├── Error
@@ -175,7 +175,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   |   |   |   └── __tests__  
   |   |   |   |   └── __mocks__
   |   |   |   |   |   └── exemploMock.ts
-  |   |   |   |   └── test.tsx          
+  |   |   |   |   └── inicio.test.tsx          
   |   |   |   ├── index.page.tsx
   |   |   |   └── styles.ts
   |   |   ├── pagina_exemplo
