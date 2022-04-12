@@ -3,5 +3,4 @@
 
 npx --no-install
 
-yarn lint
-yarn typecheck
+yarn test
