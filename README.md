@@ -185,9 +185,12 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   |   |   └── index.page.tsx
   |   ├── store
   |   |   └── slices
-  |   |   |   └── changeSideBar.ts
+  |   |   |   ├── exampleSlice
+  |   |   |   |   ├── index.ts
+  |   |   |   |   └── types.ts
+  |   |   |   └── index.ts
   |   |   ├── configStore.ts
-  |   |   └── StateTypes.ts
+  |   |   └── types.ts
   |   └── styles
   |   |   └── GlobalStyles.ts
   |   ├── theme
@@ -232,7 +235,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 - node (última versão lts)
 
-- yarn
+- yarn ou npm
 
 <br />
 
