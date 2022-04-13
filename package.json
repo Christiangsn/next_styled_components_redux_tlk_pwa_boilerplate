@@ -23,7 +23,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && yarn typecheck",
-      "pre-push": "yarn test --findRelatedTests -b && yarn build"
+      "pre-push": "yarn test --findRelatedTests -b && yarn build && yarn build-sb"
     }
   },
   "dependencies": {
