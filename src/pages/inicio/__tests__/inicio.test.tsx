@@ -15,6 +15,25 @@ describe('[Page] Home', () => {
     expect(container).toBeInTheDocument()
   })
 
+  it('should change the text displayed when clicking the button', () => {
+    renderWithProviders(<Home />)
+
+    const btn = screen.getByRole('button', { name: 'Altera Estado Global' })
+    const titleSectionBefore = screen.getByRole('heading', {
+      name: 'desativado'
+    })
+
+    expect(titleSectionBefore).toBeInTheDocument()
+
+    fireEvent.click(btn)
+
+    const titleSectionAfter = screen.getByRole('heading', {
+      name: 'ativado'
+    })
+
+    expect(titleSectionAfter).toBeInTheDocument()
+  })
+
   it('should go to another page by clicking the button 1 and it should preload the next page with the onMouseEnter event', () => {
     renderWithProviders(<Home />)
 
@@ -41,24 +60,5 @@ describe('[Page] Home', () => {
     expect(mockedPrefetch).toBeCalledTimes(1)
     expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo2')
     expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo2')
-  })
-
-  it('should change the text displayed when clicking the button', () => {
-    renderWithProviders(<Home />)
-
-    const btn = screen.getByRole('button', { name: 'Altera Sidebar' })
-    const titleSectionBefore = screen.getByRole('heading', {
-      name: 'Sidebar desativada'
-    })
-
-    expect(titleSectionBefore).toBeInTheDocument()
-
-    fireEvent.click(btn)
-
-    const titleSectionAfter = screen.getByRole('heading', {
-      name: 'Sidebar ativada'
-    })
-
-    expect(titleSectionAfter).toBeInTheDocument()
   })
 })

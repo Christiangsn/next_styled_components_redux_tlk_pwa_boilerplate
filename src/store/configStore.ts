@@ -11,18 +11,18 @@ import {
   REHYDRATE
 } from 'redux-persist'
 import asyncSessionStorage from 'redux-persist/lib/storage'
-import changeSideBar from 'store/slices/changeSideBar'
-import { RootState } from 'store/StateTypes'
+import { changeExample } from './slices'
+import { RootState } from './types'
 
 export const isDevelopment = process.env.NODE_ENV === 'development'
 export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector
 
-const reducer = combineReducers({ changeSideBar })
+const reducer = combineReducers({ changeExample })
 
 const persistConfig = {
   key: 'root',
   storage: asyncSessionStorage,
-  whitelist: ['changeSideBar']
+  whitelist: ['changeExample']
 }
 
 const persistedReducer = persistReducer(persistConfig, reducer)
