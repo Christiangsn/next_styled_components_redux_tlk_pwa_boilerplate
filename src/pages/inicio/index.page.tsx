@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { useRouter } from 'next/router'
 import { useTypedSelector } from 'store/configStore'
-import { setChangeSideBar } from 'store/slices/changeSideBar'
+import { setChangeExample } from 'store/slices/exampleSlice'
 import * as S from './styles'
 import * as C from 'components'
 import { Logo } from 'components/Svg'
@@ -9,9 +9,9 @@ import { Logo } from 'components/Svg'
 export default function Home() {
   const router = useRouter()
   const dispatch = useDispatch()
-  const { changeSideBar } = useTypedSelector(state => state)
+  const { changeExample } = useTypedSelector(state => state)
 
-  const handleChangeSidebar = () => dispatch(setChangeSideBar())
+  const handleChangeExample = () => dispatch(setChangeExample())
 
   return (
     <S.Container>
@@ -25,20 +25,17 @@ export default function Home() {
 
       <br />
 
-      <h1>
-        Sidebar
-        <span>{changeSideBar.toggleBtnNav ? ' ativada' : ' desativada'}</span>
-      </h1>
+      <h1>{changeExample.toggle ? 'ativado' : 'desativado'}</h1>
 
       <S.BtnGroup>
         <C.Button
           fullWidth={true}
           color="red"
           size="large"
-          text="Altera Sidebar"
-          aria-label="Altera Sidebar"
+          text="Altera Estado Global"
+          aria-label="Altera Estado Global"
           className="btn"
-          onClick={handleChangeSidebar}
+          onClick={handleChangeExample}
         />
       </S.BtnGroup>
 
