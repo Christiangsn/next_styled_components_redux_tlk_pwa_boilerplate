@@ -1,6 +1,6 @@
 import { useAnimationRender } from 'hooks'
 import * as S from './styles'
-import * as C from 'components/index'
+import * as C from 'components'
 
 const TitleAnimation = () => {
   const { isRenderComponent, isVisible, changeStateComponent } =
