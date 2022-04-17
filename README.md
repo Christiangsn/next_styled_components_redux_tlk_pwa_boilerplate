@@ -127,54 +127,47 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   |   |   ├── index.tsx
   |   |   └── nextRouter.ts
   |   ├── components
-  |   |   ├── Button
-  |   |   |   ├── __tests__  
+  |   |   ├── atoms
+  |   |   |   ├── Button
   |   |   |   |   ├── __mocks__
-  |   |   |   |   |   └── exemploMock.ts
-  |   |   |   |   └── Button.test.tsx          
-  |   |   |   ├── storybook
-  |   |   |   |   ├── stories.mdx
-  |   |   |   |   └── stories.tsx
-  |   |   |   ├── index.tsx
-  |   |   |   ├── styles.ts
-  |   |   |   └── types.ts
-  |   |   ├── ErrorBoundary
-  |   |   ├── HeadPage
-  |   |   ├── RenderTextByBreakpoint
-  |   |   ├── Svg
-  |   |   |   ├── Logo  
-  |   |   |   |   └── index.tsx
-  |   |   |   ├── index.ts   
-  |   |   |   └── types.ts   
-  |   |   ├── TitleAnimation
-  |   |   ├── TitleSection
+  |   |   |   |   |   └── exemploMock.ts 
+  |   |   |   |   ├── __tests__  
+  |   |   |   |   |   └── Button.test.tsx          
+  |   |   |   |   ├── storybook
+  |   |   |   |   |   ├── stories.mdx
+  |   |   |   |   |   └── stories.tsx
+  |   |   |   |   ├── index.tsx
+  |   |   |   |   ├── styles.ts
+  |   |   |   |   └── types.ts
+  |   |   |   ├── ErrorBoundary
+  |   |   |   ├── HeadPage
+  |   |   |   ├── RenderTextByBreakpoint
+  |   |   |   ├── Svg
+  |   |   |   |   ├── Logo  
+  |   |   |   |   |   └── index.tsx
+  |   |   |   |   ├── index.ts   
+  |   |   |   |   └── types.ts   
+  |   |   |   └── TitleSection
+  |   |   ├── molecules
+  |   |   |   └── TitleAnimation
+  |   |   ├── organisms
   |   |   └── index.tsx
   |   ├── hooks
   |   |   ├── useAnimationRender
-  |   |   |   ├── __tests__  
-  |   |   |   |   ├── __mocks__
-  |   |   |   |   |   └── exemploMock.ts
-  |   |   |   |   └── useAnimationRender.test.tsx          
-  |   |   |   └── index.ts
   |   |   ├── useRenderingByWindowSize
-  |   |   └── index.ts
-  |   ├── layouts
-  |   |   ├── Default
+  |   |   |   ├── __mocks__
+  |   |   |   |   └── exemploMock.ts 
   |   |   |   ├── __tests__  
-  |   |   |   |   ├── __mocks__
-  |   |   |   |   |   └── exemploMock.ts
-  |   |   |   |   └── Default.test.tsx          
-  |   |   |   ├── index.tsx
-  |   |   |   └── styles.ts
-  |   |   ├── Error
-  |   |   ├── LayoutExample
+  |   |   |   |   └── useAnimationRender.test.tsx          
+  |   |   |   ├── index.ts
+  |   |   |   └── types.ts
   |   |   └── index.ts
   |   ├── pages
   |   |   ├── _error
-  |   |   └── inicio
-  |   |   |   └── __tests__  
-  |   |   |   |   └── __mocks__
-  |   |   |   |   |   └── exemploMock.ts
+  |   |   ├── inicio
+  |   |   |   ├── __mocks__
+  |   |   |   |   └── exemploMock.ts  
+  |   |   |   ├── __tests__ 
   |   |   |   |   └── inicio.test.tsx          
   |   |   |   ├── index.page.tsx
   |   |   |   └── styles.ts
@@ -184,15 +177,32 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   |   |   ├── _document.page.tsx
   |   |   └── index.page.tsx
   |   ├── store
-  |   |   └── slices
-  |   |   |   ├── exampleSlice
-  |   |   |   |   ├── index.ts
-  |   |   |   |   └── types.ts
-  |   |   |   └── index.ts
+  |   |   ├── exampleSimple
+  |   |   |   ├── index.ts
+  |   |   |   ├── types.ts
+  |   |   |   └── useExampleSimple.ts
+  |   |   ├── exampleWithPayload
+  |   |   |   ├── index.ts
+  |   |   |   ├── types.ts
+  |   |   |   └── useExampleWithPayload.ts
   |   |   ├── configStore.ts
-  |   |   └── types.ts
-  |   └── styles
+  |   |   ├── index.ts
+  |   |   ├── persistConfig.ts
+  |   |   └── rootState.ts
+  |   ├── styles
   |   |   └── GlobalStyles.ts
+  |   ├── templates
+  |   |   ├── Default
+  |   |   |   ├── __mocks__
+  |   |   |   |   └── exemploMock.ts 
+  |   |   |   ├── __tests__  
+  |   |   |   |   └── Default.test.tsx          
+  |   |   |   ├── index.tsx
+  |   |   |   ├── styles.ts
+  |   |   |   └── types.ts
+  |   |   ├── Error
+  |   |   ├── Example
+  |   |   └── index.ts
   |   ├── theme
   |   |   ├── animations.ts
   |   |   ├── breakpoints.ts
