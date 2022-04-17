@@ -15,23 +15,43 @@ describe('[Page] Home', () => {
     expect(container).toBeInTheDocument()
   })
 
-  it('should change the text displayed when clicking the button', () => {
+  it('should alternate the text displayed in two h1 each time the button is clicked', () => {
     renderWithProviders(<Home />)
 
     const btn = screen.getByRole('button', { name: 'Altera Estado Global' })
-    const titleSectionBefore = screen.getByRole('heading', {
-      name: 'desativado'
+    const titleSectionStateExample1 = screen.getByRole('heading', {
+      name: 'Estado Exemplo do Redux: false'
+    })
+    const titleSectionPayload1 = screen.getByRole('heading', {
+      name: 'Payload: Vazio'
     })
 
-    expect(titleSectionBefore).toBeInTheDocument()
+    expect(titleSectionStateExample1).toBeInTheDocument()
+    expect(titleSectionPayload1).toBeInTheDocument()
 
     fireEvent.click(btn)
 
-    const titleSectionAfter = screen.getByRole('heading', {
-      name: 'ativado'
+    const titleSectionStateExample2 = screen.getByRole('heading', {
+      name: 'Estado Exemplo do Redux: true'
+    })
+    const titleSectionPayload2 = screen.getByRole('heading', {
+      name: 'Payload: Texto de Exemplo'
     })
 
-    expect(titleSectionAfter).toBeInTheDocument()
+    expect(titleSectionStateExample2).toBeInTheDocument()
+    expect(titleSectionPayload2).toBeInTheDocument()
+
+    fireEvent.click(btn)
+
+    const titleSectionStateExample3 = screen.getByRole('heading', {
+      name: 'Estado Exemplo do Redux: false'
+    })
+    const titleSectionPayload3 = screen.getByRole('heading', {
+      name: 'Payload: Vazio'
+    })
+
+    expect(titleSectionStateExample3).toBeInTheDocument()
+    expect(titleSectionPayload3).toBeInTheDocument()
   })
 
   it('should go to another page by clicking the button 1 and it should preload the next page with the onMouseEnter event', () => {
