@@ -1,6 +1,5 @@
 import '@testing-library/jest-dom'
 import 'jest-styled-components'
 import 'nextImageMock'
-import 'matchMediaMock'
 import 'nextDynamicMock'
 import '__mocks__'
