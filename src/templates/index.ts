@@ -1,3 +1,3 @@
 export * from './Default'
 export * from './Error'
-export * from './LayoutExample'
+export * from './Example'

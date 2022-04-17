@@ -1,7 +1,5 @@
-import { ReactNode } from 'react'
 import * as S from './styles'
-
-export type DefaultProps = { children: ReactNode }
+import { DefaultProps } from './types'
 
 export const Default = ({ children }: DefaultProps) => {
   return (

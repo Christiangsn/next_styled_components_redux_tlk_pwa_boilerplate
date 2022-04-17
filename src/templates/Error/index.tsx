@@ -1,7 +1,5 @@
-import { ReactNode } from 'react'
 import * as S from './styles'
-
-type ErrorProps = { children: ReactNode }
+import { ErrorProps } from './types'
 
 export const Error = ({ children }: ErrorProps) => {
   return (
