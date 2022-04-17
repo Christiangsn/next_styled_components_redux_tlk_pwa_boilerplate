@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { LayoutExample } from 'layouts'
+import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
 
@@ -32,4 +32,4 @@ export default function PageExample() {
   )
 }
 
-PageExample.Layout = LayoutExample
+PageExample.Template = Example

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Error } from 'layouts/Error'
+import { Error } from 'templates/Error'
 import * as S from './styles'
 
 export default function CustomError() {
@@ -14,4 +14,4 @@ export default function CustomError() {
   )
 }
 
-CustomError.Layout = Error
+CustomError.Template = Error
