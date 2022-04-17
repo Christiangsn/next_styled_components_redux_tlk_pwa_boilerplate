@@ -9,7 +9,7 @@
 
 <br />
 
-# Sobre o Projeto
+# :memo: Sobre o Projeto
 
 Este projeto é um boilerplate completo, constantemente atualizado, configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível.
 
@@ -17,13 +17,13 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Conteúdos
+# :pushpin: Conteúdos
 
-* [Tecnologias](#tecnologias)
-* [Features](#features)
-* [Estrutura de Diretórios e Arquivos](#estrutura-de-diretórios-e-arquivos)
-* [Pré-Requisitos](#pré-requisitos)
-* [Como instalar e executar o projeto](#como-instalar-e-executar-o-projeto)
+* [Tecnologias](#monocle_face-tecnologias)
+* [Features](#triangular_flag_on_post-features)
+* [Estrutura de Diretórios e Arquivos](#card_file_box-estrutura-de-diretórios-e-arquivos)
+* [Pré-Requisitos](#white_check_mark-pré-requisitos)
+* [Como instalar e executar o projeto](#question-como-instalar-e-executar-o-projeto)
   * [Clonar Repositório](#clonar-repositório)
   * [Instalar Dependências](#instalar-dependências)
   * [Inciar Ambiente de Desenvolvimento](#inciar-ambiente-de-desenvolvimento)
@@ -34,13 +34,13 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   * [Inciar Storybook em Modo de Desenvolvimento](#inciar-storybook-em-modo-de-desenvolvimento)
   * [Gerar Build de Produção do Storybook](#gerar-build-de-produção-do-storybook)
   * [Executar lints](#executar-lints)
-* [Autor](#autor)
+* [Autor](#technologist-autor)
 
 <br />
 
 ---
 
-# Tecnologias
+# :monocle_face: Tecnologias
 
 ⚛ Next.js
 
@@ -64,7 +64,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Features
+# :triangular_flag_on_post: Features
 
 - [x] Projeto responsivo;
 
@@ -88,7 +88,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Estrutura de Diretórios e Arquivos
+# :card_file_box: Estrutura de Diretórios e Arquivos
 
 <br>
 
@@ -241,7 +241,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Pré-Requisitos
+# :white_check_mark: Pré-Requisitos
 
 - node (última versão lts)
 
@@ -251,7 +251,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Como instalar e executar o projeto
+# :question: Como instalar e executar o projeto
 
 ## Clonar Repositório
 
@@ -331,8 +331,12 @@ yarn typecheck
 
 ---
 
-# Autor
+# :technologist: Autor
 
 Feito por [Éverton Toffanetto](https://programadordesucesso.com).
 
-### :link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto/
+:link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto
+
+:link: YouTube: https://www.youtube.com/c/ProgramadordeSucesso
+
+:link: Site: https://programadordesucesso.com
