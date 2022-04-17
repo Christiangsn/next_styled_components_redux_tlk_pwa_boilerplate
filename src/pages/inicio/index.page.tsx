@@ -1,17 +1,22 @@
-import { useDispatch } from 'react-redux'
 import { useRouter } from 'next/router'
-import { useTypedSelector } from 'store/configStore'
-import { setChangeExample } from 'store/slices/exampleSlice'
+import { useExampleSimple } from 'store/exampleSimple/useExampleSimple'
+import { useExampleWithPayload } from 'store/exampleWithPayload/useExampleWithPayload'
 import * as S from './styles'
 import * as C from 'components'
-import { Logo } from 'components/Svg'
 
 export default function Home() {
+  const { exampleSimple, setChangeExample } = useExampleSimple()
+  const { exampleWithPayload, setAddText, setRemoveText } =
+    useExampleWithPayload()
   const router = useRouter()
-  const dispatch = useDispatch()
-  const { changeExample } = useTypedSelector(state => state)
 
-  const handleChangeExample = () => dispatch(setChangeExample())
+  const handleChange = () => {
+    setChangeExample()
+
+    exampleWithPayload.text
+      ? setRemoveText()
+      : setAddText({ exemploText: 'Texto de Exemplo' })
+  }
 
   return (
     <S.Container>
@@ -21,11 +26,18 @@ export default function Home() {
 
       <br />
 
-      <Logo width={50} height={50} />
+      <C.Logo width={50} height={50} />
 
       <br />
 
-      <h1>{changeExample.toggle ? 'ativado' : 'desativado'}</h1>
+      <h1>
+        Estado Exemplo do Redux:
+        {exampleSimple.toggle ? ' true' : ' false'}
+      </h1>
+
+      <br />
+
+      <h1>Payload: {exampleWithPayload.text || 'Vazio'}</h1>
 
       <S.BtnGroup>
         <C.Button
@@ -35,7 +47,7 @@ export default function Home() {
           text="Altera Estado Global"
           aria-label="Altera Estado Global"
           className="btn"
-          onClick={handleChangeExample}
+          onClick={handleChange}
         />
       </S.BtnGroup>
 

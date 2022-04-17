@@ -1,20 +1,11 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import { useRenderingByWindowSize } from '..'
 import T from 'theme'
+import { size } from '__mocks__'
 
-let size: number = T.windowSizes.sm
-
-window.matchMedia = jest.fn().mockImplementation(query => ({
-  matches: query === `(min-width: ${size}px)`,
-  media: '',
-  onchange: null,
-  addListener: jest.fn(),
-  removeListener: jest.fn(),
-  dispatchEvent: jest.fn()
-}))
-
-describe('[Hooks] use', () => {
+describe('[Hooks] useRenderingByWindowSize', () => {
   it('should return xs to screen size up until T.windowSizes.sm', () => {
+    size(T.windowSizes.sm)
     const { result } = renderHook(() => useRenderingByWindowSize())
 
     act(() => {
@@ -24,7 +15,7 @@ describe('[Hooks] use', () => {
   })
 
   it('should return sm to screen size up until T.windowSizes.md', () => {
-    size = T.windowSizes.md
+    size(T.windowSizes.md)
     const { result } = renderHook(() => useRenderingByWindowSize())
 
     act(() => {
@@ -34,7 +25,7 @@ describe('[Hooks] use', () => {
   })
 
   it('should return md to screen size up until T.windowSizes.lg', () => {
-    size = T.windowSizes.lg
+    size(T.windowSizes.lg)
     const { result } = renderHook(() => useRenderingByWindowSize())
 
     act(() => {
