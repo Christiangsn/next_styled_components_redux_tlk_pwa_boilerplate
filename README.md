@@ -19,7 +19,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 # :pushpin: Conteúdos
 
-* [Tecnologias](#monocle_face-tecnologias)
+* [Tecnologias](#globe_with_meridians-tecnologias)
 * [Features](#triangular_flag_on_post-features)
 * [Estrutura de Diretórios e Arquivos](#card_file_box-estrutura-de-diretórios-e-arquivos)
 * [Pré-Requisitos](#white_check_mark-pré-requisitos)
@@ -40,7 +40,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# :monocle_face: Tecnologias
+# :globe_with_meridians: Tecnologias
 
 ⚛ Next.js
 
