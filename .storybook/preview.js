@@ -1,3 +1,4 @@
+import '../.jest/nextImageMock'
 import { Provider } from 'react-redux'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
