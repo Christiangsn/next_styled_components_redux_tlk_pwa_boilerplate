@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import Button from '..'
 
-describe('[Components] Button', () => {
+describe('[Component] Button', () => {
   it('should render a small blue button with text', () => {
     const { container } = renderWithProviders(
       <Button text="Mais Informações" color="blue" size="small" />
