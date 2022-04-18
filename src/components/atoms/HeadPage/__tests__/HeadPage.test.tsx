@@ -1,7 +1,7 @@
 import { renderWithProviders } from 'utils'
 import HeadPage from '..'
 
-describe('[Components] HeadPage', () => {
+describe('[Component] HeadPage', () => {
   it('should render a snapshot', () => {
     const { container } = renderWithProviders(
       <HeadPage title="Acessibilidade" />

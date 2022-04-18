@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import TitleSection from '..'
 
-describe('[Components] TitleSection', () => {
+describe('[Component] TitleSection', () => {
   it('should render the heading', () => {
     renderWithProviders(<TitleSection title="Título de Exemplo" />)
 

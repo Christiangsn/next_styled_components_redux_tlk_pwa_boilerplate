@@ -6,7 +6,7 @@ const ChildWithError = () => {
   throw new Error()
 }
 
-describe('[Components] ErrorBoundary', () => {
+describe('[Component] ErrorBoundary', () => {
   let spy: jest.SpyInstance<void, [message?: any, ...optionalParams: any[]]>
   beforeAll(() => {
     spy = jest.spyOn(console, 'error').mockImplementation(() => {})
