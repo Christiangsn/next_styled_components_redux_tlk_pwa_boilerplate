@@ -20,9 +20,6 @@
     "generate": "yarn plop --plopfile componentGenerator/plopfile.js",
     "prepare": "husky install"
   },
-  "engines": {
-    "node": ">=16.14.0"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && yarn typecheck",
