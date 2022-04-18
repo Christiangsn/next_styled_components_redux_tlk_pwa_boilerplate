@@ -20,6 +20,9 @@
     "generate": "yarn plop --plopfile componentGenerator/plopfile.js",
     "prepare": "husky install"
   },
+  "engines": {
+    "node": ">=16.14.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && yarn typecheck",
@@ -66,6 +69,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-storybook": "^0.5.10",
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "jest-next-dynamic": "^1.0.1",

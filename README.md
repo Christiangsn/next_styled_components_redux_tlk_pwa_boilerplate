@@ -9,21 +9,23 @@
 
 <br />
 
-# Sobre o Projeto
+# :memo: Sobre o Projeto
 
-Este projeto é um boilerplate completo, constantemente atualizado, configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível.
+Esta aplicação é um boilerplate para sistemas complexos e de grande porte, especialmente os que precisam escalar com segurança e qualidade de código.
+
+Além de constantemente atualizado, este projeto foi configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível de arquitetura e design de código.
 
 <br />
 
 ---
 
-# Conteúdos
+# :pushpin: Conteúdos
 
-* [Tecnologias](#tecnologias)
-* [Features](#features)
-* [Estrutura de Diretórios e Arquivos](#estrutura-de-diretórios-e-arquivos)
-* [Pré-Requisitos](#pré-requisitos)
-* [Como instalar e executar o projeto](#como-instalar-e-executar-o-projeto)
+* [Tecnologias](#globe_with_meridians-tecnologias)
+* [Features](#triangular_flag_on_post-features)
+* [Estrutura de Diretórios e Arquivos](#card_file_box-estrutura-de-diretórios-e-arquivos)
+* [Pré-Requisitos](#white_check_mark-pré-requisitos)
+* [Como instalar e executar o projeto](#question-como-instalar-e-executar-o-projeto)
   * [Clonar Repositório](#clonar-repositório)
   * [Instalar Dependências](#instalar-dependências)
   * [Inciar Ambiente de Desenvolvimento](#inciar-ambiente-de-desenvolvimento)
@@ -34,13 +36,13 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   * [Inciar Storybook em Modo de Desenvolvimento](#inciar-storybook-em-modo-de-desenvolvimento)
   * [Gerar Build de Produção do Storybook](#gerar-build-de-produção-do-storybook)
   * [Executar lints](#executar-lints)
-* [Autor](#autor)
+* [Autor](#technologist-autor)
 
 <br />
 
 ---
 
-# Tecnologias
+# :globe_with_meridians: Tecnologias
 
 ⚛ Next.js
 
@@ -64,9 +66,11 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Features
+# :triangular_flag_on_post: Features
 
 - [x] Projeto responsivo;
+
+- [x] Atomic Design;
 
 - [x] Acessível para navegação sem mouse e para leitores de tela;
 
@@ -74,21 +78,21 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
   - [x] animação na montagem e desmontagem de componentes;
   - [x] renderização condicional de componentes por breakpoints;
 
-- [x] Tema criado com styled-componentes sem uso de provider;
+- [x] Tema criado com styled-componentes sem uso de provider e sem necessidade de acessar propriedades do tema com arrow functions;
 
-- [x] Gerenciamento de estado global configurado e abstraído para total desacoplamento do Redux com o projeto;
+- [x] Gerenciamento de estado global Redux Toolkit e pattern Slice, tudo desacoplado da ui do projeto;
 
-- [x] Persistência de dados;
+- [x] Persistência de dados da Store;
 
-- [x] 100% de cobertura nos testes;
+- [x] 100% de cobertura nos testes contemplando: componentes, templates, páginas e hooks;
   
-- [x] PWA instalável;
+- [x] PWA;
 
 <br />
 
 ---
 
-# Estrutura de Diretórios e Arquivos
+# :card_file_box: Estrutura de Diretórios e Arquivos
 
 <br>
 
@@ -241,7 +245,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Pré-Requisitos
+# :white_check_mark: Pré-Requisitos
 
 - node (última versão lts)
 
@@ -251,7 +255,7 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 ---
 
-# Como instalar e executar o projeto
+# :question: Como instalar e executar o projeto
 
 ## Clonar Repositório
 
@@ -331,8 +335,12 @@ yarn typecheck
 
 ---
 
-# Autor
+# :technologist: Autor
 
 Feito por [Éverton Toffanetto](https://programadordesucesso.com).
 
-### :link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto/
+:link: LinkedIn: https://www.linkedin.com/in/everton-toffanetto
+
+:link: YouTube: https://www.youtube.com/c/ProgramadordeSucesso
+
+:link: Site: https://programadordesucesso.com

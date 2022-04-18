@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import TitleAnimation from '..'
 
-describe('[Components] TitleAnimation', () => {
+describe('[Component] TitleAnimation', () => {
   beforeEach(() => {
     jest.useFakeTimers()
   })

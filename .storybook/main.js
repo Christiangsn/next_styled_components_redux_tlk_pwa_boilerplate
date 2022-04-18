@@ -1,6 +1,6 @@
 module.exports = {
   staticDirs: ['../public'],
-  stories: ['../src/components/**/storybook/stories.@(js|md|ts)x'],
+  stories: ['../src/@(components|templates)/**/storybook/stories.@(js|md|ts)x'],
   addons: [
     '@storybook/addon-essentials',
     'storybook-dark-mode/register',
@@ -24,13 +24,13 @@ module.exports = {
         height: 100% !important;
         width: 100% !important;
       }
-      
+
       @media screen and (min-width: 90rem) {
         #root {
-          padding: 3rem!important;   
+          padding: 3rem!important;
         }
       }
-      
+
       .sbdocs-p {
         font-size: 17px !important;
       }

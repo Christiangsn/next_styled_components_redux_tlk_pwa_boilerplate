@@ -1,22 +1,18 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs'
-import RenderTextByBreakpoint from '..'
+import { Error } from '..'
 import * as stories from './stories'
 
 <Meta
-  title="Atoms/RenderTextByBreakpoint"
-  component={ RenderTextByBreakpoint }
+  title="Templates/Error"
+  component={Error}
   parameters={{
     controls: { sort: 'requiredFirst' }
   }}
 />
 
-# RenderTextByBreakpoint
+# Example
 
-Description general.
-
-## Default
-
-Component description.
+This Template is used when an error occurs.
 
 <Canvas>
   <Story story={stories.Default} />

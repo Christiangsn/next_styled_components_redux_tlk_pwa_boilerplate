@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[Components] Button should render a small blue button with text 1`] = `
+exports[`[Component] Button should render a small blue button with text 1`] = `
 .c0 {
   cursor: pointer;
   border-radius: 0.4rem;

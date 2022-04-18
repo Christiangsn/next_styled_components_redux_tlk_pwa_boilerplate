@@ -1,22 +1,18 @@
 import { Canvas, Meta, Story } from '@storybook/addon-docs'
-import RenderTextByBreakpoint from '..'
+import { Default } from '..'
 import * as stories from './stories'
 
 <Meta
-  title="Atoms/RenderTextByBreakpoint"
-  component={ RenderTextByBreakpoint }
+  title="Templates/Default"
+  component={Default}
   parameters={{
     controls: { sort: 'requiredFirst' }
   }}
 />
 
-# RenderTextByBreakpoint
+# Default
 
-Description general.
-
-## Default
-
-Component description.
+This Default Template is used automatically when exporting the page without defining a specific Template.
 
 <Canvas>
   <Story story={stories.Default} />
