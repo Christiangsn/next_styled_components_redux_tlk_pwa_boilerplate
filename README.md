@@ -200,7 +200,10 @@ Além de constantemente atualizado, este projeto foi configurado nos mínimos de
   |   |   |   ├── __mocks__
   |   |   |   |   └── exemploMock.ts 
   |   |   |   ├── __tests__  
-  |   |   |   |   └── Default.test.tsx          
+  |   |   |   |   └── Default.test.tsx  
+  |   |   |   ├── storybook
+  |   |   |   |   ├── stories.mdx
+  |   |   |   |   └── stories.tsx        
   |   |   |   ├── index.tsx
   |   |   |   ├── styles.ts
   |   |   |   └── types.ts
