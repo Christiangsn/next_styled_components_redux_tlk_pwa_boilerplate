@@ -11,7 +11,9 @@
 
 # :memo: Sobre o Projeto
 
-Este projeto é um boilerplate completo, constantemente atualizado, configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível.
+Esta aplicação é um boilerplate para sistemas complexos e de grande porte, especialmente os que precisam escalar com segurança e qualidade de código.
+
+Além de constantemente atualizado, este projeto foi configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível de arquitetura e design de código.
 
 <br />
 
@@ -68,21 +70,23 @@ Este projeto é um boilerplate completo, constantemente atualizado, configurado 
 
 - [x] Projeto responsivo;
 
+- [x] Atomic Design;
+
 - [x] Acessível para navegação sem mouse e para leitores de tela;
 
 - [x] Hooks personalizados para:
   - [x] animação na montagem e desmontagem de componentes;
   - [x] renderização condicional de componentes por breakpoints;
 
-- [x] Tema criado com styled-componentes sem uso de provider;
+- [x] Tema criado com styled-componentes sem uso de provider e sem necessidade de acessar propriedades do tema com arrow functions;
 
-- [x] Gerenciamento de estado global configurado e abstraído para total desacoplamento do Redux com o projeto;
+- [x] Gerenciamento de estado global Redux Toolkit e pattern Slice, tudo desacoplado da ui do projeto;
 
-- [x] Persistência de dados;
+- [x] Persistência de dados da Store;
 
-- [x] 100% de cobertura nos testes;
+- [x] 100% de cobertura nos testes contemplando: componentes, templates, páginas e hooks;
   
-- [x] PWA instalável;
+- [x] PWA;
 
 <br />
 
