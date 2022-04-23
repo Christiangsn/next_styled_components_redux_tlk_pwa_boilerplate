@@ -1,4 +1,3 @@
-import { TypedUseSelectorHook, useSelector } from 'react-redux'
 import { configureStore } from '@reduxjs/toolkit'
 import {
   FLUSH,
@@ -10,10 +9,8 @@ import {
   REHYDRATE
 } from 'redux-persist'
 import { persistedReducer } from './persistConfig'
-import { RootState } from './rootState'
 
 export const isDevelopment = process.env.NODE_ENV === 'development'
-export const useTypedSelector: TypedUseSelectorHook<RootState> = useSelector
 
 export const store = configureStore({
   reducer: persistedReducer,
