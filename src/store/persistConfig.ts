@@ -3,7 +3,7 @@ import { persistReducer } from 'redux-persist'
 import asyncSessionStorage from 'redux-persist/lib/storage'
 import * as Reducers from '.'
 
-const whitelist = ['exampleSimple', 'exampleWithPayload']
+const whitelist = ['exampleSimple', 'exampleWithPayload', 'exampleAsyncSlice']
 
 const persistConfig = {
   key: 'root',
