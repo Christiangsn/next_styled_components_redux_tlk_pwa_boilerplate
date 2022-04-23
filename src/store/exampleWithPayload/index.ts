@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { SetAddTextPayloadType } from './types'
 
 const initialState = {
@@ -9,7 +9,7 @@ const changeExampleWithPayloadReducer = createSlice({
   name: 'exampleWithPayload',
   initialState,
   reducers: {
-    setAddText(state, { payload }: SetAddTextPayloadType) {
+    setAddText(state, { payload }: PayloadAction<SetAddTextPayloadType>) {
       state.text = payload.exemploText
     },
     setRemoveText(state) {

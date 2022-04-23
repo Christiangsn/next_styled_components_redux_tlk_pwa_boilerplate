@@ -1,9 +1,5 @@
-export type TextType = {
-  text: string
-}
-
 export type SetAddTextPayloadType = {
-  payload: { exemploText: string }
+  exemploText: string
 }
 
 export type ExemploTextProp = {
