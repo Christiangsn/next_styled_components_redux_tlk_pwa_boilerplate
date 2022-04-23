@@ -1,4 +1,4 @@
-import { forwardRef } from 'react'
+import { forwardRef, memo } from 'react'
 import * as S from './styles'
 import { BtnProps } from './types'
 
@@ -11,4 +11,4 @@ const Button = forwardRef<HTMLButtonElement, BtnProps>(
   )
 )
 
-export default Button
+export default memo(Button)
