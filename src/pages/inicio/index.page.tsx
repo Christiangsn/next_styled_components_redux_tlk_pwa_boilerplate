@@ -73,6 +73,17 @@ export default function Home() {
           onClick={() => router.push('pagina_exemplo2')}
           onMouseEnter={() => router.prefetch('pagina_exemplo2')}
         />
+
+        <C.Button
+          fullWidth={true}
+          color="blue"
+          size="large"
+          text="Página Exemplo 3"
+          aria-label="Página Exemplo 3"
+          className="btn"
+          onClick={() => router.push('pagina_exemplo3')}
+          onMouseEnter={() => router.prefetch('pagina_exemplo3')}
+        />
       </S.BtnGroup>
     </S.Container>
   )
