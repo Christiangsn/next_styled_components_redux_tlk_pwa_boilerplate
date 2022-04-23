@@ -1,8 +1,8 @@
 <div align="center">
 
-<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)</a>
-![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)
-![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=yellow&style=plastic)
+  <a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)</a>
+  ![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=yellow&style=plastic)
 </div>
 
 <h1 align="center">Boilerplate Completo e atualizado com Next.js, Typescript Styled-Components, Testes, Redux Toolkit e PWA</h1>
@@ -16,6 +16,20 @@ Esta aplicação é um boilerplate para sistemas complexos e de grande porte, es
 Além de constantemente atualizado, este projeto foi configurado nos mínimos detalhes para servir de base para projetos profissionais do mais alto nível de arquitetura e design de código.
 
 <br />
+
+<div align="center">
+  <img src="informations/design.svg" alt="Design">
+  
+  <br />
+  <br />
+  
+  <img src="informations/simplifiedArchitecture.svg" alt="Simplified Architecture">
+  
+  <br />
+  <br />
+  
+  <img src="informations/architecture.svg" alt="Architecture">
+</div>
 
 ---
 
