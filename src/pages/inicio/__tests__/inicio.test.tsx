@@ -81,4 +81,18 @@ describe('[Page] Home', () => {
     expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo2')
     expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo2')
   })
+
+  it('should go to another page by clicking the button 3 and it should preload the next page with the onMouseEnter event', () => {
+    renderWithProviders(<Home />)
+
+    const btn = screen.getByRole('button', { name: 'Página Exemplo 3' })
+
+    fireEvent.click(btn)
+    fireEvent.mouseEnter(btn)
+
+    expect(mockedPush).toBeCalledTimes(1)
+    expect(mockedPrefetch).toBeCalledTimes(1)
+    expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo3')
+    expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo3')
+  })
 })
