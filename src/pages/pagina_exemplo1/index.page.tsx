@@ -3,14 +3,14 @@ import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
 
-export default function PageExample() {
+export default function PageExample1() {
   const router = useRouter()
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Página Exemplo" />
+      <C.HeadPage title="Página Exemplo 1" />
 
-      <C.TitleSection title="Página Exemplo" />
+      <C.TitleSection title="Página Exemplo 1" />
 
       <br />
 
@@ -32,4 +32,4 @@ export default function PageExample() {
   )
 }
 
-PageExample.Template = Example
+PageExample1.Template = Example

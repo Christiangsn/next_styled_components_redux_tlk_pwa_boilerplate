@@ -1,3 +1,3 @@
-export type ToggleType = {
+export type ExampleSimpleType = {
   toggle: boolean
 }

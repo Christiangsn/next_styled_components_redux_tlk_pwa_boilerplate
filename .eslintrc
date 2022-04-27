@@ -61,6 +61,8 @@
           "/^@material/",
           "module",
           ["parent", "sibling", "index"],
+          "/^./styles/",
+          "/^./types/",
           "/^components/",
           "/^__mocks__/"
         ],

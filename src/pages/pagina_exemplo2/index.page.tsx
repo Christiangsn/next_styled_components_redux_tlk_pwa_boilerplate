@@ -16,7 +16,7 @@ export default function PageExample2() {
 
       <C.RenderTextByBreakpoint />
 
-      <S.Column>
+      <S.BtnGroup>
         <C.Button
           fullWidth={true}
           color="blue"
@@ -27,7 +27,7 @@ export default function PageExample2() {
           onClick={() => router.push('/')}
           onMouseEnter={() => router.prefetch('/')}
         />
-      </S.Column>
+      </S.BtnGroup>
     </S.Container>
   )
 }

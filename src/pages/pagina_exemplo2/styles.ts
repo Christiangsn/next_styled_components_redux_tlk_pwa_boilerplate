@@ -9,13 +9,19 @@ export const Container = styled.div`
   }
 `
 
-export const Column = styled.div`
+export const BtnGroup = styled.div`
+  display: flex;
+  flex-direction: column;
   max-width: 35rem;
-  margin: 5rem auto;
+  gap: ${T.grid.gutter};
+  margin: ${T.spacings.xtreme} auto 0 auto;
+  padding: 0 ${T.spacings.large};
 
   .btn {
     opacity: 0;
     animation: ${T.animations.fadeInMove('0', '30px', '0')} 0.3s linear forwards
       0.2s;
   }
+
+  align-items: center;
 `

@@ -19,6 +19,8 @@ const customJestConfig = {
     'src/templates/index.ts',
     'src/utils/index.ts',
     'src/types',
+    'src/libs',
+    'src/services',
     'src/store',
     'src/theme',
     'src/styles',

@@ -1,8 +1,8 @@
 <div align="center">
 
-<a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)</a>
-![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)
-![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=yellow&style=plastic)
+  <a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)</a>
+  ![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=yellow&style=plastic)
 </div>
 
 <h1 align="center">Boilerplate Completo e atualizado com Next.js, Typescript Styled-Components, Testes, Redux Toolkit e PWA</h1>
@@ -17,13 +17,26 @@ Além de constantemente atualizado, este projeto foi configurado nos mínimos de
 
 <br />
 
+<div align="center">
+  <img src="informations/design.svg" alt="Design">
+  
+  <br />
+  <br />
+  
+  <img src="informations/simplifiedArchitecture.svg" alt="Simplified Architecture">
+  
+  <br />
+  <br />
+  
+  <img src="informations/architecture.svg" alt="Architecture">
+</div>
+
 ---
 
 # :pushpin: Conteúdos
 
 * [Tecnologias](#globe_with_meridians-tecnologias)
 * [Features](#triangular_flag_on_post-features)
-* [Estrutura de Diretórios e Arquivos](#card_file_box-estrutura-de-diretórios-e-arquivos)
 * [Pré-Requisitos](#white_check_mark-pré-requisitos)
 * [Como instalar e executar o projeto](#question-como-instalar-e-executar-o-projeto)
   * [Clonar Repositório](#clonar-repositório)
@@ -89,162 +102,6 @@ Além de constantemente atualizado, este projeto foi configurado nos mínimos de
 - [x] PWA;
 
 <br />
-
----
-
-# :card_file_box: Estrutura de Diretórios e Arquivos
-
-<br>
-
-<details>
-  <summary>Clique para mostrar estrutura completa</summary>
-
-```
-  project
-  .
-  ├── .husky
-  ├── .jest
-  |   ├── matchMediaMock.ts
-  |   ├── nextDynamicMocks.ts
-  |   ├── nextImageMocks.tsx
-  |   └── setup.ts
-  ├── .storybook
-  |   ├── main.js
-  |   ├── preview.js
-  |   └── preview-head.html
-  ├── componentGenerator
-  |   ├── templates
-  |   |   ├── component.tsx.hbs
-  |   |   ├── stories.mdx.hbs
-  |   |   ├── stories.tsx.hbs
-  |   |   ├── styles.ts.hbs
-  |   |   ├── test.tsx.hbs
-  |   |   └── types.ts.hbs
-  |   └── plopfile.js
-  ├── public
-  |   ├── iconsPwa     
-  |   ├── imgs   
-  |   ├── favicon.png   
-  |   └── manifest.json
-  ├── src
-  |   ├── __mocks__
-  |   |   ├── index.tsx
-  |   |   └── nextRouter.ts
-  |   ├── components
-  |   |   ├── atoms
-  |   |   |   ├── Button
-  |   |   |   |   ├── __mocks__
-  |   |   |   |   |   └── exemploMock.ts 
-  |   |   |   |   ├── __tests__  
-  |   |   |   |   |   └── Button.test.tsx          
-  |   |   |   |   ├── storybook
-  |   |   |   |   |   ├── stories.mdx
-  |   |   |   |   |   └── stories.tsx
-  |   |   |   |   ├── index.tsx
-  |   |   |   |   ├── styles.ts
-  |   |   |   |   └── types.ts
-  |   |   |   ├── ErrorBoundary
-  |   |   |   ├── HeadPage
-  |   |   |   ├── RenderTextByBreakpoint
-  |   |   |   ├── Svg
-  |   |   |   |   ├── Logo  
-  |   |   |   |   |   └── index.tsx
-  |   |   |   |   ├── index.ts   
-  |   |   |   |   └── types.ts   
-  |   |   |   └── TitleSection
-  |   |   ├── molecules
-  |   |   |   └── TitleAnimation
-  |   |   ├── organisms
-  |   |   └── index.tsx
-  |   ├── hooks
-  |   |   ├── useAnimationRender
-  |   |   ├── useRenderingByWindowSize
-  |   |   |   ├── __mocks__
-  |   |   |   |   └── exemploMock.ts 
-  |   |   |   ├── __tests__  
-  |   |   |   |   └── useAnimationRender.test.tsx          
-  |   |   |   ├── index.ts
-  |   |   |   └── types.ts
-  |   |   └── index.ts
-  |   ├── pages
-  |   |   ├── _error
-  |   |   ├── inicio
-  |   |   |   ├── __mocks__
-  |   |   |   |   └── exemploMock.ts  
-  |   |   |   ├── __tests__ 
-  |   |   |   |   └── inicio.test.tsx          
-  |   |   |   ├── index.page.tsx
-  |   |   |   └── styles.ts
-  |   |   ├── pagina_exemplo
-  |   |   ├── pagina_exemplo2
-  |   |   ├── _app.page.tsx
-  |   |   ├── _document.page.tsx
-  |   |   └── index.page.tsx
-  |   ├── store
-  |   |   ├── exampleSimple
-  |   |   |   ├── index.ts
-  |   |   |   ├── types.ts
-  |   |   |   └── useExampleSimple.ts
-  |   |   ├── exampleWithPayload
-  |   |   |   ├── index.ts
-  |   |   |   ├── types.ts
-  |   |   |   └── useExampleWithPayload.ts
-  |   |   ├── configStore.ts
-  |   |   ├── index.ts
-  |   |   ├── persistConfig.ts
-  |   |   └── rootState.ts
-  |   ├── styles
-  |   |   └── GlobalStyles.ts
-  |   ├── templates
-  |   |   ├── Default
-  |   |   |   ├── __mocks__
-  |   |   |   |   └── exemploMock.ts 
-  |   |   |   ├── __tests__  
-  |   |   |   |   └── Default.test.tsx  
-  |   |   |   ├── storybook
-  |   |   |   |   ├── stories.mdx
-  |   |   |   |   └── stories.tsx        
-  |   |   |   ├── index.tsx
-  |   |   |   ├── styles.ts
-  |   |   |   └── types.ts
-  |   |   ├── Error
-  |   |   ├── Example
-  |   |   └── index.ts
-  |   ├── theme
-  |   |   ├── animations.ts
-  |   |   ├── breakpoints.ts
-  |   |   ├── colors.ts
-  |   |   ├── index.ts
-  |   |   ├── spacings.ts
-  |   |   ├── typographies.ts
-  |   |   └── windowSizes.ts
-  |   ├── types
-  |   |   ├── page.d.ts
-  |   |   └── styled-components.d.ts
-  |   └── utils
-  |       ├── tests
-  |       |   └── provider.tsx
-  |       └── index.ts
-  ├── .commitlintrc
-  ├── .editorconfig
-  ├── .eslintignore
-  ├── .eslintrc
-  ├── .gitattributes
-  ├── .gitignore
-  ├── .prettierignore
-  ├── .pretierrc
-  ├── jest.config.js
-  ├── LICENSE
-  ├── next.config.js
-  ├── next-env.d.ts
-  ├── package.json
-  ├── README.md
-  └── tsconfig.json
-```
-
-</details>
-
-<br>
 
 ---
 

@@ -1,11 +1,11 @@
-export type TextType = {
-  text: string
-}
+import { PayloadAction } from '@reduxjs/toolkit'
 
-export type SetAddTextPayloadType = {
-  payload: { exemploText: string }
+export type ExampleWithPayloadType = {
+  text: string
 }
 
 export type ExemploTextProp = {
   exemploText: string
 }
+
+export type PayloadType = PayloadAction<ExemploTextProp>

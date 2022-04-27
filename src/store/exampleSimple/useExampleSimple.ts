@@ -1,10 +1,9 @@
-import { useDispatch } from 'react-redux'
-import { useTypedSelector } from 'store/configStore'
 import { setChangeExample } from '.'
+import { useTypedDispatch, useTypedSelector } from '../useHelpers'
 
 export const useExampleSimple = () => {
-  const dispatch = useDispatch()
-  const { exampleSimple } = useTypedSelector(state => state)
+  const dispatch = useTypedDispatch()
+  const exampleSimple = useTypedSelector(state => state.exampleSimple.toggle)
 
   const setState = {
     setChangeExample: () => dispatch(setChangeExample())

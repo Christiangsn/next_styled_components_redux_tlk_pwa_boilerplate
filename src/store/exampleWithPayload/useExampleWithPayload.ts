@@ -1,11 +1,12 @@
-import { useDispatch } from 'react-redux'
-import { useTypedSelector } from 'store/configStore'
 import { setRemoveText, setAddText } from '.'
+import { useTypedDispatch, useTypedSelector } from '../useHelpers'
 import { ExemploTextProp } from './types'
 
 export const useExampleWithPayload = () => {
-  const dispatch = useDispatch()
-  const { exampleWithPayload } = useTypedSelector(state => state)
+  const dispatch = useTypedDispatch()
+  const exampleWithPayload = useTypedSelector(
+    state => state.exampleWithPayload.text
+  )
 
   const setState = {
     setRemoveText: () => dispatch(setRemoveText()),
