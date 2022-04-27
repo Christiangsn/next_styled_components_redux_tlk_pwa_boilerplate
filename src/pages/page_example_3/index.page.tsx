@@ -16,7 +16,7 @@ export default function PageExample3() {
     if (value) await getRepositoriesGithub(value)
   }, [getRepositoriesGithub])
 
-  if (repositoriesGithub?.isLoading) return <h1>Carregando...</h1>
+  if (repositoriesGithub?.isLoading) return <h1>loading...</h1>
 
   return (
     <S.Container as="section">

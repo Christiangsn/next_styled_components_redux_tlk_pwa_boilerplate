@@ -14,8 +14,7 @@ const RenderTextByBreakpoint = () => {
   return (
     <S.Wrapper>
       <h3>
-        Redimensione a janela do navegador para visualizar o texto renderizado
-        para cada breakpoint!
+        Resize the browser window to view the rendered text for each breakpoint!
       </h3>
 
       <br />

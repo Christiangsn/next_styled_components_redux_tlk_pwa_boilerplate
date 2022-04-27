@@ -10,7 +10,7 @@ const TitleAnimation = () => {
     <S.Wrapper>
       {isRenderComponent && (
         <S.TitleAnimation isVisible={isVisible}>
-          Texto animado na montagem e desmontagem
+          Animated text on assembly and disassembly
         </S.TitleAnimation>
       )}
 
@@ -19,10 +19,10 @@ const TitleAnimation = () => {
           fullWidth={true}
           color="red"
           size="large"
-          text="Montar Componente animado"
+          text="Assemble Animated Component"
           className="btn"
           onClick={changeStateComponent}
-          aria-label="Montar Componente animado"
+          aria-label="Assemble Animated Component"
         />
       </S.Column>
     </S.Wrapper>

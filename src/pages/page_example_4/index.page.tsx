@@ -17,7 +17,7 @@ export default function PageExample4() {
     if (value) await getFetchRepositories(value)
   }, [getFetchRepositories])
 
-  if (exampleAsyncSlice?.isLoading) return <h1>Carregando...</h1>
+  if (exampleAsyncSlice?.isLoading) return <h1>loading...</h1>
 
   return (
     <S.Container as="section">

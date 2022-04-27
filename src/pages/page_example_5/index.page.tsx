@@ -15,7 +15,7 @@ export default function PageExample5() {
     if (value) setFetchRepositories(value)
   }, [setFetchRepositories])
 
-  if (exampleAsyncThunk?.isLoading) return <h1>Carregando...</h1>
+  if (exampleAsyncThunk?.isLoading) return <h1>loading...</h1>
 
   return (
     <S.Container as="section">
@@ -54,7 +54,7 @@ export default function PageExample5() {
           fullWidth={true}
           color="blue"
           size="large"
-          text="Voltar"
+          text="Return"
           className="btn"
           aria-label="Return"
           onClick={() => router.push('/')}
