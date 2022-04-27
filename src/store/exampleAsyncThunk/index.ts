@@ -21,9 +21,7 @@ const exampleAsyncThunkSlice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(fetchRepositories.pending, state => {
-        state.isLoading = true
-        state.repositories = []
-        state.error = ''
+        return { ...state, isLoading: true }
       })
       .addCase(
         fetchRepositories.fulfilled,

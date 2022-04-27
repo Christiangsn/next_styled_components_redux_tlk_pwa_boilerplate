@@ -13,9 +13,7 @@ const exampleAsyncSlice = createSlice({
   initialState,
   reducers: {
     repositoriesLoading(state) {
-      state.isLoading = true
-      state.repositories = []
-      state.error = ''
+      return { ...state, isLoading: true }
     },
     getRepositories(state, { payload }: PayloadType) {
       return { ...state, ...payload }
