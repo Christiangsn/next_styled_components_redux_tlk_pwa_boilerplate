@@ -1,19 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { getRepositoriesInTheGithubTypes } from 'services/repositories/get/fetch/types'
+import { PayloadType } from './types'
 
-const initialState = {
-  text: ''
+const initialState: getRepositoriesInTheGithubTypes = {
+  isLoading: false,
+  repositories: [],
+  error: ''
 }
 
-const changeExampleAsyncSliceReducer = createSlice({
-  name: 'exampleAsyncSlice',
+const exampleAsyncSlice = createSlice({
+  name: 'exampleAsync',
   initialState,
   reducers: {
-    AsyncSlice(state) {
-      state.text = ''
+    repositoriesLoading(state) {
+      state.isLoading = true
+      state.repositories = []
+      state.error = ''
+    },
+    getRepositories(state, { payload }: PayloadType) {
+      return { ...state, ...payload }
     }
   }
 })
 
-export const { AsyncSlice } = changeExampleAsyncSliceReducer.actions
+export const { repositoriesLoading, getRepositories } =
+  exampleAsyncSlice.actions
 
-export const exampleAsyncSlice = changeExampleAsyncSliceReducer.reducer
+export const exampleAsync = exampleAsyncSlice.reducer

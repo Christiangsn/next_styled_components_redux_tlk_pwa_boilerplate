@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { ExampleSimpleType } from './types'
 
-const initialState = {
+const initialState: ExampleSimpleType = {
   toggle: false
 }
 
-const changeExampleSimpleReducer = createSlice({
+const exampleSimpleSlice = createSlice({
   name: 'exampleSimple',
   initialState,
   reducers: {
@@ -14,6 +15,6 @@ const changeExampleSimpleReducer = createSlice({
   }
 })
 
-export const { setChangeExample } = changeExampleSimpleReducer.actions
+export const { setChangeExample } = exampleSimpleSlice.actions
 
-export const exampleSimple = changeExampleSimpleReducer.reducer
+export const exampleSimple = exampleSimpleSlice.reducer

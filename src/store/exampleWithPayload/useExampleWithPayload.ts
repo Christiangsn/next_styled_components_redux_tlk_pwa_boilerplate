@@ -1,10 +1,12 @@
-import { useTypedDispatch, useTypedSelector } from 'store/useHelpers'
 import { setRemoveText, setAddText } from '.'
+import { useTypedDispatch, useTypedSelector } from '../useHelpers'
 import { ExemploTextProp } from './types'
 
 export const useExampleWithPayload = () => {
   const dispatch = useTypedDispatch()
-  const { exampleWithPayload } = useTypedSelector(state => state)
+  const exampleWithPayload = useTypedSelector(
+    state => state.exampleWithPayload.text
+  )
 
   const setState = {
     setRemoveText: () => dispatch(setRemoveText()),

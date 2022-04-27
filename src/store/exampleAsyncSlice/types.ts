@@ -1,7 +1,4 @@
-export type SetAddTextPayloadType = {
-  payload: { exemploText: string }
-}
+import { PayloadAction } from '@reduxjs/toolkit'
+import { getRepositoriesInTheGithubTypes } from 'services/repositories/get/fetch/types'
 
-export type ExemploTextProp = {
-  exemploText: string
-}
+export type PayloadType = PayloadAction<getRepositoriesInTheGithubTypes>
