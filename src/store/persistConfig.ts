@@ -1,9 +1,17 @@
 import { combineReducers } from '@reduxjs/toolkit'
-import { persistReducer } from 'redux-persist'
+import {
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  persistReducer,
+  PURGE,
+  REGISTER,
+  REHYDRATE
+} from 'redux-persist'
 import asyncSessionStorage from 'redux-persist/lib/storage'
-import * as Reducers from '.'
+import * as Reducers from './reducers'
 
-const whitelist = ['exampleSimple', 'exampleWithPayload', 'exampleAsyncSlice']
+const whitelist = ['exampleSimple', 'exampleWithPayload']
 
 const persistConfig = {
   key: 'root',
@@ -11,6 +19,10 @@ const persistConfig = {
   whitelist
 }
 
-const reducer = combineReducers({ ...Reducers })
+const rootReducer = combineReducers({ ...Reducers })
 
-export const persistedReducer = persistReducer(persistConfig, reducer)
+export const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export const serializableCheck = {
+  ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+}
