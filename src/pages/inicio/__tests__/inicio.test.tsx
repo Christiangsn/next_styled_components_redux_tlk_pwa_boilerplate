@@ -54,73 +54,31 @@ describe('[Page] Home', () => {
     expect(titleSectionPayload3).toBeInTheDocument()
   })
 
-  it('should go to another page by clicking the button 1 and it should preload the next page with the onMouseEnter event', () => {
-    renderWithProviders(<Home />)
+  const dataTests = [
+    { buttonNumber: 1 },
+    { buttonNumber: 2 },
+    { buttonNumber: 3 },
+    { buttonNumber: 4 },
+    { buttonNumber: 5 }
+  ]
 
-    const btn = screen.getByRole('button', { name: 'Página Exemplo' })
+  dataTests.forEach(({ buttonNumber }) => {
+    it(`should go to another page by clicking the button ${buttonNumber} and it should preload the next page with the onMouseEnter event`, () => {
+      renderWithProviders(<Home />)
 
-    fireEvent.click(btn)
-    fireEvent.mouseEnter(btn)
+      const btn = screen.getByRole('button', {
+        name: `Página Exemplo ${buttonNumber}`
+      })
 
-    expect(mockedPush).toBeCalledTimes(1)
-    expect(mockedPrefetch).toBeCalledTimes(1)
-    expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo')
-    expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo')
-  })
+      fireEvent.click(btn)
+      fireEvent.mouseEnter(btn)
 
-  it('should go to another page by clicking the button 2 and it should preload the next page with the onMouseEnter event', () => {
-    renderWithProviders(<Home />)
-
-    const btn = screen.getByRole('button', { name: 'Página Exemplo 2' })
-
-    fireEvent.click(btn)
-    fireEvent.mouseEnter(btn)
-
-    expect(mockedPush).toBeCalledTimes(1)
-    expect(mockedPrefetch).toBeCalledTimes(1)
-    expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo2')
-    expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo2')
-  })
-
-  it('should go to another page by clicking the button 3 and it should preload the next page with the onMouseEnter event', () => {
-    renderWithProviders(<Home />)
-
-    const btn = screen.getByRole('button', { name: 'Página Exemplo 3' })
-
-    fireEvent.click(btn)
-    fireEvent.mouseEnter(btn)
-
-    expect(mockedPush).toBeCalledTimes(1)
-    expect(mockedPrefetch).toBeCalledTimes(1)
-    expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo3')
-    expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo3')
-  })
-
-  it('should go to another page by clicking the button 4 and it should preload the next page with the onMouseEnter event', () => {
-    renderWithProviders(<Home />)
-
-    const btn = screen.getByRole('button', { name: 'Página Exemplo 4' })
-
-    fireEvent.click(btn)
-    fireEvent.mouseEnter(btn)
-
-    expect(mockedPush).toBeCalledTimes(1)
-    expect(mockedPrefetch).toBeCalledTimes(1)
-    expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo4')
-    expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo4')
-  })
-
-  it('should go to another page by clicking the button 5 and it should preload the next page with the onMouseEnter event', () => {
-    renderWithProviders(<Home />)
-
-    const btn = screen.getByRole('button', { name: 'Página Exemplo 5' })
-
-    fireEvent.click(btn)
-    fireEvent.mouseEnter(btn)
-
-    expect(mockedPush).toBeCalledTimes(1)
-    expect(mockedPrefetch).toBeCalledTimes(1)
-    expect(mockedPush).toHaveBeenCalledWith('pagina_exemplo5')
-    expect(mockedPrefetch).toHaveBeenCalledWith('pagina_exemplo5')
+      expect(mockedPush).toBeCalledTimes(1)
+      expect(mockedPrefetch).toBeCalledTimes(1)
+      expect(mockedPush).toHaveBeenCalledWith(`pagina_exemplo${buttonNumber}`)
+      expect(mockedPrefetch).toHaveBeenCalledWith(
+        `pagina_exemplo${buttonNumber}`
+      )
+    })
   })
 })
