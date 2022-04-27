@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { fetchRepositories } from 'services'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { getRepositoriesInTheGithub } from 'services/repositories/get/api'
 import { getRepositoriesInTheGithubTypes } from 'services/repositories/get/api/types'
 import { PayloadType } from 'store/exampleAsyncThunk/types'
 
@@ -8,6 +8,11 @@ const initialState: getRepositoriesInTheGithubTypes = {
   repositories: [],
   error: ''
 }
+
+export const fetchRepositories = createAsyncThunk(
+  'repositories/getRepositories',
+  async (user: string) => await getRepositoriesInTheGithub(user)
+)
 
 const exampleAsyncThunkSlice = createSlice({
   name: 'exampleAsyncThunk',
