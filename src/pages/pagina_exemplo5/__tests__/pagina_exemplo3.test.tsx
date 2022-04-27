@@ -21,7 +21,7 @@ describe('[Page] PageExample4', () => {
 
     fireEvent.click(btn)
 
-    expect(useRefInput).toBeCalledTimes(1)
+    expect(useRefInput).toBeCalledTimes(5)
   })
 
   it('should go to another page by clicking the button', () => {
