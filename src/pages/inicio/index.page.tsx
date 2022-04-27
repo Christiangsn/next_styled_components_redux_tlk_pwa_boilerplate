@@ -13,7 +13,7 @@ export default function Home() {
   const handleChange = () => {
     setChangeExample()
 
-    exampleWithPayload.text
+    exampleWithPayload
       ? setRemoveText()
       : setAddText({ exemploText: 'Texto de Exemplo' })
   }
@@ -32,12 +32,12 @@ export default function Home() {
 
       <h1>
         Estado Exemplo do Redux:
-        {exampleSimple.toggle ? ' true' : ' false'}
+        {exampleSimple ? ' true' : ' false'}
       </h1>
 
       <br />
 
-      <h1>Payload: {exampleWithPayload.text || 'Vazio'}</h1>
+      <h1>Payload: {exampleWithPayload || 'Vazio'}</h1>
 
       <S.BtnGroup>
         <C.Button
@@ -83,6 +83,28 @@ export default function Home() {
           className="btn"
           onClick={() => router.push('pagina_exemplo3')}
           onMouseEnter={() => router.prefetch('pagina_exemplo3')}
+        />
+
+        <C.Button
+          fullWidth={true}
+          color="blue"
+          size="large"
+          text="Página Exemplo 4"
+          aria-label="Página Exemplo 4"
+          className="btn"
+          onClick={() => router.push('pagina_exemplo4')}
+          onMouseEnter={() => router.prefetch('pagina_exemplo4')}
+        />
+
+        <C.Button
+          fullWidth={true}
+          color="blue"
+          size="large"
+          text="Página Exemplo 5"
+          aria-label="Página Exemplo 5"
+          className="btn"
+          onClick={() => router.push('pagina_exemplo5')}
+          onMouseEnter={() => router.prefetch('pagina_exemplo5')}
         />
       </S.BtnGroup>
     </S.Container>
