@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { getRepositoriesInTheGithub } from '../fetch'
+import { getRepositoriesInTheGithub } from '../api'
 
 export const fetchRepositories = createAsyncThunk(
   'repositories/getRepositories',

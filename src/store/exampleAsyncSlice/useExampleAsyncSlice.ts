@@ -1,4 +1,4 @@
-import { getRepositoriesInTheGithubTypes } from 'services/repositories/get/fetch/types'
+import { getRepositoriesInTheGithubTypes } from 'services/repositories/get/api/types'
 import { getRepositories, repositoriesLoading } from '.'
 import { useTypedDispatch, useTypedSelector } from '../useHelpers'
 
