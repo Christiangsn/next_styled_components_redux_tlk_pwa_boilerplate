@@ -19,9 +19,9 @@ export default function PageExample5() {
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Página Exemplo 5" />
-      <C.TitleSection title="Buscar Repositórios do Github" />
-      <C.TitleSection title="Com createAsyncThunk" />
+      <C.HeadPage title="Page Example 5" />
+      <C.TitleSection title="Search Github Repositories" />
+      <C.TitleSection title="with createAsyncThunk" />
 
       <S.WrapperRepositories>
         {exampleAsyncThunk?.repositories?.map(repository => (
@@ -36,17 +36,17 @@ export default function PageExample5() {
       <C.Input
         ref={refInput}
         name="searchRepositoriesInTheGithub"
-        placeholder="Nome de usuário"
-        aria-describedby="Nome de usuário"
+        placeholder="User name"
+        aria-describedby="User name"
       />
       <S.BtnGroup>
         <C.Button
           fullWidth={true}
           color="red"
           size="large"
-          text="Buscar Repositórios"
+          text="Search Repositories"
           className="btn"
-          aria-label="Buscar Repositórios"
+          aria-label="Search Repositories"
           onClick={searchRepositories}
         />
 
@@ -56,7 +56,7 @@ export default function PageExample5() {
           size="large"
           text="Voltar"
           className="btn"
-          aria-label="Voltar"
+          aria-label="Return"
           onClick={() => router.push('/')}
           onMouseEnter={() => router.prefetch('/')}
         />

@@ -8,11 +8,11 @@ describe('[Page] CustomError', () => {
     expect(container).toBeInTheDocument()
   })
 
-  it('should the following section title: Ops, página não encontrada!', () => {
+  it('should the following section title: Page not found!', () => {
     renderWithProviders(<CustomError />)
 
     const titleSection = screen.getByRole('heading', {
-      name: 'Ops, página não encontrada!'
+      name: 'Page not found!'
     })
     expect(titleSection).toBeInTheDocument()
   })

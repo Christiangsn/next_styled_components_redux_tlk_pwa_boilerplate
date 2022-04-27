@@ -18,12 +18,12 @@ describe('[Page] Home', () => {
   it('should alternate the text displayed in two h1 each time the button is clicked', () => {
     renderWithProviders(<Home />)
 
-    const btn = screen.getByRole('button', { name: 'Altera Estado Global' })
+    const btn = screen.getByRole('button', { name: 'Change Global State' })
     const titleSectionStateExample1 = screen.getByRole('heading', {
-      name: 'Estado Exemplo do Redux: false'
+      name: 'Redux Example State: false'
     })
     const titleSectionPayload1 = screen.getByRole('heading', {
-      name: 'Payload: Vazio'
+      name: 'Payload: Empty'
     })
 
     expect(titleSectionStateExample1).toBeInTheDocument()
@@ -32,10 +32,10 @@ describe('[Page] Home', () => {
     fireEvent.click(btn)
 
     const titleSectionStateExample2 = screen.getByRole('heading', {
-      name: 'Estado Exemplo do Redux: true'
+      name: 'Redux Example State: true'
     })
     const titleSectionPayload2 = screen.getByRole('heading', {
-      name: 'Payload: Texto de Exemplo'
+      name: 'Payload: Example Text'
     })
 
     expect(titleSectionStateExample2).toBeInTheDocument()
@@ -44,10 +44,10 @@ describe('[Page] Home', () => {
     fireEvent.click(btn)
 
     const titleSectionStateExample3 = screen.getByRole('heading', {
-      name: 'Estado Exemplo do Redux: false'
+      name: 'Redux Example State: false'
     })
     const titleSectionPayload3 = screen.getByRole('heading', {
-      name: 'Payload: Vazio'
+      name: 'Payload: Empty'
     })
 
     expect(titleSectionStateExample3).toBeInTheDocument()
@@ -67,7 +67,7 @@ describe('[Page] Home', () => {
       renderWithProviders(<Home />)
 
       const btn = screen.getByRole('button', {
-        name: `Página Exemplo ${buttonNumber}`
+        name: `Page Example ${buttonNumber}`
       })
 
       fireEvent.click(btn)
@@ -75,9 +75,9 @@ describe('[Page] Home', () => {
 
       expect(mockedPush).toBeCalledTimes(1)
       expect(mockedPrefetch).toBeCalledTimes(1)
-      expect(mockedPush).toHaveBeenCalledWith(`pagina_exemplo${buttonNumber}`)
+      expect(mockedPush).toHaveBeenCalledWith(`page_example_${buttonNumber}`)
       expect(mockedPrefetch).toHaveBeenCalledWith(
-        `pagina_exemplo${buttonNumber}`
+        `page_example_${buttonNumber}`
       )
     })
   })

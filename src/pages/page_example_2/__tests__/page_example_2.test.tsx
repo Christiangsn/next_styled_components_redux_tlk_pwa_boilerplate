@@ -12,7 +12,7 @@ describe('[Page] PageExample2', () => {
   it('should go to another page by clicking the button', () => {
     renderWithProviders(<PageExample2 />)
 
-    const btn = screen.getByRole('button', { name: 'Voltar' })
+    const btn = screen.getByRole('button', { name: 'Return' })
 
     fireEvent.click(btn)
     fireEvent.mouseEnter(btn)

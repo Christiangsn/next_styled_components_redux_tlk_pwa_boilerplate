@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useFetchRepositories } from 'services'
+import { useRepositoriesWithDispatch } from 'services'
 import { useExampleAsyncSlice } from 'store/exampleAsyncSlice/useExampleAsyncSlice'
 import { Example } from 'templates'
 import * as S from './styles'
@@ -10,7 +10,7 @@ export default function PageExample4() {
   const router = useRouter()
   const refInput = useRef<HTMLInputElement>(null)
   const { exampleAsyncSlice } = useExampleAsyncSlice()
-  const { getFetchRepositories } = useFetchRepositories()
+  const { getFetchRepositories } = useRepositoriesWithDispatch()
 
   const searchRepositories = useCallback(async () => {
     const { value } = refInput.current!
@@ -21,9 +21,9 @@ export default function PageExample4() {
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Página Exemplo 4" />
-      <C.TitleSection title="Buscar Repositórios do Github" />
-      <C.TitleSection title="Com Hook em Services" />
+      <C.HeadPage title="Page Example 4" />
+      <C.TitleSection title="Search Github Repositories" />
+      <C.TitleSection title="With Hook in Services saving data in the Store" />
 
       <S.WrapperRepositories>
         {exampleAsyncSlice?.repositories?.map(repository => (
@@ -38,17 +38,17 @@ export default function PageExample4() {
       <C.Input
         ref={refInput}
         name="searchRepositoriesInTheGithub"
-        placeholder="Nome de usuário"
-        aria-describedby="Nome de usuário"
+        placeholder="User name"
+        aria-describedby="User name"
       />
       <S.BtnGroup>
         <C.Button
           fullWidth={true}
           color="red"
           size="large"
-          text="Buscar Repositórios"
+          text="Search Repositories"
           className="btn"
-          aria-label="Buscar Repositórios"
+          aria-label="Search Repositories"
           onClick={searchRepositories}
         />
 
@@ -56,9 +56,9 @@ export default function PageExample4() {
           fullWidth={true}
           color="blue"
           size="large"
-          text="Voltar"
+          text="Return"
           className="btn"
-          aria-label="Voltar"
+          aria-label="Return"
           onClick={() => router.push('/')}
           onMouseEnter={() => router.prefetch('/')}
         />
