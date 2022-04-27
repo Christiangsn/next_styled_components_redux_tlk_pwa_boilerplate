@@ -1,10 +1,11 @@
 {
-  "name": "boilerplate",
+  "name": "boilerplate_nextjs",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "author": "Éverton Toffanetto",
-  "description": "Este projeto é um boilerplate",
+  "description": "This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.",
+  "repository": "https://github.com/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
