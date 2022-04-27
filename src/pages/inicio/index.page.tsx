@@ -56,11 +56,11 @@ export default function Home() {
           fullWidth={true}
           color="blue"
           size="large"
-          text="Página Exemplo"
-          aria-label="Página Exemplo"
+          text="Página Exemplo 1"
+          aria-label="Página Exemplo 1"
           className="btn"
-          onClick={() => router.push('pagina_exemplo')}
-          onMouseEnter={() => router.prefetch('pagina_exemplo')}
+          onClick={() => router.push('pagina_exemplo1')}
+          onMouseEnter={() => router.prefetch('pagina_exemplo1')}
         />
 
         <C.Button
