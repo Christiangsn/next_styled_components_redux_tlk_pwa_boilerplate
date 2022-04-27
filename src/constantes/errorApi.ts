@@ -1,11 +1,11 @@
 export const ERROR_MESSAGE = {
   ERROR_500:
-    'Desculpe, serviços temporariamente indisponíveis. Por favor, tente de novo dentro de alguns instantes.',
+    'Sorry, services are temporarily unavailable. Please try again in a few moments.',
 
-  ERROR_403: 'Limite de consultas excedido.',
+  ERROR_403: 'Query limit exceeded.',
 
-  ERROR_400: 'Este usuário não existe.',
+  ERROR_400: 'This user does not exist.',
 
   GENERIC_ERROR:
-    'Desculpe, ocorreu uma falha e não foi possível prosseguir com a sua solicitação. Por favor, verifique a sua conexão com a internet e caso o erro persista, tente novamente mais tarde.'
+    'Sorry, an error has occurred and we were unable to proceed with your request. Please check your internet connection and if the error persists, please try again later.'
 }

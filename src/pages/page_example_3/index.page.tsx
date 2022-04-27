@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useSearchRepositoriesInTheGithub } from 'services'
+import { useRepositoriesInTheGithub } from 'services'
 import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
@@ -9,20 +9,20 @@ export default function PageExample3() {
   const router = useRouter()
   const refInput = useRef<HTMLInputElement>(null)
   const { getRepositoriesGithub, repositoriesGithub } =
-    useSearchRepositoriesInTheGithub()
+    useRepositoriesInTheGithub()
 
   const searchRepositories = useCallback(async () => {
     const { value } = refInput.current!
     if (value) await getRepositoriesGithub(value)
   }, [getRepositoriesGithub])
 
-  if (repositoriesGithub?.isLoading) return <h1>Carregando...</h1>
+  if (repositoriesGithub?.isLoading) return <h1>loading...</h1>
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Página Exemplo 3" />
-      <C.TitleSection title="Buscar Repositórios do Github" />
-      <C.TitleSection title="Com Hook em Services" />
+      <C.HeadPage title="Page Example 3" />
+      <C.TitleSection title="Search Github Repositories" />
+      <C.TitleSection title="With Hook in Services without Redux" />
 
       <S.WrapperRepositories>
         {repositoriesGithub?.repositories?.map(repository => (
@@ -37,17 +37,17 @@ export default function PageExample3() {
       <C.Input
         ref={refInput}
         name="searchRepositoriesInTheGithub"
-        placeholder="Nome de usuário"
-        aria-describedby="Nome de usuário"
+        placeholder="User name"
+        aria-describedby="User name"
       />
       <S.BtnGroup>
         <C.Button
           fullWidth={true}
           color="red"
           size="large"
-          text="Buscar Repositórios"
+          text="Search Repositories"
           className="btn"
-          aria-label="Buscar Repositórios"
+          aria-label="Search Repositories"
           onClick={searchRepositories}
         />
 
@@ -55,9 +55,9 @@ export default function PageExample3() {
           fullWidth={true}
           color="blue"
           size="large"
-          text="Voltar"
+          text="Return"
           className="btn"
-          aria-label="Voltar"
+          aria-label="Return"
           onClick={() => router.push('/')}
           onMouseEnter={() => router.prefetch('/')}
         />

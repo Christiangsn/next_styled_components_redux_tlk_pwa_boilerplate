@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useExampleAsyncThunk } from 'store/exampleAsyncThunk/useExampleAsyncThunk'
+import { useExampleAsyncThunk } from 'store/exampleAsyncThunk'
 import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
@@ -15,13 +15,13 @@ export default function PageExample5() {
     if (value) setFetchRepositories(value)
   }, [setFetchRepositories])
 
-  if (exampleAsyncThunk?.isLoading) return <h1>Carregando...</h1>
+  if (exampleAsyncThunk?.isLoading) return <h1>loading...</h1>
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Página Exemplo 5" />
-      <C.TitleSection title="Buscar Repositórios do Github" />
-      <C.TitleSection title="Com createAsyncThunk" />
+      <C.HeadPage title="Page Example 5" />
+      <C.TitleSection title="Search Github Repositories" />
+      <C.TitleSection title="with createAsyncThunk" />
 
       <S.WrapperRepositories>
         {exampleAsyncThunk?.repositories?.map(repository => (
@@ -36,17 +36,17 @@ export default function PageExample5() {
       <C.Input
         ref={refInput}
         name="searchRepositoriesInTheGithub"
-        placeholder="Nome de usuário"
-        aria-describedby="Nome de usuário"
+        placeholder="User name"
+        aria-describedby="User name"
       />
       <S.BtnGroup>
         <C.Button
           fullWidth={true}
           color="red"
           size="large"
-          text="Buscar Repositórios"
+          text="Search Repositories"
           className="btn"
-          aria-label="Buscar Repositórios"
+          aria-label="Search Repositories"
           onClick={searchRepositories}
         />
 
@@ -54,9 +54,9 @@ export default function PageExample5() {
           fullWidth={true}
           color="blue"
           size="large"
-          text="Voltar"
+          text="Return"
           className="btn"
-          aria-label="Voltar"
+          aria-label="Return"
           onClick={() => router.push('/')}
           onMouseEnter={() => router.prefetch('/')}
         />

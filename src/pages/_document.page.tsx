@@ -13,7 +13,10 @@ export default class MyDocument extends Document {
       <Html lang="pt-BR">
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="description" content="Este projeto é um boilerplate" />
+          <meta
+            name="description"
+            content="This project is a Nextjs boilerplate"
+          />
           <meta name="keywords" content="boilerplate, nextjs, react" />
           <meta name="copyright" content="© Éverton Toffanetto" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />

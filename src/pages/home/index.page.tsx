@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import { useExampleSimple } from 'store/exampleSimple/useExampleSimple'
-import { useExampleWithPayload } from 'store/exampleWithPayload/useExampleWithPayload'
+import { useExampleSimple } from 'store/exampleSimple'
+import { useExampleWithPayload } from 'store/exampleWithPayload'
 import * as S from './styles'
 import * as C from 'components'
 
@@ -15,14 +15,14 @@ export default function Home() {
 
     exampleWithPayload
       ? setRemoveText()
-      : setAddText({ exemploText: 'Texto de Exemplo' })
+      : setAddText({ exemploText: 'Example Text' })
   }
 
   return (
     <S.Container>
-      <C.HeadPage title="Página Inicial" />
+      <C.HeadPage title="Home Page" />
 
-      <C.TitleSection title="Acessibilidade Web" />
+      <C.TitleSection title="Web Accessibility" />
 
       <br />
 
@@ -31,21 +31,21 @@ export default function Home() {
       <br />
 
       <h1>
-        Estado Exemplo do Redux:
+        Redux Example State:
         {exampleSimple ? ' true' : ' false'}
       </h1>
 
       <br />
 
-      <h1>Payload: {exampleWithPayload || 'Vazio'}</h1>
+      <h1>Payload: {exampleWithPayload || 'Empty'}</h1>
 
       <S.BtnGroup>
         <C.Button
           fullWidth={true}
           color="red"
           size="large"
-          text="Altera Estado Global"
-          aria-label="Altera Estado Global"
+          text="Change Global State"
+          aria-label="Change Global State"
           className="btn"
           onClick={handleChange}
         />
@@ -56,55 +56,55 @@ export default function Home() {
           fullWidth={true}
           color="blue"
           size="large"
-          text="Página Exemplo 1"
-          aria-label="Página Exemplo 1"
+          text="Page Example 1"
+          aria-label="Page Example 1"
           className="btn"
-          onClick={() => router.push('pagina_exemplo1')}
-          onMouseEnter={() => router.prefetch('pagina_exemplo1')}
+          onClick={() => router.push('page_example_1')}
+          onMouseEnter={() => router.prefetch('page_example_1')}
         />
 
         <C.Button
           fullWidth={true}
           color="blue"
           size="large"
-          text="Página Exemplo 2"
-          aria-label="Página Exemplo 2"
+          text="Page Example 2"
+          aria-label="Page Example 2"
           className="btn"
-          onClick={() => router.push('pagina_exemplo2')}
-          onMouseEnter={() => router.prefetch('pagina_exemplo2')}
+          onClick={() => router.push('page_example_2')}
+          onMouseEnter={() => router.prefetch('page_example_2')}
         />
 
         <C.Button
           fullWidth={true}
           color="blue"
           size="large"
-          text="Página Exemplo 3"
-          aria-label="Página Exemplo 3"
+          text="Page Example 3"
+          aria-label="Page Example 3"
           className="btn"
-          onClick={() => router.push('pagina_exemplo3')}
-          onMouseEnter={() => router.prefetch('pagina_exemplo3')}
+          onClick={() => router.push('page_example_3')}
+          onMouseEnter={() => router.prefetch('page_example_3')}
         />
 
         <C.Button
           fullWidth={true}
           color="blue"
           size="large"
-          text="Página Exemplo 4"
-          aria-label="Página Exemplo 4"
+          text="Page Example 4"
+          aria-label="Page Example 4"
           className="btn"
-          onClick={() => router.push('pagina_exemplo4')}
-          onMouseEnter={() => router.prefetch('pagina_exemplo4')}
+          onClick={() => router.push('page_example_4')}
+          onMouseEnter={() => router.prefetch('page_example_4')}
         />
 
         <C.Button
           fullWidth={true}
           color="blue"
           size="large"
-          text="Página Exemplo 5"
-          aria-label="Página Exemplo 5"
+          text="Page Example 5"
+          aria-label="Page Example 5"
           className="btn"
-          onClick={() => router.push('pagina_exemplo5')}
-          onMouseEnter={() => router.prefetch('pagina_exemplo5')}
+          onClick={() => router.push('page_example_5')}
+          onMouseEnter={() => router.prefetch('page_example_5')}
         />
       </S.BtnGroup>
     </S.Container>

@@ -1,7 +1,7 @@
-import { useExampleAsyncSlice } from 'store/exampleAsyncSlice/useExampleAsyncSlice'
-import { getRepositoriesInTheGithub } from '../fetch'
+import { useExampleAsyncSlice } from 'store/exampleAsyncSlice'
+import { getRepositoriesInTheGithub } from '../api'
 
-export const useFetchRepositories = () => {
+export const useRepositoriesWithDispatch = () => {
   const { getRepositories, repositoriesLoading } = useExampleAsyncSlice()
 
   const getFetchRepositories = async (user: string) => {

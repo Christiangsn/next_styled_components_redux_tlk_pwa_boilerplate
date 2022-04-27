@@ -1,5 +1,5 @@
-import { setRemoveText, setAddText } from '.'
 import { useTypedDispatch, useTypedSelector } from '../useHelpers'
+import { setRemoveText, setAddText } from './slice'
 import { ExemploTextProp } from './types'
 
 export const useExampleWithPayload = () => {

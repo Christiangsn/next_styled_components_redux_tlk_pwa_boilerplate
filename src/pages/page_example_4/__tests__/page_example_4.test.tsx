@@ -1,33 +1,33 @@
 import React from 'react'
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
-import PageExample3 from '../index.page'
+import PageExample4 from '../index.page'
 import { mockedPush, mockedPrefetch } from '__mocks__'
 
-describe('[Page] PageExample3', () => {
+describe('[Page] PageExample4', () => {
   it('should an Home page', () => {
-    const { container } = renderWithProviders(<PageExample3 />)
+    const { container } = renderWithProviders(<PageExample4 />)
     expect(container).toBeInTheDocument()
   })
 
-  it('should render list of repositories when clicking "Buscar Repositório" button if user in text field exists', () => {
+  it('should render list of repositories when clicking "Search Repository" button if user in text field exists', () => {
     const useRefInput = jest
       .spyOn(React, 'useRef')
       .mockReturnValueOnce({ current: { value: 'everton-dgn' } })
 
-    renderWithProviders(<PageExample3 />)
+    renderWithProviders(<PageExample4 />)
 
-    const btn = screen.getByRole('button', { name: /buscar repositórios/i })
+    const btn = screen.getByRole('button', { name: /search repositories/i })
 
     fireEvent.click(btn)
 
-    expect(useRefInput).toBeCalledTimes(1)
+    expect(useRefInput).toBeCalledTimes(9)
   })
 
   it('should go to another page by clicking the button', () => {
-    renderWithProviders(<PageExample3 />)
+    renderWithProviders(<PageExample4 />)
 
-    const btn = screen.getByRole('button', { name: 'Voltar' })
+    const btn = screen.getByRole('button', { name: 'Return' })
 
     fireEvent.click(btn)
     fireEvent.mouseEnter(btn)

@@ -1,5 +1,5 @@
-import { fetchRepositories } from 'services'
 import { useTypedDispatch, useTypedSelector } from '../useHelpers'
+import { fetchRepositories } from './slice'
 
 export const useExampleAsyncThunk = () => {
   const dispatch = useTypedDispatch()

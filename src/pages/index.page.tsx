@@ -1,2 +1,2 @@
-import Home from './inicio/index.page'
+import Home from './home/index.page'
 export default Home

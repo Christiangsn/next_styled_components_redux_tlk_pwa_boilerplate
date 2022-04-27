@@ -8,9 +8,9 @@ export default function PageExample1() {
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Página Exemplo 1" />
+      <C.HeadPage title="Page Example 1" />
 
-      <C.TitleSection title="Página Exemplo 1" />
+      <C.TitleSection title="Page Example 1" />
 
       <br />
 
@@ -21,9 +21,9 @@ export default function PageExample1() {
           fullWidth={true}
           color="blue"
           size="large"
-          text="Voltar"
+          text="Return"
           className="btn"
-          aria-label="Voltar"
+          aria-label="Return"
           onClick={() => router.push('/')}
           onMouseEnter={() => router.prefetch('/')}
         />

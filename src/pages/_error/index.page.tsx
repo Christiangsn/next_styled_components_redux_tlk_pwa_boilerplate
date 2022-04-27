@@ -6,10 +6,10 @@ export default function CustomError() {
   return (
     <S.Container>
       <Head>
-        <title>Página Não encontrada</title>
+        <title>Page not found</title>
       </Head>
 
-      <S.Title>Ops, página não encontrada!</S.Title>
+      <S.Title>Page not found!</S.Title>
     </S.Container>
   )
 }

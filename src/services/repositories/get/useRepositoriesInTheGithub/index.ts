@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { getRepositoriesInTheGithub } from '../fetch'
-import { getRepositoriesInTheGithubTypes } from '../fetch/types'
+import { getRepositoriesInTheGithub } from '../api'
+import { getRepositoriesInTheGithubTypes } from '../api/types'
 
-export const useSearchRepositoriesInTheGithub = () => {
+export const useRepositoriesInTheGithub = () => {
   const [repositoriesGithub, setRepositoriesGithub] =
     useState<getRepositoriesInTheGithubTypes>()
 
