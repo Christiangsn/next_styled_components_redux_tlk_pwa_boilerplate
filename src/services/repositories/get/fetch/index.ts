@@ -1,24 +1,24 @@
 import { api } from 'libs'
 import { ErrorApi } from 'types/errorApi'
 import { errorApi } from 'utils'
-import { RepositoriesTypes } from './types'
+import { getRepositoriesInTheGithubTypes } from './types'
 
-export const searchRepositoriesInTheGithub = async (
+export const getRepositoriesInTheGithub = async (
   user: string
-): Promise<RepositoriesTypes> => {
+): Promise<getRepositoriesInTheGithubTypes> => {
   try {
     const { data } = await api.get(`/users/${user}/repos`)
 
     return {
-      data,
+      repositories: data,
       error: '',
-      loading: false
+      isLoading: false
     }
   } catch (e) {
     return {
-      data: [],
+      repositories: [],
       error: errorApi(e as ErrorApi),
-      loading: false
+      isLoading: false
     }
   }
 }
