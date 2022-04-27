@@ -12,8 +12,8 @@ export default function PageExample3() {
     useRepositoriesInTheGithub()
 
   const searchRepositories = useCallback(async () => {
-    const { value } = refInput.current!
-    if (value) await getRepositoriesGithub(value)
+    const user = refInput.current?.value
+    if (user) await getRepositoriesGithub(user)
   }, [getRepositoriesGithub])
 
   if (repositoriesGithub?.isLoading) return <h1>loading...</h1>

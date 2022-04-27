@@ -13,8 +13,8 @@ export default function PageExample4() {
   const { getFetchRepositories } = useRepositoriesWithDispatch()
 
   const searchRepositories = useCallback(async () => {
-    const { value } = refInput.current!
-    if (value) await getFetchRepositories(value)
+    const user = refInput.current?.value
+    if (user) await getFetchRepositories(user)
   }, [getFetchRepositories])
 
   if (exampleAsyncSlice?.isLoading) return <h1>loading...</h1>
