@@ -7,5 +7,5 @@ const Template: Story<TitleProps> = args => <TitleSection {...args} />
 export const Default = Template.bind({})
 
 Default.args = {
-  title: 'Este é um título de exemplo'
+  title: 'This is an example title'
 }
