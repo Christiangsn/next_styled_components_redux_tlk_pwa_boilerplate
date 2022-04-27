@@ -1,7 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useRepositoriesWithDispatch } from 'services'
-import { useExampleAsyncSlice } from 'store/exampleAsyncSlice/useExampleAsyncSlice'
+import { useExampleAsyncSlice } from 'store/exampleAsyncSlice'
 import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'

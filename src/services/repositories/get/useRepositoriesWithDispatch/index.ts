@@ -1,4 +1,4 @@
-import { useExampleAsyncSlice } from 'store/exampleAsyncSlice/useExampleAsyncSlice'
+import { useExampleAsyncSlice } from 'store/exampleAsyncSlice'
 import { getRepositoriesInTheGithub } from '../api'
 
 export const useRepositoriesWithDispatch = () => {

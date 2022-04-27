@@ -1,4 +1,4 @@
-export { exampleSimple } from './exampleSimple'
-export { exampleAsync } from './exampleAsyncSlice'
-export { exampleAsyncThunk } from './exampleAsyncThunk'
-export { exampleWithPayload } from './exampleWithPayload'
+export { exampleSimple } from './exampleSimple/slice'
+export { exampleAsync } from './exampleAsyncSlice/slice'
+export { exampleAsyncThunk } from './exampleAsyncThunk/slice'
+export { exampleWithPayload } from './exampleWithPayload/slice'

@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useExampleAsyncThunk } from 'store/exampleAsyncThunk/useExampleAsyncThunk'
+import { useExampleAsyncThunk } from 'store/exampleAsyncThunk'
 import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'

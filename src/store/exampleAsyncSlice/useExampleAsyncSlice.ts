@@ -1,6 +1,6 @@
 import { getRepositoriesInTheGithubTypes } from 'services/repositories/get/api/types'
-import { getRepositories, repositoriesLoading } from '.'
 import { useTypedDispatch, useTypedSelector } from '../useHelpers'
+import { getRepositories, repositoriesLoading } from './slice'
 
 export const useExampleAsyncSlice = () => {
   const dispatch = useTypedDispatch()

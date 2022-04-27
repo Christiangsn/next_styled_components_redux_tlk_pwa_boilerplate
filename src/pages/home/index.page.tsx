@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
-import { useExampleSimple } from 'store/exampleSimple/useExampleSimple'
-import { useExampleWithPayload } from 'store/exampleWithPayload/useExampleWithPayload'
+import { useExampleSimple } from 'store/exampleSimple'
+import { useExampleWithPayload } from 'store/exampleWithPayload'
 import * as S from './styles'
 import * as C from 'components'
 
