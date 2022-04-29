@@ -3,6 +3,7 @@ const nextJest = require('next/jest')
 const createJestConfig = nextJest()
 
 const customJestConfig = {
+  coverageProvider: 'v8',
   testEnvironment: 'jsdom',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
