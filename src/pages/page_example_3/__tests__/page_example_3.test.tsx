@@ -36,9 +36,6 @@ jest.mock('services/repositories/get/useRepositoriesInTheGithub', () => ({
 }))
 
 describe('[Page] PageExample3', () => {
-  beforeAll(() => {
-    jest.clearAllMocks()
-  })
   afterEach(() => {
     jest.clearAllMocks()
   })
