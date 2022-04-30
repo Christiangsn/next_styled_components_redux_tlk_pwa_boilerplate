@@ -11,8 +11,8 @@ export default function PageExample5() {
   const { exampleAsyncThunk, setFetchRepositories } = useExampleAsyncThunk()
 
   const searchRepositories = useCallback(() => {
-    const { value } = refInput.current!
-    if (value) setFetchRepositories(value)
+    const user = refInput.current?.value
+    if (user) setFetchRepositories(user)
   }, [setFetchRepositories])
 
   if (exampleAsyncThunk?.isLoading) return <h1>loading...</h1>

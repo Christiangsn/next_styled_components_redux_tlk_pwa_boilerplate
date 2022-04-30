@@ -1,14 +1,11 @@
-const nextJest = require('next/jest')
-
-const createJestConfig = nextJest()
-
-const customJestConfig = {
+module.exports = {
   testEnvironment: 'jsdom',
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  testPathIgnorePatterns: ['/node_modules', '/.next/'],
   moduleDirectories: ['node_modules', '<rootDir>/'],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
+  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
   coveragePathIgnorePatterns: [
     'src/pages/_app.page.tsx',
     'src/pages/index.page.tsx',
@@ -26,7 +23,47 @@ const customJestConfig = {
     'src/styles',
     'stories.tsx',
     'types.ts'
-  ]
+  ],
+  transform: {
+    '^.+\\.[jt]sx?$': ['babel-jest', { presets: ['next/babel'] }]
+  },
+  moduleNameMapper: {
+    '^styled-components':
+      '<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js'
+  }
 }
 
-module.exports = createJestConfig(customJestConfig)
+// Waiting for fixes from nextjs to generate coverage correctly
+// const nextJest = require('next/jest')
+//
+// const createJestConfig = nextJest()
+//
+// const customJestConfig = {
+//  // coverageProvider: 'v8',
+//  testEnvironment: 'jsdom',
+//  collectCoverage: true,
+//  moduleDirectories: ['node_modules', '<rootDir>/'],
+//  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
+//  modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
+//  collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+//  coveragePathIgnorePatterns: [
+//    'src/pages/_app.page.tsx',
+//    'src/pages/index.page.tsx',
+//    'src/pages/_document.page.tsx',
+//    'src/components/index.tsx',
+//    'src/components/atoms/Svg',
+//    'src/hooks/index.ts',
+//    'src/templates/index.ts',
+//    'src/utils/index.ts',
+//    'src/types',
+//    'src/libs',
+//    'src/services',
+//    'src/store',
+//    'src/theme',
+//    'src/styles',
+//    'stories.tsx',
+//    'types.ts'
+//  ]
+// }
+//
+// module.exports = createJestConfig(customJestConfig)

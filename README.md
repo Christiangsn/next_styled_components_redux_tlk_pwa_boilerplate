@@ -49,6 +49,7 @@ In addition to being constantly updated, this project was configured in the smal
   * [Launch Storybook in Development Mode](#launch-storybook-in-development-mode)
   * [Generate Storybook Production Build](#generate-storybook-production-build)
   * [Run Lints](#run-lints)
+* [Important Considerations](#rotating_light-important-considerations)
 * [Author](#technologist-author)
 
 <br />
@@ -192,6 +193,41 @@ yarn typecheck
 ```
 
 <br />
+
+---
+
+# :rotating_light: Important Considerations
+
+- The husky is configured to not allow commit if there are any lint and typescript errors. The push can only be done if all tests and builds (of the project and the storybook) pass.
+
+- Due to husky's build check settings, to push with git, the development server must be stopped first or an error will occur in the `git push` command.
+
+- Some conventions widely used in the React ecosystem were used. For example: 
+  - In the root of the components folder, an export index was created to facilitate the use of components with named import. In this way, to use a component just import it as an object and use it with the prefix "C", thus avoiding several unnecessary lines of imports:
+  
+    ```jsx
+    import * as C from 'components'
+    
+    ...
+    <C.Card>
+      <C.Input />
+    </C.Card>
+    ...
+    ```
+
+  - To import style sheets that use styled-components, named imports were used for the same reason as before, thus:
+
+    ```jsx
+    import * as S from './styles'
+    
+    ...
+    <S.Wrapper>
+      <S.Title />
+    </S.Wrapper>
+    ...
+    ```
+
+- To create a complete component folder with tests, storybook, index and styles files, just use the command in the terminal: `yarn generate ComponentName`
 
 ---
 
