@@ -1,4 +1,3 @@
-import React from 'react'
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import PageExample4 from '../index.page'
@@ -38,7 +37,7 @@ const mockedUseRepositoriesWithDispatch3 = {
 
 let mockedUseRepositoriesWithDispatch = mockedUseRepositoriesWithDispatch1
 
-jest.mock('services/repositories/get/useRepositoriesWithDispatch', () => ({
+jest.mock('services', () => ({
   useRepositoriesWithDispatch: () => mockedUseRepositoriesWithDispatch
 }))
 

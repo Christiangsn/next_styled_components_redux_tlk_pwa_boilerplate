@@ -1,10 +1,9 @@
-import React from 'react'
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import PageExample3 from '../index.page'
 import { mockedPrefetch, mockedPush } from '__mocks__'
 
-const mockObj1 = {
+const mockedUseRepositoriesInTheGithub1 = {
   getRepositoriesGithub: jest.fn(),
   repositoriesGithub: {
     isLoading: false,
@@ -12,7 +11,7 @@ const mockObj1 = {
     error: ''
   }
 }
-const mockObj2 = {
+const mockedUseRepositoriesInTheGithub2 = {
   getRepositoriesGithub: jest.fn(),
   repositoriesGithub: {
     isLoading: false,
@@ -20,7 +19,7 @@ const mockObj2 = {
     error: 'Not found'
   }
 }
-const mockObj3 = {
+const mockedUseRepositoriesInTheGithub3 = {
   getRepositoriesGithub: jest.fn(),
   repositoriesGithub: {
     isLoading: true,
@@ -29,10 +28,10 @@ const mockObj3 = {
   }
 }
 
-let mockObj = mockObj1
+let mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub1
 
-jest.mock('services/repositories/get/useRepositoriesInTheGithub', () => ({
-  useRepositoriesInTheGithub: () => mockObj
+jest.mock('services', () => ({
+  useRepositoriesInTheGithub: () => mockedUseRepositoriesInTheGithub
 }))
 
 describe('[Page] PageExample3', () => {
@@ -46,8 +45,8 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should render loading when clicking "Search Repository" button while isLoading for true', () => {
-    mockObj = mockObj3
-    jest.spyOn(mockObj, 'getRepositoriesGithub')
+    mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub3
+    jest.spyOn(mockedUseRepositoriesInTheGithub, 'getRepositoriesGithub')
 
     renderWithProviders(<PageExample3 />)
 
@@ -57,8 +56,11 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should render error message to clicking "Search Repository" button if user in text field not exists and if isLoading is false', () => {
-    mockObj = mockObj2
-    const verifyCall = jest.spyOn(mockObj, 'getRepositoriesGithub')
+    mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub2
+    const verifyCall = jest.spyOn(
+      mockedUseRepositoriesInTheGithub,
+      'getRepositoriesGithub'
+    )
 
     renderWithProviders(<PageExample3 />)
 
@@ -76,8 +78,11 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should render list of repositories when clicking "Search Repository" button if user in text field exists and if isLoading is false', () => {
-    mockObj = mockObj1
-    const verifyCall = jest.spyOn(mockObj, 'getRepositoriesGithub')
+    mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub1
+    const verifyCall = jest.spyOn(
+      mockedUseRepositoriesInTheGithub,
+      'getRepositoriesGithub'
+    )
 
     renderWithProviders(<PageExample3 />)
 
@@ -92,9 +97,12 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should not take any action if the text input is empty', () => {
-    mockObj = mockObj2
+    mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub2
 
-    const verifyCall = jest.spyOn(mockObj, 'getRepositoriesGithub')
+    const verifyCall = jest.spyOn(
+      mockedUseRepositoriesInTheGithub,
+      'getRepositoriesGithub'
+    )
 
     renderWithProviders(<PageExample3 />)
 
@@ -106,7 +114,7 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should go to another page by clicking the button', () => {
-    mockObj = mockObj1
+    mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub1
 
     renderWithProviders(<PageExample3 />)
 
