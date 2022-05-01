@@ -64,7 +64,10 @@
           "/^./styles/",
           "/^./types/",
           "/^components/",
-          "/^__mocks__/"
+          "/^__mocks__/",
+          "/^./__mocks__/",
+          "/^../__mocks__/",
+          "/^mocks/"
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }

@@ -2,34 +2,9 @@ import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import PageExample3 from '../index.page'
 import { mockedPrefetch, mockedPush } from '__mocks__'
+import * as mock from '../__mocks__/mockedUseRepositoriesInTheGithub'
 
-const getRepositoriesGithub = jest.fn()
-const mockedUseRepositoriesInTheGithub1 = {
-  getRepositoriesGithub,
-  repositoriesGithub: {
-    isLoading: false,
-    repositories: [{ name: 'example1' }, { name: 'example2' }],
-    error: ''
-  }
-}
-const mockedUseRepositoriesInTheGithub2 = {
-  getRepositoriesGithub,
-  repositoriesGithub: {
-    isLoading: false,
-    repositories: [],
-    error: 'Not found'
-  }
-}
-const mockedUseRepositoriesInTheGithub3 = {
-  getRepositoriesGithub,
-  repositoriesGithub: {
-    isLoading: true,
-    repositories: [],
-    error: ''
-  }
-}
-
-let mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub1
+let mockedUseRepositoriesInTheGithub = mock.useRepositoriesInTheGithub1
 
 jest.mock('services', () => ({
   useRepositoriesInTheGithub: () => mockedUseRepositoriesInTheGithub
@@ -80,7 +55,7 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should render loading when clicking "Search Repository" button while isLoading for true', () => {
-    mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub3
+    mockedUseRepositoriesInTheGithub = mock.useRepositoriesInTheGithub3
 
     renderWithProviders(<PageExample3 />)
 
@@ -94,7 +69,7 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should render error message to clicking "Search Repository" button if user in text field not exists and if isLoading is false', () => {
-    mockedUseRepositoriesInTheGithub = mockedUseRepositoriesInTheGithub2
+    mockedUseRepositoriesInTheGithub = mock.useRepositoriesInTheGithub2
 
     renderWithProviders(<PageExample3 />)
 

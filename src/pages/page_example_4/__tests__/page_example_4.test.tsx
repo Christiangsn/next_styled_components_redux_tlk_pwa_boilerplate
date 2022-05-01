@@ -2,43 +2,16 @@ import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import PageExample4 from '../index.page'
 import { mockedPush, mockedPrefetch } from '__mocks__'
+import * as mock from '../__mocks__/mockedUseExampleAsyncSlice'
 
-const mockedUseExampleAsyncSlice1 = {
-  exampleAsyncSlice: {
-    isLoading: false,
-    repositories: [{ name: 'example1' }, { name: 'example2' }],
-    error: ''
-  }
-}
-const mockedUseExampleAsyncSlice2 = {
-  exampleAsyncSlice: {
-    isLoading: false,
-    repositories: [],
-    error: 'Not found'
-  }
-}
-const mockedUseExampleAsyncSlice3 = {
-  exampleAsyncSlice: {
-    isLoading: true,
-    repositories: [],
-    error: ''
-  }
-}
+let mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice1
 
-let mockedUseExampleAsyncSlice = mockedUseExampleAsyncSlice1
-
-const mockedUseRepositoriesWithDispatch = {
-  getFetchRepositories: jest.fn()
-}
 jest.mock('services', () => ({
-  useRepositoriesWithDispatch: () => mockedUseRepositoriesWithDispatch
-}))
-jest.mock('store/exampleAsyncSlice', () => ({
-  useExampleAsyncSlice: () => mockedUseExampleAsyncSlice
+  useRepositoriesWithDispatch: () => mockedUseExampleAsyncSlice
 }))
 
 const verifyCall = jest.spyOn(
-  mockedUseRepositoriesWithDispatch,
+  mockedUseExampleAsyncSlice,
   'getFetchRepositories'
 )
 
@@ -82,7 +55,7 @@ describe('[Page] PageExample4', () => {
   })
 
   it('should render loading when clicking "Search Repository" button while isLoading for true', () => {
-    mockedUseExampleAsyncSlice = mockedUseExampleAsyncSlice3
+    mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice3
 
     renderWithProviders(<PageExample4 />)
 
@@ -96,7 +69,7 @@ describe('[Page] PageExample4', () => {
   })
 
   it('should render error message to clicking "Search Repository" button if user in text field not exists and if isLoading is false', () => {
-    mockedUseExampleAsyncSlice = mockedUseExampleAsyncSlice2
+    mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice2
 
     renderWithProviders(<PageExample4 />)
 
