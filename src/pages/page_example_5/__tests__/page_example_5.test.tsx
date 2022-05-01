@@ -2,34 +2,9 @@ import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import PageExample5 from '../index.page'
 import { mockedPush, mockedPrefetch } from '__mocks__'
+import * as mock from '../__mocks__/mockedUseExampleAsyncThunk'
 
-const setFetchRepositories = jest.fn()
-const mockedUseExampleAsyncThunk1 = {
-  setFetchRepositories,
-  exampleAsyncThunk: {
-    isLoading: false,
-    repositories: [{ name: 'example1' }, { name: 'example2' }],
-    error: ''
-  }
-}
-const mockedUseExampleAsyncThunk2 = {
-  setFetchRepositories,
-  exampleAsyncThunk: {
-    isLoading: false,
-    repositories: [],
-    error: 'Not found'
-  }
-}
-const mockedUseExampleAsyncThunk3 = {
-  setFetchRepositories,
-  exampleAsyncThunk: {
-    isLoading: true,
-    repositories: [],
-    error: ''
-  }
-}
-
-let mockedUseExampleAsyncThunk = mockedUseExampleAsyncThunk1
+let mockedUseExampleAsyncThunk = mock.useExampleAsyncThunk1
 
 jest.mock('store/exampleAsyncThunk', () => ({
   useExampleAsyncThunk: () => mockedUseExampleAsyncThunk
@@ -80,7 +55,7 @@ describe('[Page] PageExample5', () => {
   })
 
   it('should render loading when clicking "Search Repository" button while isLoading for true', () => {
-    mockedUseExampleAsyncThunk = mockedUseExampleAsyncThunk3
+    mockedUseExampleAsyncThunk = mock.useExampleAsyncThunk3
 
     renderWithProviders(<PageExample5 />)
 
@@ -94,7 +69,7 @@ describe('[Page] PageExample5', () => {
   })
 
   it('should render error message to clicking "Search Repository" button if user in text field not exists and if isLoading is false', () => {
-    mockedUseExampleAsyncThunk = mockedUseExampleAsyncThunk2
+    mockedUseExampleAsyncThunk = mock.useExampleAsyncThunk2
 
     renderWithProviders(<PageExample5 />)
 

@@ -2,34 +2,9 @@ import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import PageExample4 from '../index.page'
 import { mockedPush, mockedPrefetch } from '__mocks__'
+import * as mock from '../__mocks__/mockedUseExampleAsyncSlice'
 
-const getFetchRepositories = jest.fn()
-const mockedUseExampleAsyncSlice1 = {
-  getFetchRepositories,
-  exampleAsyncSlice: {
-    isLoading: false,
-    repositories: [{ name: 'example1' }, { name: 'example2' }],
-    error: ''
-  }
-}
-const mockedUseExampleAsyncSlice2 = {
-  getFetchRepositories,
-  exampleAsyncSlice: {
-    isLoading: false,
-    repositories: [],
-    error: 'Not found'
-  }
-}
-const mockedUseExampleAsyncSlice3 = {
-  getFetchRepositories,
-  exampleAsyncSlice: {
-    isLoading: true,
-    repositories: [],
-    error: ''
-  }
-}
-
-let mockedUseExampleAsyncSlice = mockedUseExampleAsyncSlice1
+let mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice1
 
 jest.mock('services', () => ({
   useRepositoriesWithDispatch: () => mockedUseExampleAsyncSlice
@@ -80,7 +55,7 @@ describe('[Page] PageExample4', () => {
   })
 
   it('should render loading when clicking "Search Repository" button while isLoading for true', () => {
-    mockedUseExampleAsyncSlice = mockedUseExampleAsyncSlice3
+    mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice3
 
     renderWithProviders(<PageExample4 />)
 
@@ -94,7 +69,7 @@ describe('[Page] PageExample4', () => {
   })
 
   it('should render error message to clicking "Search Repository" button if user in text field not exists and if isLoading is false', () => {
-    mockedUseExampleAsyncSlice = mockedUseExampleAsyncSlice2
+    mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice2
 
     renderWithProviders(<PageExample4 />)
 
