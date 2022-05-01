@@ -3,7 +3,9 @@ import { renderWithProviders } from 'utils'
 import PageExample4 from '../index.page'
 import { mockedPush, mockedPrefetch } from '__mocks__'
 
+const getFetchRepositories = jest.fn()
 const mockedUseExampleAsyncSlice1 = {
+  getFetchRepositories,
   exampleAsyncSlice: {
     isLoading: false,
     repositories: [{ name: 'example1' }, { name: 'example2' }],
@@ -11,6 +13,7 @@ const mockedUseExampleAsyncSlice1 = {
   }
 }
 const mockedUseExampleAsyncSlice2 = {
+  getFetchRepositories,
   exampleAsyncSlice: {
     isLoading: false,
     repositories: [],
@@ -18,6 +21,7 @@ const mockedUseExampleAsyncSlice2 = {
   }
 }
 const mockedUseExampleAsyncSlice3 = {
+  getFetchRepositories,
   exampleAsyncSlice: {
     isLoading: true,
     repositories: [],
@@ -27,18 +31,12 @@ const mockedUseExampleAsyncSlice3 = {
 
 let mockedUseExampleAsyncSlice = mockedUseExampleAsyncSlice1
 
-const mockedUseRepositoriesWithDispatch = {
-  getFetchRepositories: jest.fn()
-}
 jest.mock('services', () => ({
-  useRepositoriesWithDispatch: () => mockedUseRepositoriesWithDispatch
-}))
-jest.mock('store/exampleAsyncSlice', () => ({
-  useExampleAsyncSlice: () => mockedUseExampleAsyncSlice
+  useRepositoriesWithDispatch: () => mockedUseExampleAsyncSlice
 }))
 
 const verifyCall = jest.spyOn(
-  mockedUseRepositoriesWithDispatch,
+  mockedUseExampleAsyncSlice,
   'getFetchRepositories'
 )
 
