@@ -1,7 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useRepositoriesWithDispatch } from 'services'
-import { useExampleAsyncSlice } from 'store/exampleAsyncSlice'
 import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
@@ -9,8 +8,8 @@ import * as C from 'components'
 export default function PageExample4() {
   const router = useRouter()
   const refInput = useRef<HTMLInputElement>(null)
-  const { exampleAsyncSlice } = useExampleAsyncSlice()
-  const { getFetchRepositories } = useRepositoriesWithDispatch()
+  const { getFetchRepositories, exampleAsyncSlice } =
+    useRepositoriesWithDispatch()
 
   const searchRepositories = useCallback(async () => {
     const user = refInput.current?.value

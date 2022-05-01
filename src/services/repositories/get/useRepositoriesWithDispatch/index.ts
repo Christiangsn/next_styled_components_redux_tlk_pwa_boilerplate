@@ -2,7 +2,8 @@ import { useExampleAsyncSlice } from 'store/exampleAsyncSlice'
 import { getRepositoriesInTheGithub } from '../api'
 
 export const useRepositoriesWithDispatch = () => {
-  const { getRepositories, repositoriesLoading } = useExampleAsyncSlice()
+  const { getRepositories, repositoriesLoading, exampleAsyncSlice } =
+    useExampleAsyncSlice()
 
   const getFetchRepositories = async (user: string) => {
     repositoriesLoading()
@@ -10,5 +11,5 @@ export const useRepositoriesWithDispatch = () => {
     getRepositories(repositories)
   }
 
-  return { getFetchRepositories }
+  return { exampleAsyncSlice, getFetchRepositories }
 }
