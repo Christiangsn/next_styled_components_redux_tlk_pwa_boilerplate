@@ -25,7 +25,7 @@ module.exports = {
     'types.ts'
   ],
   transform: {
-    '^.+\\.[jt]sx?$': ['babel-jest', { presets: ['next/babel'] }]
+    '^.+\\.tsx?$': ['babel-jest', { presets: ['next/babel'] }]
   },
   moduleNameMapper: {
     '^styled-components':
