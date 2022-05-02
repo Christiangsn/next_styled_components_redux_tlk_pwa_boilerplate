@@ -25,7 +25,7 @@ export default createGlobalStyle`
       color: ${T.colors.black};
   }
 
-  body, #root, input, select, textarea, button {
+  #__next, body, input, select, textarea, button {
       font: ${T.fonts.normal} ${T.fonts.sizes.medium} 'Inter', sans-serif;
   }
 
