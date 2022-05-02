@@ -18,16 +18,14 @@ export const BtnGroup = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 35rem;
-
   gap: ${T.grid.gutter};
   margin-top: ${T.spacings.xtreme};
   padding: 0 ${T.spacings.large};
+  align-items: center;
 
   .btn {
     opacity: 0;
     animation: ${T.animations.fadeInMove('0', '30px', '0')} 0.3s linear forwards
       0.2s;
   }
-
-  align-items: center;
 `

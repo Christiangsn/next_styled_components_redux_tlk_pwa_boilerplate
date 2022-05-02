@@ -18,20 +18,26 @@ export default createGlobalStyle`
     font-size: 62.5%;
   }
 
+  #__next,
   body,
-  html,
-  #__next {
-      background-color: ${T.colors.secondary};
-      color: ${T.colors.black};
+  html {
+    background-color: ${T.colors.secondary};
+    color: ${T.colors.black};
   }
 
-  #__next, body, input, select, textarea, button {
-      font: ${T.fonts.normal} ${T.fonts.sizes.medium} 'Inter', sans-serif;
+  #__next,
+  body,
+  input,
+  select,
+  textarea,
+  button {
+    font: ${T.fonts.normal} ${T.fonts.sizes.medium} Inter, sans-serif;
   }
 
   button {
     border: none;
     border-radius: ${T.border.radius};
+    cursor: pointer;
   }
 
   #__next {
@@ -45,10 +51,6 @@ export default createGlobalStyle`
   a:active {
     color: inherit;
     text-decoration: none;
-  }
-
-  button {
-    cursor: pointer;
   }
 
   ::-webkit-scrollbar,
