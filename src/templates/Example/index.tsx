@@ -4,7 +4,7 @@ import { ExampleProps } from './types'
 export const Example = ({ children }: ExampleProps) => {
   return (
     <S.Grid>
-      <h1>Layout Example</h1>
+      <h1>Template Example</h1>
       <div>{children}</div>
     </S.Grid>
   )
