@@ -10,15 +10,15 @@ export const animations = {
     }
   `,
   fadeInMove: (x: string, y: string, z: string) => keyframes`
-      0% {
-        opacity: 0;
-        transform: translate3d(${x}, ${y}, ${z});
-      }
-      100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
-    `,
+    0% {
+      opacity: 0;
+      transform: translate3d(${x}, ${y}, ${z});
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  `,
   fadeIn: keyframes`
     to {
       opacity: 1;
@@ -28,7 +28,6 @@ export const animations = {
     to {
       background-color: #000000b3;
       backdrop-filter: blur(0.7rem);
-      -webkit-backdrop-filter: blur(0.7rem);
     }
   `
 }

@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint src/**/*.{ts,tsx,js,jsx,json} --max-warnings=0",
+    "lint:css": "stylelint src/**/styles.ts src/**/GlobalStyles.ts src/theme/*.ts",
     "next:lint": "next lint",
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "test": "jest --maxWorkers=50% --passWithNoTests",
@@ -19,12 +20,12 @@
     "sb": "start-storybook -p 6006",
     "build-sb": "build-storybook",
     "generate": "yarn plop --plopfile componentGenerator/plopfile.js",
-    "verify-update": "yarn upgrade-interactive --latest",
+    "verify:update": "yarn upgrade-interactive --latest",
     "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn typecheck",
+      "pre-commit": "yarn lint && yarn lint:css && yarn typecheck",
       "pre-push": "yarn test --findRelatedTests -b && yarn build && yarn build-sb"
     }
   },
@@ -80,6 +81,11 @@
     "storybook-dark-mode": "^1.0.9",
     "storybook-mobile": "^1.0.0",
     "typescript": "^4.5.5",
+    "stylelint": "^14.8.1",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "webpack": "^5.67.0"
   }
 }

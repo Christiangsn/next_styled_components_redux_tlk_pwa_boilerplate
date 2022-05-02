@@ -1,6 +1,5 @@
 import { useCallback } from 'react'
 import { useRenderingByWindowSize } from 'hooks'
-import * as S from './styles'
 
 const RenderTextByBreakpoint = () => {
   const { windowSize } = useRenderingByWindowSize()
@@ -12,14 +11,14 @@ const RenderTextByBreakpoint = () => {
   }, [windowSize.lg, windowSize.md, windowSize.sm])
 
   return (
-    <S.Wrapper>
+    <div>
       <h3>
         Resize the browser window to view the rendered text for each breakpoint!
       </h3>
 
       <br />
       <h1>{renderTextByBreakpoint()}</h1>
-    </S.Wrapper>
+    </div>
   )
 }
 
