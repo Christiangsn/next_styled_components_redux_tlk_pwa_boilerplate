@@ -25,9 +25,17 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn lint:css && yarn typecheck",
+      "pre-commit": "lint-staged",
       "pre-push": "yarn test --findRelatedTests -b && yarn build && yarn build-sb"
     }
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint",
+      "yarn lint:css",
+      "yarn typecheck",
+      "yarn test --findRelatedTests -b"
+    ]
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
@@ -75,6 +83,7 @@
     "jest": "^27.4.7",
     "jest-next-dynamic": "^1.0.1",
     "jest-styled-components": "^7.0.8",
+    "lint-staged": "^12.4.1",
     "plop": "^3.0.5",
     "prettier": "^2.5.1",
     "storybook-addon-next-router": "^3.1.1",
