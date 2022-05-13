@@ -1,5 +1,5 @@
 module.exports = {
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
   collectCoverage: true,
   testPathIgnorePatterns: ['/node_modules', '/.next/'],
   moduleDirectories: ['node_modules', '<rootDir>/'],
@@ -33,14 +33,14 @@ module.exports = {
   }
 }
 
-// Waiting for fixes from nextjs to generate coverage correctly
+// Waiting for fixes from next.js to generate coverage correctly
 // const nextJest = require('next/jest')
 //
 // const createJestConfig = nextJest()
 //
 // const customJestConfig = {
 //  // coverageProvider: 'v8',
-//  testEnvironment: 'jsdom',
+//  testEnvironment: 'jest-environment-jsdom',
 //  collectCoverage: true,
 //  moduleDirectories: ['node_modules', '<rootDir>/'],
 //  setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
