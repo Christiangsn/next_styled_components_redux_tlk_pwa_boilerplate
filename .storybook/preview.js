@@ -4,7 +4,7 @@ import { RouterContext } from 'next/dist/shared/lib/router-context'
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { themes } from '@storybook/theming'
 import { store } from 'store/configStore'
-import GlobalStyles from 'styles/GlobalStyles'
+import { GlobalStyles } from 'globalStyles'
 
 const customViewports = {
   MotoG4: {
@@ -49,7 +49,7 @@ export const parameters = {
       appContentBg: '#000927',
       barBg: '#051542',
       appBg: '#051542',
-      brandTitle: 'Acessibilidade Web',
+      brandTitle: 'Boilerplate',
       brandUrl: '/',
       colorSecondary: '#1EA7FD',
       appBorderColor: '#ffffff26',
