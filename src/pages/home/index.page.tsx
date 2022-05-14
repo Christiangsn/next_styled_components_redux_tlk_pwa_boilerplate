@@ -3,6 +3,7 @@ import { useExampleSimple } from 'store/exampleSimple'
 import { useExampleWithPayload } from 'store/exampleWithPayload'
 import * as S from './styles'
 import * as C from 'components'
+import { ReactComponent as IconArrowUp } from 'assets/icons/arrow_up.svg'
 
 export default function Home() {
   const { exampleSimple, setChangeExample } = useExampleSimple()
@@ -26,7 +27,7 @@ export default function Home() {
 
       <br />
 
-      <C.Logo width={50} height={50} />
+      <IconArrowUp width={50} height={50} />
 
       <br />
 
