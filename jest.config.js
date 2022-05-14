@@ -11,7 +11,6 @@ module.exports = {
     'src/pages/index.page.tsx',
     'src/pages/_document.page.tsx',
     'src/components/index.tsx',
-    'src/components/atoms/Svg',
     'src/hooks/index.ts',
     'src/templates/index.ts',
     'src/utils/index.ts',
@@ -20,7 +19,7 @@ module.exports = {
     'src/services',
     'src/store',
     'src/theme',
-    'src/styles',
+    'src/globalStyles',
     'stories.tsx',
     'types.ts'
   ],
@@ -28,8 +27,7 @@ module.exports = {
     '^.+\\.tsx?$': ['babel-jest', { presets: ['next/babel'] }]
   },
   moduleNameMapper: {
-    '^styled-components':
-      '<rootDir>/node_modules/styled-components/dist/styled-components.browser.cjs.js'
+    '^.+\\.svg$': '<rootDir>/src/__mocks__/svg.ts'
   }
 }
 
@@ -60,7 +58,7 @@ module.exports = {
 //    'src/services',
 //    'src/store',
 //    'src/theme',
-//    'src/styles',
+//    'src/globalStyles',
 //    'stories.tsx',
 //    'types.ts'
 //  ]
