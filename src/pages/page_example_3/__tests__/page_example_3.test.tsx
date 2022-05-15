@@ -1,4 +1,5 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import PageExample3 from '../index.page'
 import { mockedPrefetch, mockedPush } from 'mocks'
@@ -29,11 +30,10 @@ describe('[Page] PageExample3', () => {
     const btn = screen.getByRole('button', { name: /search repositories/i })
     const repositoryListText1 = screen.getByText('example1')
     const repositoryListText2 = screen.getByText('example2')
+    const input = screen.getByRole('textbox')
 
-    fireEvent.change(screen.getByPlaceholderText('User name'), {
-      target: { value: 'everton-dgn' }
-    })
-    fireEvent.click(btn)
+    userEvent.type(input, 'everton-dgn')
+    userEvent.click(btn)
 
     expect(verifyCall).toHaveBeenCalledTimes(1)
     expect(repositoryListText1).toBeInTheDocument()
@@ -45,11 +45,11 @@ describe('[Page] PageExample3', () => {
 
     const btn = screen.getByRole('button', { name: 'Return' })
 
-    fireEvent.click(btn)
-    fireEvent.mouseEnter(btn)
+    userEvent.click(btn)
+    userEvent.hover(btn)
 
     expect(mockedPush).toHaveBeenCalledTimes(1)
-    expect(mockedPrefetch).toHaveBeenCalledTimes(1)
+    expect(mockedPrefetch).toHaveBeenCalledTimes(2)
     expect(mockedPush).toHaveBeenCalledWith('/')
     expect(mockedPrefetch).toHaveBeenCalledWith('/')
   })
@@ -77,11 +77,10 @@ describe('[Page] PageExample3', () => {
     const error = screen.getByText(/not found/i)
     const repositoryListText1 = screen.queryByText('example1')
     const repositoryListText2 = screen.queryByText('example2')
+    const input = screen.getByRole('textbox')
 
-    fireEvent.change(screen.getByPlaceholderText('User name'), {
-      target: { value: 'everton-dgn' }
-    })
-    fireEvent.click(btn)
+    userEvent.type(input, 'everton-dgn')
+    userEvent.click(btn)
 
     expect(error).toBeInTheDocument()
     expect(verifyCall).toHaveBeenCalledTimes(1)
@@ -97,7 +96,7 @@ describe('[Page] PageExample3', () => {
     const repositoryListText1 = screen.queryByText('example1')
     const repositoryListText2 = screen.queryByText('example2')
 
-    fireEvent.click(btn)
+    userEvent.click(btn)
 
     expect(verifyCall).toHaveBeenCalledTimes(0)
     expect(repositoryListText1).not.toBeInTheDocument()
