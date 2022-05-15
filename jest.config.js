@@ -27,7 +27,7 @@ module.exports = {
     '^.+\\.tsx?$': ['babel-jest', { presets: ['next/babel'] }]
   },
   moduleNameMapper: {
-    '^.+\\.svg$': '<rootDir>/src/__mocks__/svg.ts'
+    '^.+\\.svg$': '<rootDir>/src/mocks/svg.ts'
   }
 }
 
