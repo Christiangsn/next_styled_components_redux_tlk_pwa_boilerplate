@@ -3,6 +3,14 @@ const withPWA = require('next-pwa')
 const isDevelopment = process.env.NODE_ENV === 'development'
 
 module.exports = withPWA({
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.tsx?$/,
+      use: ['@svgr/webpack']
+    })
+    return config
+  },
   swcMinify: true,
   compiler: {
     styledComponents: true
