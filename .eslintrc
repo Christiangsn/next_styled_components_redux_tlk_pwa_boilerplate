@@ -20,6 +20,11 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:jsx-a11y/recommended",
+    "prettier",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
     "next/core-web-vitals",
     "next"
   ],
@@ -36,6 +41,9 @@
     "react-hooks",
     "@typescript-eslint",
     "prettier",
+    "jest-dom",
+    "testing-library",
+    "jest",
     "jsx-a11y"
   ],
   "rules": {
@@ -57,7 +65,18 @@
       "files": ["*.stories.@(tsx|mdx|js|jsx|mjs|cjs)"],
       "rules": {
         "storybook/hierarchy-separator": "error"
-      }
+      },
+      "extends": ["plugin:storybook/recommended"]
+    },
+    {
+      "files": ["**/__tests__/**/*.tsx?", "**/?(*.)+(spec|test).tsx?"],
+      "plugins": ["jest-dom", "testing-library", "jest"],
+      "extends": [
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+      ]
     }
   ]
 }
