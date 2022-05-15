@@ -1,4 +1,5 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import PageExample1 from '../index.page'
 import { mockedPush, mockedPrefetch } from 'mocks'
@@ -14,11 +15,11 @@ describe('[Page] PageExample1', () => {
 
     const btn = screen.getByRole('button', { name: 'Return' })
 
-    fireEvent.click(btn)
-    fireEvent.mouseEnter(btn)
+    userEvent.click(btn)
+    userEvent.hover(btn)
 
     expect(mockedPush).toHaveBeenCalledTimes(1)
-    expect(mockedPrefetch).toHaveBeenCalledTimes(1)
+    expect(mockedPrefetch).toHaveBeenCalledTimes(2)
     expect(mockedPush).toHaveBeenCalledWith('/')
     expect(mockedPrefetch).toHaveBeenCalledWith('/')
   })

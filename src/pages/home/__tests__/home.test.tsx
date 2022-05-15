@@ -1,4 +1,5 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import Home from '../index.page'
 import { mockedPush, mockedPrefetch } from 'mocks'
@@ -29,7 +30,7 @@ describe('[Page] Home', () => {
     expect(titleSectionStateExample1).toBeInTheDocument()
     expect(titleSectionPayload1).toBeInTheDocument()
 
-    fireEvent.click(btn)
+    userEvent.click(btn)
 
     const titleSectionStateExample2 = screen.getByRole('heading', {
       name: 'Redux Example State: true'
@@ -41,7 +42,7 @@ describe('[Page] Home', () => {
     expect(titleSectionStateExample2).toBeInTheDocument()
     expect(titleSectionPayload2).toBeInTheDocument()
 
-    fireEvent.click(btn)
+    userEvent.click(btn)
 
     const titleSectionStateExample3 = screen.getByRole('heading', {
       name: 'Redux Example State: false'
@@ -70,11 +71,11 @@ describe('[Page] Home', () => {
         name: `Page Example ${buttonNumber}`
       })
 
-      fireEvent.click(btn)
-      fireEvent.mouseEnter(btn)
+      userEvent.click(btn)
+      userEvent.hover(btn)
 
       expect(mockedPush).toHaveBeenCalledTimes(1)
-      expect(mockedPrefetch).toHaveBeenCalledTimes(1)
+      expect(mockedPrefetch).toHaveBeenCalledTimes(2)
       expect(mockedPush).toHaveBeenCalledWith(`page_example_${buttonNumber}`)
       expect(mockedPrefetch).toHaveBeenCalledWith(
         `page_example_${buttonNumber}`
