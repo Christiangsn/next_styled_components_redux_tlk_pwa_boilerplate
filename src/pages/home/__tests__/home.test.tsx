@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react'
 import { renderWithProviders } from 'utils'
 import Home from '../index.page'
-import { mockedPush, mockedPrefetch } from '__mocks__'
+import { mockedPush, mockedPrefetch } from 'mocks'
 
 describe('[Page] Home', () => {
   beforeEach(() => {
@@ -73,8 +73,8 @@ describe('[Page] Home', () => {
       fireEvent.click(btn)
       fireEvent.mouseEnter(btn)
 
-      expect(mockedPush).toBeCalledTimes(1)
-      expect(mockedPrefetch).toBeCalledTimes(1)
+      expect(mockedPush).toHaveBeenCalledTimes(1)
+      expect(mockedPrefetch).toHaveBeenCalledTimes(1)
       expect(mockedPush).toHaveBeenCalledWith(`page_example_${buttonNumber}`)
       expect(mockedPrefetch).toHaveBeenCalledWith(
         `page_example_${buttonNumber}`
