@@ -15,9 +15,9 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta
             name="description"
-            content="This project is a Nextjs boilerplate"
+            content="This project is a Next.js boilerplate"
           />
-          <meta name="keywords" content="boilerplate, nextjs, react" />
+          <meta name="keywords" content="boilerplate, next.js, react" />
           <meta name="copyright" content="© Éverton Toffanetto" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -45,6 +45,7 @@ export default class MyDocument extends Document {
 
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
+    // eslint-disable-next-line testing-library/render-result-naming-convention
     const originalRenderPage = ctx.renderPage
 
     try {
