@@ -4,14 +4,16 @@ import { useExampleWithPayload } from 'store/exampleWithPayload'
 import * as S from './styles'
 import * as C from 'components'
 import IconArrowUp from 'assets/icons/arrow_up.svg'
+import { useThemeDetect } from 'hooks'
 
 export default function Home() {
   const { exampleSimple, setChangeExample } = useExampleSimple()
   const { exampleWithPayload, setAddText, setRemoveText } =
     useExampleWithPayload()
+  const { setTheme, showThemeToSelect } = useThemeDetect()
   const router = useRouter()
 
-  const handleChange = () => {
+  const handleChange = (): void => {
     setChangeExample()
 
     exampleWithPayload
@@ -106,6 +108,16 @@ export default function Home() {
           className="btn"
           onClick={() => router.push('page_example_5')}
           onMouseEnter={() => router.prefetch('page_example_5')}
+        />
+
+        <C.Button
+          fullWidth={true}
+          color="red"
+          size="large"
+          text={`Theme ${showThemeToSelect}`}
+          aria-label={`Theme ${showThemeToSelect}`}
+          className="btn"
+          onClick={setTheme}
         />
       </S.BtnGroup>
     </S.Container>

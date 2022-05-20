@@ -66,7 +66,7 @@ In addition to being constantly updated, this project was configured in the smal
 
 🗂 Redux Toolkit and Redux-Persist
 
-🚩 Lints: ESlint, Stylelint, Commitlint, Lint-Staged, Prettier, EditorConfig and Typecheck
+🚩 Lints: Husky, ESlint, Stylelint, Commitlint, Lint-Staged, Prettier, EditorConfig and Typecheck
 
 ✅ Jest 
 
@@ -91,6 +91,7 @@ In addition to being constantly updated, this project was configured in the smal
 - [x] Custom hooks for:
   - [x] animation in the assembly and disassembly of components;
   - [x] conditional rendering of components by breakpoints;
+  - [x] dark/light theme change;
 
 - [x] Theme created with styled-components without using a provider and no need to access theme properties with arrow functions;
 
@@ -99,8 +100,10 @@ In addition to being constantly updated, this project was configured in the smal
 - [x] Store data persistence in localStorage;
 
 - [x] 100% coverage in tests including: components, templates, pages and hooks;
-  
-- [x] PWA;
+
+- [x] Theme Dark/Light without provider;
+
+- [x] PWA.
 
 <br />
 

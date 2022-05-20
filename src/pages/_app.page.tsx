@@ -1,26 +1,18 @@
-import { Provider } from 'react-redux'
 import type { AppProps } from 'next/app'
-import { PersistGate } from 'redux-persist/integration/react'
-import { persistor, store } from 'store/configStore'
-import { GlobalStyles } from 'globalStyles'
 import { Default } from 'templates'
 import { Page } from 'types/page'
-import * as C from 'components'
+import { MainProviders } from 'utils'
 
 type Props = AppProps & { Component: Page }
 
 export default function App({ Component, pageProps }: Props) {
   const Template = Component.Template || Default
+
   return (
-    <C.ErrorBoundary>
-      <Provider store={store}>
-        <PersistGate loading={<h1>Loading...</h1>} persistor={persistor}>
-          <Template>
-            <Component {...pageProps} />
-            <GlobalStyles />
-          </Template>
-        </PersistGate>
-      </Provider>
-    </C.ErrorBoundary>
+    <MainProviders>
+      <Template>
+        <Component {...pageProps} />
+      </Template>
+    </MainProviders>
   )
 }

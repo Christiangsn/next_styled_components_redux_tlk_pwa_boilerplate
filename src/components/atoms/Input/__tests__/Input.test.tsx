@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithProviders } from 'utils/tests/provider'
+import { renderWithProviders } from 'utils/tests/providerComponents'
 import Input from '..'
 
 describe('[Component] Input', () => {
