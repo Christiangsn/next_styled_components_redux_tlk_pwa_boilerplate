@@ -6,7 +6,6 @@ describe('[Component] HeadPage', () => {
     const { container } = renderWithProviders(
       <HeadPage title="Acessibilidade" />
     )
-
     expect(container).toMatchSnapshot()
   })
 })

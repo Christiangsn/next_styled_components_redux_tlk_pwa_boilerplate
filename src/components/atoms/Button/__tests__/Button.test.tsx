@@ -10,12 +10,12 @@ describe('[Component] Button', () => {
     )
 
     const btn = screen.getByRole('button', { name: /Mais Informações/i })
+
     expect(btn).toHaveStyle({
       height: 'min-content',
       padding: '0.8rem 1.2rem',
       fontSize: '1.2rem'
     })
-
     expect(btn).toBeEnabled()
     expect(container).toMatchSnapshot()
   })
@@ -78,9 +78,7 @@ describe('[Component] Button', () => {
         fullWidth={true}
       />
     )
-
     const btn = screen.getByRole('button', { name: /Mais Informações/i })
-
     expect(btn).toHaveStyle({ width: '100%' })
   })
 })

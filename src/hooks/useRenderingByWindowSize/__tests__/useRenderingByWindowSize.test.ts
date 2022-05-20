@@ -11,6 +11,7 @@ describe('[Hooks] useRenderingByWindowSize', () => {
     act(() => {
       window.dispatchEvent(new Event('resize'))
     })
+
     expect(result.current.windowSize.sm).toBeTruthy()
   })
 
@@ -21,6 +22,7 @@ describe('[Hooks] useRenderingByWindowSize', () => {
     act(() => {
       window.dispatchEvent(new Event('resize'))
     })
+
     expect(result.current.windowSize.md).toBeTruthy()
   })
 
@@ -31,6 +33,7 @@ describe('[Hooks] useRenderingByWindowSize', () => {
     act(() => {
       window.dispatchEvent(new Event('resize'))
     })
+
     expect(result.current.windowSize.lg).toBeTruthy()
   })
 })
