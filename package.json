@@ -7,7 +7,8 @@
   "description": "This application is a boilerplate for complex and large systems, especially those that need to scale with security and code quality.",
   "repository": "https://github.com/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate",
   "scripts": {
-    "dev": "next dev",
+    "open-browser": "start http://localhost:3000",
+    "dev": "yarn open-browser & next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint src/**/*.{ts,tsx,js,jsx,json} --max-warnings=0",
