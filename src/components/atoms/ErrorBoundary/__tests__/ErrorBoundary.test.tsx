@@ -19,7 +19,6 @@ describe('[Component] ErrorBoundary', () => {
         <ChildWithError />
       </ErrorBoundary>
     )
-
     expect(screen.getByText('Algo deu errado.')).toBeInTheDocument()
   })
 })

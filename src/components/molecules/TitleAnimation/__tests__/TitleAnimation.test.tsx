@@ -15,13 +15,6 @@ describe('[Component] TitleAnimation', () => {
     jest.useRealTimers()
   })
 
-  it('should render a button', () => {
-    renderWithProviders(<TitleAnimation />)
-
-    const button = screen.getByRole('button')
-    expect(button).toBeInTheDocument()
-  })
-
   it('should render a heading by clicking the button', () => {
     renderWithProviders(<TitleAnimation />)
 

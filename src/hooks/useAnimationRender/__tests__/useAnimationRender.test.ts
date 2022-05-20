@@ -29,6 +29,7 @@ describe('[Hooks] useAnimationRender', () => {
     act(() => {
       result.current.changeStateComponent()
     })
+
     expect(result.current.isRenderComponent).toBeTruthy()
     expect(result.current.isVisible).toBeTruthy()
   })
