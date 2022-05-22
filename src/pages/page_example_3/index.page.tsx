@@ -1,6 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useRepositoriesInTheGithub } from 'services'
+import { useRepositoriesWithRedux } from 'services'
+import { useExampleLoading } from 'store/exampleLoading'
 import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
@@ -8,28 +9,28 @@ import * as C from 'components'
 export default function PageExample3() {
   const router = useRouter()
   const refInput = useRef<HTMLInputElement>(null)
-  const { getRepositoriesGithub, repositoriesGithub } =
-    useRepositoriesInTheGithub()
+  const { getFetchRepositories, exampleAsyncSlice } = useRepositoriesWithRedux()
+  const { isLoading } = useExampleLoading()
 
   const searchRepositories = useCallback(async () => {
     const user = refInput.current?.value
-    if (user) await getRepositoriesGithub(user)
-  }, [getRepositoriesGithub])
+    if (user) await getFetchRepositories(user)
+  }, [getFetchRepositories])
 
-  if (repositoriesGithub?.isLoading) return <h1>loading...</h1>
+  if (isLoading) return <h1>loading...</h1>
 
   return (
     <S.Container as="section">
-      <C.HeadPage title="Page Example 3" />
+      <C.HeadPage title="Page Example 4" />
       <C.TitleSection title="Search Github Repositories" />
-      <C.TitleSection title="With Hook in Services without Redux" />
+      <C.TitleSection title="With Hook in Services saving data in the Store" />
 
       <S.WrapperRepositories>
-        {repositoriesGithub?.repositories?.map(repository => (
+        {exampleAsyncSlice?.repositories?.map(repository => (
           <span key={repository.name}>{repository.name}</span>
         ))}
 
-        {repositoriesGithub?.error && <b>{repositoriesGithub.error}</b>}
+        {exampleAsyncSlice?.error && <b>{exampleAsyncSlice.error}</b>}
       </S.WrapperRepositories>
 
       <br />
