@@ -2,21 +2,22 @@ import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import PageExample3 from '../index.page'
-import { mockedPrefetch, mockedPush } from 'mocks'
-import * as mock from '../mocks/mockedUseRepositoriesInTheGithub'
+import { mockedPush, mockedPrefetch } from 'mocks'
+import * as mock from '../mocks/mockedUseExampleAsyncSlice'
+import * as store from 'store/exampleLoading/useExampleLoading'
 
-let mockedUseRepositoriesInTheGithub = mock.useRepositoriesInTheGithub1
+let mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice1
 
 jest.mock('services', () => ({
-  useRepositoriesInTheGithub: () => mockedUseRepositoriesInTheGithub
+  useRepositoriesWithRedux: () => mockedUseExampleAsyncSlice
 }))
 
 const verifyCall = jest.spyOn(
-  mockedUseRepositoriesInTheGithub,
-  'getRepositoriesGithub'
+  mockedUseExampleAsyncSlice,
+  'getFetchRepositories'
 )
 
-describe('[Page] PageExample3', () => {
+describe('[Page] PageExample4', () => {
   afterEach(() => jest.clearAllMocks())
 
   it('should render list of repositories when clicking "Search Repository" button if user in text field exists and if isLoading is false', () => {
@@ -50,7 +51,11 @@ describe('[Page] PageExample3', () => {
   })
 
   it('should render loading when clicking "Search Repository" button while isLoading for true', () => {
-    mockedUseRepositoriesInTheGithub = mock.useRepositoriesInTheGithub3
+    mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice3
+    const spy = jest.spyOn(store, 'useExampleLoading').mockReturnValue({
+      isLoading: true,
+      setIsLoading: jest.fn()
+    })
 
     renderWithProviders(<PageExample3 />)
 
@@ -61,10 +66,12 @@ describe('[Page] PageExample3', () => {
     expect(loading).toBeInTheDocument()
     expect(repositoryListText1).not.toBeInTheDocument()
     expect(repositoryListText2).not.toBeInTheDocument()
+
+    spy.mockRestore()
   })
 
   it('should render error message to clicking "Search Repository" button if user in text field not exists and if isLoading is false', () => {
-    mockedUseRepositoriesInTheGithub = mock.useRepositoriesInTheGithub2
+    mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice2
 
     renderWithProviders(<PageExample3 />)
 

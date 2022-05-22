@@ -17,9 +17,10 @@ module.exports = {
     'src/types',
     'src/libs',
     'src/services',
+    'src/http',
     'src/store',
     'src/theme',
-    'src/mocks/index.tsx',
+    'src/mocks/index.ts',
     'src/globalStyles',
     'stories.tsx',
     'types.ts'
@@ -56,9 +57,10 @@ module.exports = {
 //  'src/types',
 //  'src/libs',
 //  'src/services',
+//  'src/http',
 //  'src/store',
 //  'src/theme',
-//  'src/mocks/index.tsx',
+//  'src/mocks/index.ts',
 //  'src/globalStyles',
 //  'stories.tsx',
 //  'types.ts'
