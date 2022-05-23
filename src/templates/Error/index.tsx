@@ -4,7 +4,7 @@ import { ErrorProps } from './types'
 export const Error = ({ children }: ErrorProps) => {
   return (
     <S.Grid>
-      <h1>Template Error</h1>
+      <S.Header role="banner">Template Error</S.Header>
       <div>{children}</div>
     </S.Grid>
   )

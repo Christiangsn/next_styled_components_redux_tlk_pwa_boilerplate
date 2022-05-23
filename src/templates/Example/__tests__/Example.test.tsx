@@ -10,10 +10,10 @@ describe('[Template] Example', () => {
       </Example>
     )
 
-    const title = screen.getByRole('heading', { name: 'Template Example' })
+    const title = screen.getByRole('banner')
     const children = screen.getByTestId('select_template')
 
     expect(children).toBeInTheDocument()
-    expect(title).toBeInTheDocument()
+    expect(title).toHaveTextContent('Template Example')
   })
 })
