@@ -7,7 +7,7 @@ export default function PageExample1() {
   const router = useRouter()
 
   return (
-    <S.Container as="section">
+    <S.Container role="main">
       <C.HeadPage title="Page Example 1" />
 
       <C.TitleSection title="Page Example 1" />

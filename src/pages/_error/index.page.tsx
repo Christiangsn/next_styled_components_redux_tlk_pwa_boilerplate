@@ -4,7 +4,7 @@ import * as S from './styles'
 
 export default function CustomError() {
   return (
-    <S.Container>
+    <S.Container role="main">
       <Head>
         <title>Page not found</title>
       </Head>
