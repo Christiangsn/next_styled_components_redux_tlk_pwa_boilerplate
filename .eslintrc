@@ -9,18 +9,28 @@
     "react": {
       "version": "detect"
     },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
-      "typescript": {}
+      "typescript": {
+        "project": "tsconfig.json"
+      }
     }
   },
   "extends": [
-    "plugin:storybook/recommended",
     "standard",
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:promise/recommended",
     "plugin:jsx-a11y/recommended",
+    "plugin:import/errors",
+    "plugin:import/typescript",
     "prettier",
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended",
     "plugin:jest-dom/recommended",
     "plugin:testing-library/react",
     "plugin:jest/recommended",
@@ -33,13 +43,14 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
   "plugins": [
     "react",
     "react-hooks",
     "@typescript-eslint",
+    "promise",
     "prettier",
     "jest-dom",
     "testing-library",
@@ -47,6 +58,7 @@
     "jsx-a11y"
   ],
   "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
     "@next/next/no-img-element": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "react-hooks/rules-of-hooks": "error",

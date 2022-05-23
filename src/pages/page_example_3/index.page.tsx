@@ -20,7 +20,7 @@ export default function PageExample3() {
   if (isLoading) return <h1>loading...</h1>
 
   return (
-    <S.Container as="section">
+    <S.Container role="main">
       <C.HeadPage title="Page Example 4" />
       <C.TitleSection title="Search Github Repositories" />
       <C.TitleSection title="With Hook in Services saving data in the Store" />

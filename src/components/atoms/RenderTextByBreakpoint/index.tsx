@@ -12,12 +12,12 @@ const RenderTextByBreakpoint = () => {
 
   return (
     <div>
-      <h3>
+      <h2>
         Resize the browser window to view the rendered text for each breakpoint!
-      </h3>
+      </h2>
 
       <br />
-      <h1>{renderTextByBreakpoint()}</h1>
+      <h3>{renderTextByBreakpoint()}</h3>
     </div>
   )
 }

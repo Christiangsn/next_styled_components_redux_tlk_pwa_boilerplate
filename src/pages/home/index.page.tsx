@@ -22,7 +22,7 @@ export default function Home() {
   }
 
   return (
-    <S.Container>
+    <S.Container role="main">
       <C.HeadPage title="Home Page" />
 
       <C.TitleSection title="Web Accessibility" />
