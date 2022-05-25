@@ -3,13 +3,13 @@ import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import PageExample3 from '../index.page'
 import { mockedPush, mockedPrefetch } from 'mocks'
-import * as mock from '../mocks/mockedUseExampleAsyncSlice'
+import * as mock from 'pages/page_example_3/mocks/mockedUseExampleAsyncSlice'
 import * as store from 'store/exampleLoading/useExampleLoading'
 
 let mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice1
 
 jest.mock('services', () => ({
-  useRepositoriesWithRedux: () => mockedUseExampleAsyncSlice
+  useGetRepositoriesWithRedux: () => mockedUseExampleAsyncSlice
 }))
 
 const verifyCall = jest.spyOn(

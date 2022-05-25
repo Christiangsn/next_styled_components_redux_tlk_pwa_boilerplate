@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useRepositoriesWithRedux } from 'services'
+import { useGetRepositoriesWithRedux } from 'services'
 import { useExampleLoading } from 'store/exampleLoading'
 import { Example } from 'templates'
 import * as S from './styles'
@@ -9,7 +9,8 @@ import * as C from 'components'
 export default function PageExample3() {
   const router = useRouter()
   const refInput = useRef<HTMLInputElement>(null)
-  const { getFetchRepositories, exampleAsyncSlice } = useRepositoriesWithRedux()
+  const { getFetchRepositories, exampleAsyncSlice } =
+    useGetRepositoriesWithRedux()
   const { isLoading } = useExampleLoading()
 
   const searchRepositories = useCallback(async () => {
@@ -26,7 +27,7 @@ export default function PageExample3() {
       <C.TitleSection title="With Hook in Services saving data in the Store" />
 
       <S.WrapperRepositories>
-        {exampleAsyncSlice?.repositories?.map(repository => (
+        {exampleAsyncSlice?.data?.map(repository => (
           <span key={repository.name}>{repository.name}</span>
         ))}
 

@@ -44,4 +44,4 @@ yarn-error.log*
 /src/stories
 
 # typescript incremental features
-tsconfig.tsbuildinfo
+/.tsBuildInfoFile/
