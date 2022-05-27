@@ -31,7 +31,7 @@ export default function PageExample3() {
           <span key={repository.name}>{repository.name}</span>
         ))}
 
-        {exampleAsyncSlice?.error && <b>{exampleAsyncSlice.error}</b>}
+        {!!exampleAsyncSlice?.error && <b>{exampleAsyncSlice.error}</b>}
       </S.WrapperRepositories>
 
       <br />

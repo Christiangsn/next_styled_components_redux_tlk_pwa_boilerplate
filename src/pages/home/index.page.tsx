@@ -7,7 +7,7 @@ import IconArrowUp from 'assets/icons/arrow_up.svg'
 import { useThemeDetect } from 'hooks'
 
 export default function Home() {
-  const { exampleSimple, setChangeExample } = useExampleSimple()
+  const { isExampleSimple, setChangeExample } = useExampleSimple()
   const { exampleWithPayload, setAddText, setRemoveText } =
     useExampleWithPayload()
   const { setTheme, showThemeToSelect } = useThemeDetect()
@@ -35,7 +35,7 @@ export default function Home() {
 
       <h1>
         Redux Example State:
-        {exampleSimple ? ' true' : ' false'}
+        {isExampleSimple ? ' true' : ' false'}
       </h1>
 
       <br />
