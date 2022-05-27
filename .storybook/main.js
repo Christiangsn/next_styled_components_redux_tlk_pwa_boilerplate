@@ -1,6 +1,6 @@
 module.exports = {
   staticDirs: ['../public'],
-  stories: ['../src/@(components|templates)/**/storybook/stories.@(js|md|ts)x'],
+  stories: ['../src/@(components|templates)/**/storybook/stories.@(js|ts)x'],
   addons: [
     '@storybook/addon-essentials',
     'storybook-dark-mode/register',
@@ -9,10 +9,24 @@ module.exports = {
     'storybook-addon-next-router',
     'storybook-addon-swc'
   ],
-  core: {
-    builder: 'webpack5'
+  features: {
+    storyStoreV7: true
   },
-  webpackFinal: config => {
+  typescript: {
+    check: false,
+    checkOptions: {}
+  },
+  core: {
+    builder: {
+      name: 'webpack5',
+      options: {
+        lazyCompilation: true,
+        fsCache: true
+      }
+    },
+    disableTelemetry: true
+  },
+  webpackFinal: async config => {
     config.resolve.modules.push(`${process.cwd()}/src`)
     return config
   },
@@ -38,5 +52,8 @@ module.exports = {
       }
     </style>
   `,
-  reactOptions: { fastRefresh: true }
+  reactOptions: {
+    fastRefresh: true
+  },
+  framework: '@storybook/react'
 }
