@@ -1,7 +1,7 @@
 import * as S from './styles'
 import { DefaultProps } from './types'
 
-export const Default = ({ children }: DefaultProps) => {
+const Default = ({ children }: DefaultProps) => {
   return (
     <S.Grid>
       <S.Header role="banner">Template Default</S.Header>
@@ -9,3 +9,5 @@ export const Default = ({ children }: DefaultProps) => {
     </S.Grid>
   )
 }
+
+export default Default

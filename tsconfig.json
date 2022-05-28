@@ -26,5 +26,11 @@
     "src/**/*.tsx",
     "./.jest/setup.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".storybook",
+    "src/**/stories.tsx",
+    "src/**/*.test*"
+  ]
 }

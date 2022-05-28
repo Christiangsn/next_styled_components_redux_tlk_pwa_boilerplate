@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
 
@@ -32,4 +31,4 @@ export default function PageExample2() {
   )
 }
 
-PageExample2.Template = Example
+PageExample2.Template = C.ExampleTemplate

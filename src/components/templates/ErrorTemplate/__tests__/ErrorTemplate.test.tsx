@@ -1,13 +1,13 @@
 import { screen } from '@testing-library/react'
-import { Error } from '..'
+import ErrorTemplate from '..'
 import { renderWithProviders } from 'utils'
 
 describe('[Template] Error', () => {
   it('should render a children and a title', () => {
     renderWithProviders(
-      <Error>
+      <ErrorTemplate>
         <p data-testid="select_template">Test Template</p>
-      </Error>
+      </ErrorTemplate>
     )
 
     const title = screen.getByRole('banner')
