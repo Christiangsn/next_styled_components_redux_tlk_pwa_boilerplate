@@ -30,11 +30,15 @@ module.exports = withPWA({
   eslint: {
     dirs: [
       'components',
+      'constants',
+      'globalStyles',
       'hooks',
-      'layouts',
+      'http',
+      'libs',
+      'mocks',
       'pages',
+      'services',
       'store',
-      'styles',
       'theme',
       'types',
       'utils'
