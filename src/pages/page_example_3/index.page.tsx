@@ -2,7 +2,6 @@ import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useGetRepositoriesWithRedux } from 'services'
 import { useExampleLoading } from 'store/exampleLoading'
-import { Example } from 'templates'
 import * as S from './styles'
 import * as C from 'components'
 
@@ -68,4 +67,4 @@ export default function PageExample3() {
   )
 }
 
-PageExample3.Template = Example
+PageExample3.Template = C.ExampleTemplate

@@ -1,19 +1,19 @@
 import { screen } from '@testing-library/react'
-import { Example } from '..'
+import DefaultTemplate from '..'
 import { renderWithProviders } from 'utils'
 
-describe('[Template] Example', () => {
+describe('[Template] Default', () => {
   it('should render a children and a title', () => {
     renderWithProviders(
-      <Example>
+      <DefaultTemplate>
         <p data-testid="select_template">Test Template</p>
-      </Example>
+      </DefaultTemplate>
     )
 
     const title = screen.getByRole('banner')
     const children = screen.getByTestId('select_template')
 
     expect(children).toBeInTheDocument()
-    expect(title).toHaveTextContent('Template Example')
+    expect(title).toHaveTextContent('Template Default')
   })
 })

@@ -1,12 +1,12 @@
 import type { AppProps } from 'next/app'
-import { Default } from 'templates'
 import { Page } from 'types/page'
 import { MainProviders } from 'utils'
+import * as C from 'components'
 
 type Props = AppProps & { Component: Page }
 
 export default function App({ Component, pageProps }: Props) {
-  const Template = Component.Template || Default
+  const Template = Component.Template || C.DefaultTemplate
 
   return (
     <MainProviders>

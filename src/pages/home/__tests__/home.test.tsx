@@ -6,7 +6,6 @@ import { mockedPush, mockedPrefetch } from 'mocks'
 
 describe('[Page] Home', () => {
   beforeEach(() => {
-    jest.resetModules()
     mockedPush.mockClear()
     mockedPrefetch.mockClear()
   })

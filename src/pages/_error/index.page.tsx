@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import { Error } from 'templates/Error'
 import * as S from './styles'
+import * as C from 'components'
 
 export default function CustomError() {
   return (
@@ -14,4 +14,4 @@ export default function CustomError() {
   )
 }
 
-CustomError.Template = Error
+CustomError.Template = C.ErrorTemplate
