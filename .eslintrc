@@ -28,6 +28,7 @@
     "plugin:jsx-a11y/recommended",
     "plugin:import/errors",
     "plugin:import/typescript",
+    "plugin:@next/next/recommended",
     "prettier",
     "plugin:prettier/recommended",
     "plugin:storybook/recommended",
@@ -35,8 +36,7 @@
     "plugin:testing-library/react",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "next/core-web-vitals",
-    "next"
+    "next/core-web-vitals"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -58,6 +58,10 @@
     "jsx-a11y"
   ],
   "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".ts", ".tsx"] }
+    ],
     "@typescript-eslint/no-unused-vars": "error",
     "@next/next/no-img-element": "off",
     "jsx-a11y/anchor-is-valid": "off",
