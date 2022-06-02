@@ -1,4 +1,4 @@
-import { screen } from '@testing-library/react'
+import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'utils'
 import Home from '../index.page'
@@ -24,7 +24,7 @@ describe('[Page] Home', () => {
     expect(titleSectionStateExample1).toBeInTheDocument()
     expect(titleSectionPayload1).toBeInTheDocument()
 
-    userEvent.click(btn)
+    fireEvent.click(btn)
 
     const titleSectionStateExample2 = screen.getByRole('heading', {
       name: 'Redux Example State: true'
@@ -36,7 +36,7 @@ describe('[Page] Home', () => {
     expect(titleSectionStateExample2).toBeInTheDocument()
     expect(titleSectionPayload2).toBeInTheDocument()
 
-    userEvent.click(btn)
+    fireEvent.click(btn)
 
     const titleSectionStateExample3 = screen.getByRole('heading', {
       name: 'Redux Example State: false'
@@ -63,11 +63,11 @@ describe('[Page] Home', () => {
         name: `Page Example ${buttonNumber}`
       })
 
-      userEvent.click(btn)
+      fireEvent.click(btn)
       userEvent.hover(btn)
 
       expect(mockedPush).toHaveBeenCalledTimes(1)
-      expect(mockedPrefetch).toHaveBeenCalledTimes(2)
+      expect(mockedPrefetch).toHaveBeenCalledTimes(1)
       expect(mockedPush).toHaveBeenCalledWith(`page_example_${buttonNumber}`)
       expect(mockedPrefetch).toHaveBeenCalledWith(
         `page_example_${buttonNumber}`
@@ -81,7 +81,7 @@ describe('[Page] Home', () => {
 
       expect(btnTheme).toHaveTextContent('Theme dark')
 
-      userEvent.click(btnTheme)
+      fireEvent.click(btnTheme)
 
       expect(btnTheme).toHaveTextContent('Theme light')
     })
@@ -97,7 +97,7 @@ describe('[Page] Home', () => {
         window.matchMedia('(prefers-color-scheme: dark)').matches
       ).toBeFalsy()
 
-      userEvent.click(btnTheme)
+      fireEvent.click(btnTheme)
 
       expect(document.body.dataset.theme).toBe('light')
       expect(
