@@ -4,6 +4,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)
 ![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=yellow&style=plastic)
 ![GitHub Repo stars](https://img.shields.io/github/v/release/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=orange&style=plastic)
+![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release&style=plastic)
 
 </div>
 
@@ -54,6 +55,7 @@ In addition to being constantly updated, this project was configured in the smal
   - [Run Lints](#run-lints)
   - [Format code with prettier](#format-code-with-prettier)
   - [Check for Available Updates for Dependencies](#check-for-available-updates-for-dependencies)
+  - [Generate Semantic Releases](#generate-semantic-releases)
 - [Important Considerations](#rotating_light-important-considerations)
 - [Author](#technologist-author)
 
@@ -72,6 +74,8 @@ In addition to being constantly updated, this project was configured in the smal
 🗂 Redux Toolkit and Redux-Persist
 
 🚩 Lints: Husky, ESlint, Stylelint, Commitlint, Lint-Staged, Prettier, EditorConfig and Typecheck
+
+🌸 Semantic Release
 
 ✅ Jest
 
@@ -219,6 +223,12 @@ yarn format
 
 ```bash
 yarn check-update
+```
+
+## Generate Semantic Releases
+
+```bash
+yarn release
 ```
 
 <br />
