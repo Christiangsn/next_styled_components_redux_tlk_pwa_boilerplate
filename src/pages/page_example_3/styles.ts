@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import T from 'theme'
 
 export const Container = styled.main`
-  margin: 2rem auto;
+  margin: 20px auto;
 
   ${T.breakpoints.custom(800)} {
-    margin: 12rem auto;
+    margin: 120px auto;
   }
 `
 
@@ -20,7 +20,7 @@ export const BtnGroup = styled.div`
   .btn {
     opacity: 0;
     animation: ${T.animations.fadeInMove('0', '30px', '0')} 0.3s linear forwards
-      0.2s;
+    0.2s;
   }
 
   align-items: center;

@@ -101,7 +101,7 @@ In addition to being constantly updated, this project was configured in the smal
 
   - [x] animation in the assembly and disassembly of components;
   - [x] conditional rendering of components by breakpoints;
-  - [x] dark/light theme change;
+  - [x] dark/light theme change and detection of prefers-color-scheme;
 
 - [x] Theme created with styled-components without using a provider and no need to access theme properties with arrow functions;
 
@@ -114,6 +114,8 @@ In addition to being constantly updated, this project was configured in the smal
 - [x] Theme Dark/Light without provider;
 
 - [x] PWA.
+
+- [x] Detection prefers-reduced-motion;
 
 <br />
 
