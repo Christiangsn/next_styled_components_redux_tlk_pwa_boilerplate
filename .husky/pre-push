@@ -3,7 +3,6 @@
 . "$(dirname "$0")/common.sh"
 
 npx --no-install
-
 yarn typecheck
 yarn test
 yarn build
