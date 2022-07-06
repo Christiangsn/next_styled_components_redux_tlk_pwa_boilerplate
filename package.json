@@ -28,12 +28,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn typecheck && yarn test --findRelatedTests -b && yarn build && yarn build-storybook"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
+    "src/**/*.{ts,tsx}": [
       "yarn lint",
       "yarn lint:css"
     ]
