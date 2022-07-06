@@ -13,21 +13,21 @@ module.exports = {
     'src/pages/_app.page.tsx',
     'src/pages/index.page.tsx',
     'src/pages/_document.page.tsx',
-    'src/components/index.tsx',
-    'src/components/atoms/index.tsx',
-    'src/components/molecules/index.tsx',
-    'src/components/templates/index.tsx',
+    'src/ui/components/index.tsx',
+    'src/ui/components/atoms/index.tsx',
+    'src/ui/components/molecules',
+    'src/ui/components/templates/index.tsx',
+    'src/ui/assets',
+    'src/ui/theme',
+    'src/ui/globalStyles',
+    'src/ui/providers',
     'src/hooks/index.ts',
-    'utils/providers',
-    'src/utils/index.tsx',
+    'src/tests/providers',
+    'src/data',
+    'src/infra',
     'src/types',
-    'src/libs',
-    'src/services',
-    'src/http',
     'src/store',
-    'src/theme',
-    'src/mocks/index.ts',
-    'src/globalStyles',
+    'src/tests/mocks/index.ts',
     'stories.tsx',
     'types.ts'
   ],
@@ -35,7 +35,7 @@ module.exports = {
     '^.+\\.tsx?$': ['babel-jest', { presets: ['next/babel'] }]
   },
   moduleNameMapper: {
-    '^.+\\.svg$': '<rootDir>/src/mocks/svg.ts'
+    '^.+\\.svg$': '<rootDir>/src/tests/mocks/svg.ts'
   },
   coverageThreshold: {
     global: {
