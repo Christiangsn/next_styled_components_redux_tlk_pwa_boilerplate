@@ -1,14 +1,14 @@
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { renderWithProviders } from 'utils'
+import { renderWithProviders } from 'tests/providers'
 import PageExample3 from '../index.page'
-import { mockedPush, mockedPrefetch } from 'mocks'
+import { mockedPush, mockedPrefetch } from 'tests/mocks'
 import * as mock from 'pages/page_example_3/mocks/mockedUseExampleAsyncSlice'
 import * as store from 'store/exampleLoading/useExampleLoading'
 
 let mockedUseExampleAsyncSlice = mock.useExampleAsyncSlice1
 
-jest.mock('services', () => ({
+jest.mock('data', () => ({
   useGetRepositoriesWithRedux: () => mockedUseExampleAsyncSlice
 }))
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import T from 'theme'
+import T from 'ui/theme'
 
 export const Container = styled.main`
   display: flex;

@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import { Page } from 'types/page'
-import { MainProviders } from 'utils'
-import * as C from 'components'
+import { MainProviders } from 'ui/providers'
+import * as C from 'ui/components'
 
 type Props = AppProps & { Component: Page }
 

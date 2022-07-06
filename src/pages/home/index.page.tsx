@@ -2,8 +2,8 @@ import { useRouter } from 'next/router'
 import { useExampleSimple } from 'store/exampleSimple'
 import { useExampleWithPayload } from 'store/exampleWithPayload'
 import * as S from './styles'
-import * as C from 'components'
-import IconArrowUp from 'assets/icons/arrow_up.svg'
+import * as C from 'ui/components'
+import IconArrowUp from 'ui/assets/icons/arrow_up.svg'
 import { useThemeDetect } from 'hooks'
 
 export default function Home() {

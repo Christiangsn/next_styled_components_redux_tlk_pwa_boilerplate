@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react'
-import { renderWithProviders } from 'utils'
+import { renderWithProviders } from 'tests/providers'
 import CustomError from '../index.page'
 
 describe('[Page] CustomError', () => {
