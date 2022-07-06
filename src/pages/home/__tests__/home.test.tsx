@@ -1,8 +1,8 @@
 import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { renderWithProviders } from 'utils'
+import { renderWithProviders } from 'tests/providers'
 import Home from '../index.page'
-import { mockedPush, mockedPrefetch } from 'mocks'
+import { mockedPush, mockedPrefetch } from 'tests/mocks'
 
 describe('[Page] Home', () => {
   beforeEach(() => {

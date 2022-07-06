@@ -1,9 +1,9 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
-import { useGetRepositoriesWithRedux } from 'services'
+import { useGetRepositoriesWithRedux } from 'data'
 import { useExampleLoading } from 'store/exampleLoading'
 import * as S from './styles'
-import * as C from 'components'
+import * as C from 'ui/components'
 
 export default function PageExample3() {
   const router = useRouter()

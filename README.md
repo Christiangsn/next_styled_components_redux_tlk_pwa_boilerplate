@@ -1,6 +1,7 @@
 <div align="center">
 
 <a href="./LICENSE">![GitHub](https://img.shields.io/github/license/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)</a>
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=next-styled-components-redux-tlk-pwa-boilerplate&style=plastic)
 ![GitHub repo size](https://img.shields.io/github/repo-size/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?style=plastic)
 ![GitHub Repo stars](https://img.shields.io/github/stars/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=yellow&style=plastic)
 ![GitHub Repo stars](https://img.shields.io/github/v/release/everton-dgn/next_styled_components_redux_tlk_pwa_boilerplate?color=orange&style=plastic)
@@ -248,7 +249,7 @@ yarn release
   - In the root of the components folder, an export index was created to facilitate the use of components with named import. In this way, to use a component just import it as an object and use it with the prefix "C", thus avoiding several unnecessary lines of imports:
 
     ```jsx
-    import * as C from 'components'
+    import * as C from 'ui/components'
 
     ...
     <C.Card>

@@ -2,7 +2,7 @@ import '../.jest/nextImageMock'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 import { MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 import { themes } from '@storybook/theming'
-import { MainProviders } from 'utils'
+import { MainProviders } from 'ui/providers'
 
 const customViewports = {
   MotoG4: {

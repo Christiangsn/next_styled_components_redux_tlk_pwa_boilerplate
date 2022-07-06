@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import * as S from './styles'
-import * as C from 'components'
+import * as C from 'ui/components'
 
 export default function PageExample2() {
   const router = useRouter()
