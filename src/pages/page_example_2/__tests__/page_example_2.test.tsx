@@ -1,17 +1,19 @@
-import { fireEvent, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { renderWithProviders } from 'tests/providers'
 import PageExample2 from '../index.page'
 import { mockedPush, mockedPrefetch } from 'tests/mocks'
 
 describe('[Page] PageExample2', () => {
-  it('should go to another page by clicking the button', () => {
+  it('should go to another page by clicking the button', async () => {
+    const user = userEvent.setup({ delay: null })
+
     renderWithProviders(<PageExample2 />)
 
     const btn = screen.getByRole('button', { name: 'Return' })
 
-    fireEvent.click(btn)
-    userEvent.hover(btn)
+    await user.click(btn)
+    await user.hover(btn)
 
     expect(mockedPush).toHaveBeenCalledTimes(1)
     expect(mockedPrefetch).toHaveBeenCalledTimes(1)
