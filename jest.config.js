@@ -26,7 +26,6 @@ module.exports = {
     'src/data',
     'src/infra',
     'src/types',
-    'src/store',
     'src/tests/mocks/index.ts',
     'stories.tsx',
     'types.ts'
