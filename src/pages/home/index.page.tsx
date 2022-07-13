@@ -1,15 +1,15 @@
 import { useRouter } from 'next/router'
-import { useExampleSimple } from 'infra/store/exampleSimple'
-import { useExampleWithPayload } from 'infra/store/exampleWithPayload'
+import { useExampleSimpleAdapter } from 'infra/store/exampleSimple/useAdapter'
+import { useExampleWithPayloadAdapter } from 'infra/store/exampleWithPayload/useAdapter'
 import * as S from './styles'
 import * as C from 'ui/components'
 import IconArrowUp from 'ui/assets/icons/arrow_up.svg'
 import { useThemeDetect } from 'hooks'
 
 export default function Home() {
-  const { isExampleSimple, setChangeExample } = useExampleSimple()
+  const { isExampleSimple, setChangeExample } = useExampleSimpleAdapter()
   const { exampleWithPayload, setAddText, setRemoveText } =
-    useExampleWithPayload()
+    useExampleWithPayloadAdapter()
   const { setTheme, showThemeToSelect } = useThemeDetect()
   const router = useRouter()
 
