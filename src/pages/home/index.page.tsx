@@ -7,7 +7,8 @@ import { useThemeDetect, useStorage } from 'hooks'
 
 export default function Home() {
   const { getStorage, setStorageState } = useStorage({
-    key: 'isExampleSimple'
+    key: 'isExampleSimple',
+    initialValue: false
   })
   const { exampleWithPayload, setAddText, setRemoveText } =
     useExampleWithPayloadAdapter()
