@@ -1,20 +1,21 @@
 import { useRouter } from 'next/router'
-import { useExampleSimple } from 'infra/store/exampleSimple'
-import { useExampleWithPayload } from 'infra/store/exampleWithPayload'
+import { useExampleWithPayloadAdapter } from 'infra/store/exampleWithPayload/useAdapter'
 import * as S from './styles'
 import * as C from 'ui/components'
 import IconArrowUp from 'ui/assets/icons/arrow_up.svg'
-import { useThemeDetect } from 'hooks'
+import { useThemeDetect, useStorage } from 'hooks'
 
 export default function Home() {
-  const { isExampleSimple, setChangeExample } = useExampleSimple()
+  const { getStorage, setStorageState } = useStorage({
+    key: 'isExampleSimple'
+  })
   const { exampleWithPayload, setAddText, setRemoveText } =
-    useExampleWithPayload()
+    useExampleWithPayloadAdapter()
   const { setTheme, showThemeToSelect } = useThemeDetect()
   const router = useRouter()
 
   const handleChange = (): void => {
-    setChangeExample()
+    setStorageState(!getStorage)
 
     exampleWithPayload
       ? setRemoveText()
@@ -35,7 +36,7 @@ export default function Home() {
 
       <h1>
         Redux Example State:
-        {isExampleSimple ? ' true' : ' false'}
+        {getStorage ? ' true' : ' false'}
       </h1>
 
       <br />
