@@ -62,6 +62,7 @@
       "error",
       { "extensions": [".ts", ".tsx"] }
     ],
+    "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unused-vars": "error",
     "@next/next/no-img-element": "off",
     "jsx-a11y/anchor-is-valid": "off",
