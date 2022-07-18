@@ -1,7 +1,7 @@
 import { useCallback, useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useGetRepositoriesWithRedux } from 'data'
-import { useExampleLoadingAdapter } from 'infra/store/exampleLoading/useAdapter'
+import { useIsLoading } from 'infra/store/isLoading/useAdapter'
 import * as S from './styles'
 import * as C from 'ui/components'
 
@@ -10,7 +10,7 @@ export default function PageExample3() {
   const refInput = useRef<HTMLInputElement>(null)
   const { getFetchRepositories, exampleAsyncSlice } =
     useGetRepositoriesWithRedux()
-  const { isLoading } = useExampleLoadingAdapter()
+  const { isLoading } = useIsLoading()
 
   const searchRepositories = useCallback(async () => {
     const user = refInput.current?.value
